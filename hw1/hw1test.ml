@@ -40,4 +40,7 @@ let my_set_diff_test5 = equal_sets (set_diff [1] [1;2]) [];;
 
 let equality x y =
 	x == y;;
-let my_computed_fixed_point_test0 = equality (computed_fixed_point equality (fun x -> (x/2)) 2) 0;;
+let my_computed_fixed_point_test0 = (computed_fixed_point equality (fun x -> (x/2)) 2) == 0;;
+let my_computed_fixed_point_test1 = equal_sets (computed_fixed_point equal_sets (fun list -> (set_intersection list list)) [3;5;5]) [3;5;5];;
+let my_computed_fixed_point_test2 = equal_sets (computed_fixed_point equal_sets (fun list -> (set_diff list [5])) [3;5;5]) [3];;
+let my_computed_fixed_point_test3 = (computed_fixed_point equality (fun x -> (x/2)) 10394023) == 0;;
