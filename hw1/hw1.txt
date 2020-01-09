@@ -1,0 +1,15 @@
+Tried loops, realized loops were not allowed
+Used List library to make methods simpler
+equal_set uses subset
+	equal sets are subsets of each other
+set_union does not produce a list with unique elements
+	some elements are repeated, since allowed in set
+	uses List.append
+set_intersection uses opposite condition of set_diff
+computed_fixed_point is recursive to be able to compute infinite times
+computed_fixed_point loops inifinitely if no fixed point, because uses infinite tries
+filter_reachable conatins multiple helper methods
+	Two methods to parse tuples
+	One recursive method to parse grammar
+		Tried to keep all the rules on each function call, but that caused endless loop
+		
