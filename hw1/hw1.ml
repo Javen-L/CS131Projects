@@ -25,6 +25,7 @@ let filter_reachable g =
 		| current::rest ->
 			(* extract the rules from the first element *)
 			let these = List.filter (fun element -> ((first element) = current)) rules in
+
 			(* take the first elements from the list uniquely *)
 			let appendifnot el arr = match el with
 				N name -> if (List.mem name arr) then arr else name::arr
@@ -36,22 +37,24 @@ let filter_reachable g =
 			let next = List.fold_right getuniques these [] in
 			(* remove found rules from rules *)
 			let newrules = set_diff rules these in
+
 			(* apply this function to them *)
 			let results = reached next newrules in
-			(* combine the result of that to this uniquely *)
-			let intersection = set_intersection these results in
-			let difference = set_diff these results in
-			let these = set_union intersection difference in
+
+			(* combine the result of that to this *)
+			let these2 = set_union these results in
+
 			(* remove the elements of next from the rest *)
 			let newnext = set_diff rest next in
+
 			(* remove found rules from newrules *)
-			let newnewrules = set_diff newrules these in
+			let newnewrules = set_diff newrules these2 in
+
 			(* apply this function to rest of this array *)
 			let results = reached newnext newnewrules in
-			(* combine the result of that to this uniquely *)
-			let intersection = set_intersection these results in
-			let difference = set_diff these results in
-			let these = set_union intersection difference in
-			these
+
+			(* combine the result of that to this *)
+			let these3 = set_union results these2 in
+			these3
 	in
 	(start, set_intersection rules (reached [start] rules));;
