@@ -46,3 +46,5 @@ let my_computed_fixed_point_test2 = equal_sets (computed_fixed_point equal_sets 
 let my_computed_fixed_point_test3 = 
 	let equality x y = x == y in
 	(computed_fixed_point equality (fun x -> (x/2)) 10394023) == 0;;
+
+let my_filter_reachable_test0 = filter_reachable (N None, []) = (N None, []);;
