@@ -22,14 +22,36 @@ let filter_reachable g =
 	let rules = second g in
 	let rec reached array rules = match array with 
 		[] -> []
-		| [current] ->
-			List.filter (fun element -> ((first element) = current)) rules
-		| current::_::_ ->
-			List.filter (fun element -> ((first element) = current)) rules
+		| current::rest ->
+			(* extract the rules from the first element *)
+			let these = List.filter (fun element -> ((first element) = current)) rules in
+			(* take the first elements from the list uniquely *)
+			let appendifnot el arr = match el with
+				N name -> if (List.mem name arr) then arr else name::arr
+				| T _ -> arr
+			in
+			let getuniques tuple arr =
+				List.fold_right appendifnot (second tuple) arr
+			in
+			let next = List.fold_right getuniques these [] in
+			(* remove found rules from rules *)
+			let newrules = set_diff rules these in
+			(* apply this function to them *)
+			let results = reached next newrules in
+			(* combine the result of that to this uniquely *)
+			let intersection = set_intersection these results in
+			let difference = set_diff these results in
+			let these = set_union intersection difference in
+			(* remove the elements of next from the rest *)
+			let newnext = set_diff rest next in
+			(* remove found rules from newrules *)
+			let newnewrules = set_diff newrules these in
+			(* apply this function to rest of this array *)
+			let results = reached newnext newnewrules in
+			(* combine the result of that to this uniquely *)
+			let intersection = set_intersection these results in
+			let difference = set_diff these results in
+			let these = set_union intersection difference in
+			these
 	in
-	(* recursive function: start with start *)
-	(* filter list for rules starting with start *)
-	(* use second part of rules as input to more calls *)
-	(* get difference of unions of output lists *)
-	(* output the list of rules *)
-	(start, reached [start] rules);;
+	(start, set_intersection rules (reached [start] rules));;
