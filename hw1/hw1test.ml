@@ -48,3 +48,54 @@ let my_computed_fixed_point_test3 =
 	(computed_fixed_point equality (fun x -> (x/2)) 10394023) == 0;;
 
 let my_filter_reachable_test0 = filter_reachable (N None, []) = (N None, []);;
+type rfc_nonterminals =
+	| Msgid | Idright | Nofoldliteral | Dtexts | Dtext | Dotatomtext | Atextplus | Dotwords
+let rfc_grammar = (Msgid,
+	[Msgid, [T "<"; N Dotatomtext; T "@"; N Idright; T ">"];
+	Idright, [N Dotatomtext];
+	Idright, [N Nofoldliteral];
+	Nofoldliteral, [T "["; N Dtexts; T "]"];
+	Dtexts, [];
+	Dtexts, [N Dtext; N Dtexts];
+	Dtext, [T "something goes here"];
+	Dotatomtext, [N Atextplus; N Dotwords];
+	Atextplus, [N Dtext];
+	Atextplus, [N Dtext; N Atextplus];
+	Dotwords, [T "."; N Atextplus; N Dotwords];
+	Dotwords, [];
+	]);;
+let my_filter_reachable_test1 = (filter_reachable rfc_grammar) = rfc_grammar;;
+let rfc_grammar2 = (Dtext,
+	[Msgid, [T "<"; N Dotatomtext; T "@"; N Idright; T ">"];
+	Idright, [N Dotatomtext];
+	Idright, [N Nofoldliteral];
+	Nofoldliteral, [T "["; N Dtexts; T "]"];
+	Dtexts, [];
+	Dtexts, [N Dtext; N Dtexts];
+	Dtext, [T "something goes here"];
+	Dotatomtext, [N Atextplus; N Dotwords];
+	Atextplus, [N Dtext];
+	Atextplus, [N Dtext; N Atextplus];
+	Dotwords, [T "."; N Atextplus; N Dotwords];
+	Dotwords, [];
+	]);;
+let my_filter_reachable_test2 = (filter_reachable rfc_grammar2) = (Dtext,
+	[Dtext, [T "something goes here"]]);;
+let rfc_grammar3 = (Dtexts,
+	[Msgid, [T "<"; N Dotatomtext; T "@"; N Idright; T ">"];
+	Idright, [N Dotatomtext];
+	Idright, [N Nofoldliteral];
+	Nofoldliteral, [T "["; N Dtexts; T "]"];
+	Dtexts, [];
+	Dtexts, [N Dtext; N Dtexts];
+	Dtext, [T "something goes here"];
+	Dotatomtext, [N Atextplus; N Dotwords];
+	Atextplus, [N Dtext];
+	Atextplus, [N Dtext; N Atextplus];
+	Dotwords, [T "."; N Atextplus; N Dotwords];
+	Dotwords, [];
+	]);;
+let my_filter_reachable_test3 = (filter_reachable rfc_grammar3) = (Dtexts,
+	[Dtexts, [];
+	Dtexts, [N Dtext; N Dtexts];
+	Dtext, [T "something goes here"]]);;
