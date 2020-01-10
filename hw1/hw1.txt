@@ -1,15 +1,31 @@
-Tried loops, realized loops were not allowed
-Used List library to make methods simpler
-equal_set uses subset
-	equal sets are subsets of each other
-set_union does not produce a list with unique elements
-	some elements are repeated, since allowed in set
-	uses List.append
-set_intersection uses opposite condition of set_diff
-computed_fixed_point is recursive to be able to compute infinite times
-computed_fixed_point loops inifinitely if no fixed point, because uses infinite tries
-filter_reachable conatins multiple helper methods
-	Two methods to parse tuples
-	One recursive method to parse grammar
-		Tried to keep all the rules on each function call, but that caused endless loop
-		
+At first, I used loops to create the subsets method, but then I realized that 
+loops were not allowed.
+Then, I used methods from the List library to create the methods.
+I used the methods List.for_all, List.mem, and List.filter to implement the 
+same functionality as the loops.
+subset a b tests if each element in the first List is in the second List.
+equal_set a b tests if the Lists are subsets of each other, because if they are 
+subsets of each other, then their sets are equal.
+set_union a b concatenates the two lists, because the elements of a set do not 
+have to be unique.
+set_intersection a b returns a List that contains all the elements of a that 
+are also in b. Since this calculation is commutative, the resulting List is the
+intersection.
+set_diff a b returns a List that contains all the elements of a that are not 
+in b. This is implemented in the same way as set_intersection except with a 
+not for the condition.
+computed_fixed_point is recursive to be able to compute infinite times. It 
+computes the result of the input function and compares it to the input. If the 
+result is the same as the input, then the input is returned. Otherwise, 
+computed_fixed_point is called on the result. This means computed_fixed_point 
+goes through infinite recursion if there is no fixed point.
+filter_reachable conatins multiple helper methods. It has two methods to parse 
+tuples, one to get the first part, and another to get the second part. The 
+other helper method is recursive, and parses the grammar.
+The recursive helper method contains the main body of the method.
+The recursive helper method takes in the two parts of the input tuple as its 
+arguments. The first part of the input tuple is taken as an array. If the 
+first part is empty, then an empty array is returned.
+Otherwise, the second part of the input tuple is filtered for its tuples that 
+have the first part as the first element of the first part of the input tuple.
+	Tried to keep all the rules on each function call, but that caused endless loop
