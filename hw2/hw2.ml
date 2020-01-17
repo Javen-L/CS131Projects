@@ -21,7 +21,7 @@ let convert_grammar gram1 =
 	let fold_func (outputsymbols, outputrules) (elementsymbol, elementrule) =
 		let rec addtoarray input index array count result =
 			if (index = count) then
-				let newval = input::(List.nth array count) in
+				let newval = (List.nth array count)@[input] in
 				addtoarray input index array (count+2) (result@[newval])
 			else if (count < List.length array) then
 				addtoarray input index array (count+1) (result@[(List.nth array count)])
