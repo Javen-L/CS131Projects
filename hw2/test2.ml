@@ -24,3 +24,12 @@ let awksub_grammar = (Expr,
     Num, [T"9"]]);;
 let converted = convert_grammar awksub_grammar;;
 let expr = (snd converted) Expr;;
+let lval = (snd converted) Lvalue;;
+let incrop = (snd converted) Incrop;;
+let binop = (snd converted) Binop;;
+let num = (snd converted) Num;;
+
+let single_grammar = (Expr,
+	[Expr, [N Expr]]);;
+let converted2 = convert_grammar single_grammar;;
+let expr2 = (snd converted2) Expr;;

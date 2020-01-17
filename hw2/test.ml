@@ -26,3 +26,15 @@ let output = test2 3;;
 let test3 = func z w;;
 let output = test3 (N Expr);;
 let output = test3 (N Binop);;
+let rec findindex key lst index = match lst with
+                | [] -> -1
+                | this::rest -> if(this = key) then index else findindex key rest (index+1)
+let rec addtoarray input index array count result =
+                        if (index = count) then
+                                let newval = input::(List.nth array count) in
+                                addtoarray input index array (count+1) (result@[newval])
+                        else if (count < List.length array) then
+                                addtoarray input index array (count+1) (result@[(List.nth array count)])
+                        else result
+let array = [[1;2;3];[4;5;6];[3;2;1]];;
+let x = addtoarray 21 0 array 0 [];;
