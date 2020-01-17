@@ -23,14 +23,14 @@ let convert_grammar gram1 =
 			if (index = count) then
 				let newval = input::(List.nth array count) in
 				addtoarray input index array (count+2) (result@[newval])
-			else if (count < List.length array) then 
+			else if (count < List.length array) then
 				addtoarray input index array (count+1) (result@[(List.nth array count)])
 			else result
 		in
 		if (List.mem elementsymbol outputsymbols) then (outputsymbols, addtoarray elementrule (findindex elementsymbol outputsymbols 0) outputrules 0 [])
-		else (outputsymbols@[elementsymbol], outputrules@([elementrule]::[]))
+		else (outputsymbols@[elementsymbol], outputrules@([[elementrule]]))
 	in
-	let lists = List.fold_left fold_func ([],[[]]) second in
+	let lists = List.fold_left fold_func ([],[]) second in
 	let rulematcher = rules (fst lists) (snd lists) in
 	(first, rulematcher);;
 let parse_tree_leaves tree =
