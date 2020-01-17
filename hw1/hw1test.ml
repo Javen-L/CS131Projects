@@ -99,3 +99,4 @@ let my_filter_reachable_test3 = (filter_reachable rfc_grammar3) = (Dtexts,
 	[Dtexts, [];
 	Dtexts, [N Dtext; N Dtexts];
 	Dtext, [T "something goes here"]]);;
+let my_filter_reachable_test4 = (filter_reachable (Msgid, []) = (Msgid, []));;
