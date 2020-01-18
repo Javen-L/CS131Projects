@@ -41,8 +41,22 @@ let rec parse_tree_leaves tree =
 	| Node (value, treelist) -> List.fold_left fold_func [] treelist
 	| Leaf value -> [value];;
 let make_matcher gram =
+	let rec ismatch gram frag =
+		true
+	in
+	let rec suffix gram frag =
+		if (ismatch gram frag) then []
+		else
+		let reverse = List.rev frag in
+		match reverse with
+		| hd::tail ->
+			let outcome = suffix gram (List.rev tail) in
+			if (outcome = []) then [hd]
+			else outcome@[hd]
+		| [] -> []
+	in
 	let matcher gram accept frag =
-		accept frag
+		accept (suffix gram frag)
 	in
 	matcher gram;;
 let make_parser gram =
