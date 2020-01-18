@@ -29,7 +29,8 @@ let incrop = (snd converted) Incrop;;
 let binop = (snd converted) Binop;;
 let num = (snd converted) Num;;
 
-let single_grammar = (Expr,
-	[Expr, [N Expr]]);;
-let converted2 = convert_grammar single_grammar;;
-let expr2 = (snd converted2) Expr;;
+let leaf = (Node (Expr, [Leaf "hi"; Node (Binop, [Leaf "+"]); Leaf "bye"]));;
+let output = parse_tree_leaves leaf;;
+
+let other_parse_tree = parse_tree_leaves (Node ("+", [Leaf 3; Node ("*", [Leaf 4; Leaf 5])]));;
+let test = other_parse_tree = [3;4;5];;

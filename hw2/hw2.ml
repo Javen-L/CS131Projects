@@ -33,9 +33,17 @@ let convert_grammar gram1 =
 	let lists = List.fold_left fold_func ([],[]) second in
 	let rulematcher = rules (fst lists) (snd lists) in
 	(first, rulematcher);;
-let parse_tree_leaves tree =
-	tree;;
+let rec parse_tree_leaves tree = 
+	let fold_func outputlist element =
+		outputlist@(parse_tree_leaves element)
+	in
+	match tree with
+	| Node (value, treelist) -> List.fold_left fold_func [] treelist
+	| Leaf value -> [value];;
 let make_matcher gram =
-	gram;;
+	let matcher gram accept frag =
+		accept frag
+	in
+	matcher gram;;
 let make_parser gram =
 	gram;;
