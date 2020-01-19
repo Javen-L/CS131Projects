@@ -41,8 +41,26 @@ let rec parse_tree_leaves tree =
 	| Node (value, treelist) -> List.fold_left fold_func [] treelist
 	| Leaf value -> [value];;
 let make_matcher gram =
-	let rec ismatch gram frag =
-		true
+	let first (one,two,three) =
+		one
+	in
+	let rec ismatch gram frag = match frag with
+		| _::_ ->
+(* helper function to be in fold_left *)
+(* try to match each subtree *)
+(* match each part *)
+(* remove leaves *)
+(* skip nodes *)
+(* false if not match *)
+(* test all node possibilities if leaves match *)
+(* input accumulator is false *)
+(* result ORed with accumulator *)
+			let rec matchoption (acc, gram, frag) option =
+				if (acc) then (acc, gram, frag)
+				else (acc, gram, frag)
+			in
+			first (List.fold_left matchoption (false, gram, frag) ((snd gram) (fst gram)))
+		| [] -> true
 	in
 	let rec suffix gram frag =
 		if (ismatch gram frag) then []
