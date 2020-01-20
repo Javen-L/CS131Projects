@@ -4,8 +4,6 @@ type ('nonterminal, 'terminal) symbol =
 type ('nonterminal, 'terminal) parse_tree =
 	| Node of 'nonterminal * ('nonterminal, 'terminal) parse_tree list
 	| Leaf of 'terminal
-(* 'a * ('a * ('a, 'b) symbol list) list *)
-(* 'a * fun 'a -> (('a, 'b) symbol list) list *)
 let convert_grammar gram1 =
 	let rec findindex key lst index = match lst with
 		| [] -> -1
@@ -47,17 +45,26 @@ let make_matcher gram =
 	let rec ismatch gram frag = match frag with
 		| _::_ ->
 (* helper function to be in fold_left *)
-(* try to match each subtree *)
-(* match each part *)
-(* remove leaves *)
-(* skip nodes *)
-(* false if not match *)
-(* test all node possibilities if leaves match *)
-(* input accumulator is false *)
-(* result ORed with accumulator *)
 			let rec matchoption (acc, gram, frag) option =
 				if (acc) then (acc, gram, frag)
-				else (acc, gram, frag)
+				else
+					match (frag, option) with
+						| (Leaf a::tailfrag, Leaf b::tailoption) ->
+							if (a = b) then (first (matchoption (acc, gram, tailfrag) tailoption), gram, frag)
+							else (false, gram, frag)
+						| (Leaf a::tailfrag, Node (b,c)::tailoption) ->
+(* need to make a node matching function, returning List of possible lengths *)
+(* then test on all possible remainder lengths *)
+							(acc, gram, frag)
+(* frag should not have Nodes, if it does, returns false *)
+						| (_,_) -> (acc, gram, frag)
+(* remove terminals *)
+(* call ismatch on remaining part of array? *)
+(* how to deal with nonterminals? *)
+(* what if nonterminal matches with empty? *)
+(* need to check for that *)
+(* match nonterminal with one, then pass to matchoption without the first *)
+(* then, if not match, go to next *)
 			in
 			first (List.fold_left matchoption (false, gram, frag) ((snd gram) (fst gram)))
 		| [] -> true
