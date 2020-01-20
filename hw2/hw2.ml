@@ -78,4 +78,17 @@ let make_matcher gram =
 	in
 	matcher gram;;
 let make_parser gram =
-	gram;;
+	let parser gram frag =
+		let accept input = match input with
+			| _::_ -> Some input
+			| [] -> None
+		in
+		let suffix = make_matcher gram accept frag in
+		if (suffix = Some []) then None
+(* make make_matcher work first *)
+(* might not want to use make_matcher, rather construct tree as you go *)
+(* pass tree recursively *)
+(* change gram to actual parse tree of frag *)
+		else Some gram
+	in
+	parser gram;;
