@@ -49,15 +49,20 @@ let make_matcher gram =
 				if (acc) then (acc, gram, frag)
 				else
 					match (frag, option) with
-						| (Leaf a::tailfrag, Leaf b::tailoption) ->
+						| (a::tailfrag, T b::tailoption) ->
 							if (a = b) then (first (matchoption (acc, gram, tailfrag) tailoption), gram, frag)
-							else (false, gram, frag)
-						| (Leaf a::tailfrag, Node (b,c)::tailoption) ->
-(* need to make a node matching function, returning List of possible lengths *)
-(* then test on all possible remainder lengths *)
+							else (acc, gram, frag)
+						| (a::tailfrag, N b::tailoption) ->
+(* apply this function to each possible length, and then OR the results *)
+(* stop if at first true, if any *)
 							(acc, gram, frag)
-(* frag should not have Nodes, if it does, returns false *)
-						| (_,_) -> (acc, gram, frag)
+						| (_::_, []) -> (acc, gram, frag)
+						| ([], T b::_) -> (acc, gram, frag)
+						| ([], N b::tailoption) ->
+(* test if the nonterminal has empty option *)
+(* if so, return true *)
+							(acc, gram, frag)
+						| ([], []) -> (true, gram, frag)
 (* remove terminals *)
 (* call ismatch on remaining part of array? *)
 (* how to deal with nonterminals? *)
@@ -84,6 +89,7 @@ let make_matcher gram =
 		accept (suffix gram frag)
 	in
 	matcher gram;;
+
 let make_parser gram =
 	let parser gram frag =
 		let accept input = match input with
@@ -94,8 +100,9 @@ let make_parser gram =
 		if (suffix = Some []) then None
 (* make make_matcher work first *)
 (* might not want to use make_matcher, rather construct tree as you go *)
+(* can take helper functions from make_matcher though *)
 (* pass tree recursively *)
-(* change gram to actual parse tree of frag *)
-		else Some gram
+		else Some (Leaf "Hi")
+(* change to actual parse tree of frag *)
 	in
 	parser gram;;
