@@ -39,79 +39,63 @@ let rec parse_tree_leaves tree =
 	| Node (value, treelist) -> List.fold_left fold_func [] treelist
 	| Leaf value -> [value];;
 let make_matcher gram =
-	let rec matchsymbol gram frag symbol =
-		match symbol with
-		| N _ -> None
-(* parse nonterminal combinations and provide tail *)
-(* try to parse max size first *)
-		| T value ->
-			match frag with
-				| head::tail -> 
-					if (head = value) then Some tail
-					else None
-				| [] -> None
+	let first (one,two,three) =
+		one
 	in
-	let rec matchrule (acc,gram,frag) rule =
-		if (acc) then (acc,gram,frag)
+	let rec ismatch gram frag = match frag with
+		| _::_ ->
+(* helper function to be in fold_left *)
+			let rec matchoption (acc, gram, frag) option =
+				if (acc) then (acc, gram, frag)
+				else
+					match (frag, option) with
+						| (a::tailfrag, T b::tailoption) ->
+							if (a = b) then (first (matchoption (acc, gram, tailfrag) tailoption), gram, frag)
+							else (acc, gram, frag)
+						| (a::tailfrag, N b::tailoption) ->
+(* apply this function to each possible length, and then OR the results *)
+(* stop if at first true, if any *)
+							(acc, gram, frag)
+						| (_::_, []) -> (acc, gram, frag)
+						| ([], T b::_) -> (acc, gram, frag)
+						| ([], N b::tailoption) ->
+(* test if the nonterminal has empty option *)
+(* if so, return true *)
+							(acc, gram, frag)
+						| ([], []) -> (true, gram, frag)
+(* remove terminals *)
+(* call ismatch on remaining part of array? *)
+(* how to deal with nonterminals? *)
+(* what if nonterminal matches with empty? *)
+(* need to check for that *)
+(* match nonterminal with one, then pass to matchoption without the first *)
+(* then, if not match, go to next *)
+			in
+			first (List.fold_left matchoption (false, gram, frag) ((snd gram) (fst gram)))
+		| [] -> true
+	in
+	let rec splitmatch gram frag =
+		if (ismatch gram frag) then (frag, [])
 		else
-		let first (one,two,three) =
-			one
-		in
-		match rule with
-		| head::ruletail ->
-			(match head with
-				| T value ->
-					(match frag with
-						| head::fragtail ->
-							if (value = head) then (first (matchrule (acc,gram,fragtail) ruletail),gram,frag)
-							else (false,gram,frag)
-						| [] -> (false,gram,frag)
-					)
-				| N nonterminal ->
-					let result = matchsymbol gram frag (N nonterminal) in
-					match result with
-					| Some fragtail ->
-						let outcome = matchrule (acc,gram,fragtail) ruletail in
-						if (first outcome) then (true,gram,frag)
-						else 
-							if (frag = []) then (false,gram,frag)
-							else (first (matchrule (acc,gram,(List.tl frag)) rule),gram,frag)
-(* if frag is empty, false *)
-(* test nonterminal with last frag removed *)
-(* also test part after (in reverse order) *)
-					| None -> (false,gram,frag)
-			)
-		| [] -> (frag = [], gram, frag)
+		let reverse = List.rev frag in
+		match reverse with
+		| hd::tail ->
+			let outcome = splitmatch gram (List.rev tail) in
+			if ((snd outcome) = []) then (List.rev tail, [hd])
+			else (List.rev tail, (snd outcome)@[hd])
+		| [] -> ([],[])
 	in
-	let ismatch gram frag =
-(* if match, true *)
-(* if not match, false *)
-		let first (one, two, three) =
-			one
-		in
-		let reverse = List.rev ((snd gram) (fst gram)) in
-		first (List.fold_left matchrule (false,gram,frag) reverse)
-	in
-	let rec matcher gram suffix accept frag =
-		if (ismatch gram frag)
-		then
-			if((accept frag) != None) then accept suffix
-			else
-				let reverse = List.rev frag in
-				match reverse with
-					| head::tail -> matcher gram (head::suffix) accept (List.rev tail)
-					| [] -> None
+(* need to match prefix *)
+	let matcher gram accept frag =
+		if (accept ((fst splitmatch) gram frag) != None)
+		then accept ((snd splitmatch) gram frag)
 		else
 			let reverse = List.rev frag in
 			match reverse with
-				| head::tail -> matcher gram (head::suffix) accept (List.rev tail)
-				| [] -> None
-(* test if whole frag is match *)
-(* if so, call accept on it and suffix *)
-(* if not, test if frag without last is match *)
-(* keep going recursively until empty*)
+			| head::tail -> matcher gram accept (List.rev tail)
+			| [] -> accept []
 	in
-	matcher gram [];;
+	matcher gram;;
 
 let make_parser gram =
 	let parser gram frag =
