@@ -82,7 +82,7 @@ let make_matcher gram =
 								let outcome = matchrule (acc,gram,fragtail) ruletail in
 								if (first outcome) then (true,gram,frag)
 								else
-									let reverse = List.rev frag in
+									let reverse = List.rev fragtosearch in
 									(match reverse with
 										| head::tail ->
 											symbolrecursion acc gram frag (List.rev tail) nonterminal ruletail
