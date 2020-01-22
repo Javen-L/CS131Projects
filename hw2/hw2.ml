@@ -40,8 +40,6 @@ let rec parse_tree_leaves tree =
 	| Leaf value -> [value];;
 let make_matcher gram =
 	let rec matchsymbol gram frag symbol =
-		print_endline "matchsymbol";
-		print_endline (string_of_int (List.length frag));
 (* parse nonterminal combinations and provide tail *)
 (* try to parse max size first *)
 		let first (one,two,three) =
@@ -61,7 +59,6 @@ let make_matcher gram =
 				| [] -> None
 			)
 	and matchrule (acc,gram,frag) rule =
-		print_endline "matchrule";
 		if (acc) then (acc,gram,frag)
 		else
 		let first (one,two,three) =

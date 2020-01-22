@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ocamlc -g hw2.ml
+ocamlc -g hw2.cmo hw2sampletest.ml
