@@ -40,18 +40,28 @@ let rec parse_tree_leaves tree =
 	| Leaf value -> [value];;
 let make_matcher gram =
 	let rec matchsymbol gram frag symbol =
-		match symbol with
-		| N _ -> None
+		print_endline "matchsymbol";
+		print_endline (string_of_int (List.length frag));
 (* parse nonterminal combinations and provide tail *)
 (* try to parse max size first *)
-		| T value ->
-			match frag with
-				| head::tail -> 
-					if (head = value) then Some tail
-					else None
+		let first (one,two,three) =
+			one
+		in
+		let reversedrules = List.rev ((snd gram) symbol) in
+		if (first (List.fold_left matchrule (false,gram,frag) reversedrules)) then Some []
+		else
+			let reverse = List.rev frag in
+			(match reverse with
+				| head::tail ->
+					let result = matchsymbol gram (List.rev tail) symbol in
+					(match result with
+						| Some tail -> Some (tail@[head])
+						| None -> None
+					)
 				| [] -> None
-	in
-	let rec matchrule (acc,gram,frag) rule =
+			)
+	and matchrule (acc,gram,frag) rule =
+		print_endline "matchrule";
 		if (acc) then (acc,gram,frag)
 		else
 		let first (one,two,three) =
@@ -68,18 +78,23 @@ let make_matcher gram =
 						| [] -> (false,gram,frag)
 					)
 				| N nonterminal ->
-					let result = matchsymbol gram frag (N nonterminal) in
-					match result with
-					| Some fragtail ->
-						let outcome = matchrule (acc,gram,fragtail) ruletail in
-						if (first outcome) then (true,gram,frag)
-						else 
-							if (frag = []) then (false,gram,frag)
-							else (first (matchrule (acc,gram,(List.tl frag)) rule),gram,frag)
-(* if frag is empty, false *)
-(* test nonterminal with last frag removed *)
-(* also test part after (in reverse order) *)
-					| None -> (false,gram,frag)
+					let rec symbolrecursion acc gram frag fragtosearch nonterminal ruletail =
+						let result = matchsymbol gram fragtosearch nonterminal in
+						(match result with
+							| Some fragtail ->
+								let outcome = matchrule (acc,gram,fragtail) ruletail in
+								if (first outcome) then (true,gram,frag)
+								else
+									let reverse = List.rev frag in
+									(match reverse with
+										| head::tail ->
+											symbolrecursion acc gram frag (List.rev tail) nonterminal ruletail
+										| [] -> (false, gram, frag)
+									)
+							| None -> (false, gram, frag)
+						)
+					in
+					symbolrecursion acc gram frag frag nonterminal ruletail
 			)
 		| [] -> (frag = [], gram, frag)
 	in
