@@ -48,12 +48,22 @@ let make_matcher gram =
 								let outcome = matchrule (acc,gram,fragtail@fragtoappend) ruletail in
 								if (first outcome) then (true,gram,frag)
 								else
-									let reverse = List.rev fragtosearch in
-									(match reverse with
-										| head::tail ->
-											symbolrecursion acc gram frag (List.rev tail) (head::fragtoappend) nonterminal ruletail
-										| [] -> (false, gram, frag)
-									)
+                                                                    	let taillength = (List.length fragtail)+(List.length fragtoappend) in
+                                                                        let length = (List.length frag)-taillength in
+                                                                        let rec firstelements length frag =
+                                                                                match frag with
+                                                                                        | [] -> []
+                                                                                        | head::tail ->
+                                                                                                if (length = 1) then [head]
+                                                                                                else head::(firstelements (length-1) frag)
+                                                                        in
+                                                                        let newfragtosearch = firstelements length frag in
+                                                                        let reverse = List.rev newfragtosearch in
+                                                                        (match reverse with
+                                                                                | head::tail ->
+                                                                                        symbolrecursion acc gram frag (List.rev tail) (head::fragtoappend) nonterminal ruletail
+                                                                                | [] -> (false, gram, frag)
+                                                                        )
 							| None -> (false, gram, frag)
 						)
 					in
