@@ -141,30 +141,15 @@ let awkish_grammar =
          [[T"0"]; [T"1"]; [T"2"]; [T"3"]; [T"4"];
           [T"5"]; [T"6"]; [T"7"]; [T"8"]; [T"9"]])
 
-let test0 =
-  ((make_matcher awkish_grammar accept_all ["ouch"]) = None);;
-
-let test1 =
-  ((make_matcher awkish_grammar accept_all ["9"]) = Some []);;
-
-let test2 =
-  (make_matcher awkish_grammar accept_all ["9"; "+"; "$"; "1"; "+"]);;
-let test2 =
-  ((make_matcher awkish_grammar accept_all ["9"; "+"; "$"; "1"; "+"]) = Some ["+"]);;
-
-let test3 =
-  ((make_matcher awkish_grammar accept_empty_suffix ["9"; "+"; "$"; "1"; "+"])
-   = None);;
-
 let test = 
 	(make_matcher awkish_grammar accept_all
-		["("; "$"; "8"; ")"; "-"; "$"; "++"])
+		["("; "$"; "8"; ")"; "-"; "$"; "++"; "$"; "--"; "$"])
 
-let test4 =
- ((make_matcher awkish_grammar accept_all
-     ["("; "$"; "8"; ")"; "-"; "$"; "++"; "$"; "--"; "$"; "9"; "+";
-      "("; "$"; "++"; "$"; "2"; "+"; "("; "8"; ")"; "-"; "9"; ")";
-      "-"; "("; "$"; "$"; "$"; "$"; "$"; "++"; "$"; "$"; "5"; "++";
-      "++"; "--"; ")"; "-"; "++"; "$"; "$"; "("; "$"; "8"; "++"; ")";
-      "++"; "+"; "0"])
-  = Some [])
+(*let test4 =*)
+(* ((make_matcher awkish_grammar accept_all*)
+(*     ["("; "$"; "8"; ")"; "-"; "$"; "++"; "$"; "--"; "$"; "9"; "+";*)
+(*      "("; "$"; "++"; "$"; "2"; "+"; "("; "8"; ")"; "-"; "9"; ")";*)
+(*      "-"; "("; "$"; "$"; "$"; "$"; "$"; "++"; "$"; "$"; "5"; "++";*)
+(*      "++"; "--"; ")"; "-"; "++"; "$"; "$"; "("; "$"; "8"; "++"; ")";*)
+(*      "++"; "+"; "0"])*)
+(*  = Some [])*)

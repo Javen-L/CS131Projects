@@ -75,23 +75,23 @@ let make_matcher gram =
 						| [] -> (false,gram,frag)
 					)
 				| N nonterminal ->
-					let rec symbolrecursion acc gram frag fragtosearch nonterminal ruletail =
-						let result = matchsymbol gram fragtosearch nonterminal in
-						(match result with
-							| Some fragtail ->
-								let outcome = matchrule (acc,gram,fragtail) ruletail in
-								if (first outcome) then (true,gram,frag)
-								else
-									let reverse = List.rev fragtosearch in
-									(match reverse with
-										| head::tail ->
-											symbolrecursion acc gram frag (List.rev tail) nonterminal ruletail
-										| [] -> (false, gram, frag)
-									)
-							| None -> (false, gram, frag)
-						)
-					in
-					symbolrecursion acc gram frag frag nonterminal ruletail
+					let rec symbolrecursion acc gram frag fragtosearch fragtoappend nonterminal ruletail =
+                                                let result = matchsymbol gram fragtosearch nonterminal in
+                                                (match result with
+                                                        | Some fragtail ->
+                                                                let outcome = matchrule (acc,gram,fragtail@fragtoappend) ruletail in
+                                                                if (first outcome) then (true,gram,frag)
+                                                                else
+                                                                        let reverse = List.rev fragtosearch in
+                                                                        (match reverse with
+                                                                                | head::tail ->
+                                                                                        symbolrecursion acc gram frag (List.rev tail) (head::fragtoappend) nonterminal ruletail
+                                                                                | [] -> (false, gram, frag)
+                                                                        )
+                                                        | None -> (false, gram, frag)
+                                                )
+                                        in
+                                        symbolrecursion acc gram frag frag [] nonterminal ruletail
 			)
 		| [] -> (frag = [], gram, frag)
 	in
