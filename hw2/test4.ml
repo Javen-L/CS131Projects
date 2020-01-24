@@ -6,7 +6,7 @@ type ('nonterminal, 'terminal) parse_tree =
 	| Leaf of 'terminal
 let make_matcher gram =
 	let rec matchsymbol gram frag symbol =
-		print_endline "matchsymbol";
+		print_endline "symbol";
 (* parse nonterminal combinations and provide tail *)
 (* try to parse max size first *)
 		let first (one,two,three) =
@@ -36,7 +36,6 @@ let make_matcher gram =
 		| head::ruletail ->
 			(match head with
 				| T value ->
-					print_endline value;
 					(match frag with
 						| head::fragtail ->
 							if (value = head) then (first (matchrule (acc,gram,fragtail) ruletail),gram,frag)
@@ -45,33 +44,32 @@ let make_matcher gram =
 					)
 				| N nonterminal ->
 					let rec symbolrecursion acc gram frag fragtosearch fragtoappend nonterminal ruletail =
-						print_endline "symbolrecursion";
-						let result = matchsymbol gram fragtosearch nonterminal in
-						(match result with
-							| Some fragtail ->
-								let outcome = matchrule (acc,gram,fragtail@fragtoappend) ruletail in
-								if (first outcome) then (true,gram,frag)
-								else
-									let taillength = List.length fragtail in
-									let length = (List.length fragtosearch)-taillength in
-									let rec firstelements length frag =
-										match frag with
-											| [] -> []
-											| head::tail ->
-												if (length = 1) then [head]
-												else head::(firstelements (length-1) frag)
-									in
-									let newfragtosearch = firstelements length frag in
-									let reverse = List.rev newfragtosearch in
-									(match reverse with
-										| head::tail ->
-											symbolrecursion acc gram frag (List.rev tail) (head::fragtoappend) nonterminal ruletail
-										| [] -> (false, gram, frag)
-									)
-							| None -> (false, gram, frag)
-						)
-					in
-					symbolrecursion acc gram frag frag [] nonterminal ruletail
+                                                let result = matchsymbol gram fragtosearch nonterminal in
+                                                (match result with
+                                                        | Some fragtail ->
+                                                                let outcome = matchrule (acc,gram,fragtail@fragtoappend) ruletail in
+                                                                if (first outcome) then (true,gram,frag)
+                                                                else
+                                                                    	let taillength = (List.length fragtail)+(List.length fragtoappend) in
+                                                                        let length = (List.length frag)-taillength in
+                                                                        let rec firstelements length frag =
+                                                                                match frag with
+                                                                                        | [] -> []
+                                                                                        | head::tail ->
+                                                                                                if (length = 1) then [head]
+                                                                                                else head::(firstelements (length-1) frag)
+                                                                        in
+                                                                        let newfragtosearch = firstelements length frag in
+                                                                        let reverse = List.rev newfragtosearch in
+                                                                        (match reverse with
+                                                                                | head::tail ->
+                                                                                        symbolrecursion acc gram frag (List.rev tail) (head::fragtoappend) nonterminal ruletail
+                                                                                | [] -> (false, gram, frag)
+                                                                        )
+                                                        | None -> (false, gram, frag)
+                                                )
+                                        in
+                                        symbolrecursion acc gram frag frag [] nonterminal ruletail
 			)
 		| [] -> (frag = [], gram, frag)
 	in
@@ -157,7 +155,7 @@ let awkish_grammar =
 
 let test = 
 	(make_matcher awkish_grammar accept_all
-		["("; "$"; "8"; ")"])
+		["("; "$"; "8"; ")"; "-"; "$"; "++"; "$";])
 
 (*let test4 =*)
 (* ((make_matcher awkish_grammar accept_all*)

@@ -38,102 +38,35 @@ let rec parse_tree_leaves tree =
 	match tree with
 	| Node (value, treelist) -> List.fold_left fold_func [] treelist
 	| Leaf value -> [value];;
-let make_matcher gram =
-	let rec matchsymbol gram frag symbol =
-(* parse nonterminal combinations and provide tail *)
-(* try to parse max size first *)
-		let first (one,two,three) =
-			one
-		in
-		let reversedrules = List.rev ((snd gram) symbol) in
-		if (first (List.fold_left matchrule (false,gram,frag) reversedrules)) then Some []
-		else
-			let reverse = List.rev frag in
-			(match reverse with
-				| head::tail ->
-					let result = matchsymbol gram (List.rev tail) symbol in
-					(match result with
-						| Some tail -> Some (tail@[head])
-						| None -> None
-					)
-				| [] -> None
-			)
-	and matchrule (acc,gram,frag) rule =
-		if (acc) then (acc,gram,frag)
-		else
-		let first (one,two,three) =
-			one
-		in
-		match rule with
-		| head::ruletail ->
-			(match head with
-				| T value ->
-					(match frag with
-						| head::fragtail ->
-							if (value = head) then (first (matchrule (acc,gram,fragtail) ruletail),gram,frag)
-							else (false,gram,frag)
-						| [] -> (false,gram,frag)
-					)
-				| N nonterminal ->
-					let rec symbolrecursion acc gram frag fragtosearch fragtoappend nonterminal ruletail =
-                                                let result = matchsymbol gram fragtosearch nonterminal in
-                                                (match result with
-                                                        | Some fragtail ->
-                                                                let outcome = matchrule (acc,gram,fragtail@fragtoappend) ruletail in
-                                                                if (first outcome) then (true,gram,frag)
-                                                                else
-									let taillength = List.length fragtail in
-                                                                        let length = (List.length fragtosearch)-taillength in
-                                                                        let rec firstelements length frag =
-                                                                                match frag with
-                                                                                        | [] -> []
-                                                                                        | head::tail ->
-                                                                                                if (length = 1) then [head]
-                                                                                                else head::(firstelements (length-1) frag)
-                                                                        in
-                                                                        let newfragtosearch = firstelements length frag in
-                                                                        let reverse = List.rev newfragtosearch in
-                                                                        (match reverse with
-                                                                                | head::tail ->
-                                                                                        symbolrecursion acc gram frag (List.rev tail) (head::fragtoappend) nonterminal ruletail
-                                                                                | [] -> (false, gram, frag)
-                                                                        )
-                                                        | None -> (false, gram, frag)
+let rec make_matcher gram =
+        let rec matchrule rule accept frag =
+                match rule with
+                        | [] -> accept frag
+                        | head::tail ->
+                                match head with
+                                        | T value ->
+                                                (match frag with
+                                                        | [] -> None
+                                                        | fraghead::fragtail ->
+                                                                if (value = fraghead) then
+                                                                        matchrule tail accept fragtail
+                                                                else None
                                                 )
-                                        in
-                                        symbolrecursion acc gram frag frag [] nonterminal ruletail
-			)
-		| [] -> (frag = [], gram, frag)
-	in
-	let ismatch gram frag =
-(* if match, true *)
-(* if not match, false *)
-		let first (one, two, three) =
-			one
-		in
-		let reverse = List.rev ((snd gram) (fst gram)) in
-		first (List.fold_left matchrule (false,gram,frag) reverse)
-	in
-	let rec matcher gram suffix accept frag =
-		if (ismatch gram frag)
-		then
-			if((accept frag) != None) then accept suffix
-			else
-				let reverse = List.rev frag in
-				match reverse with
-					| head::tail -> matcher gram (head::suffix) accept (List.rev tail)
-					| [] -> None
-		else
-			let reverse = List.rev frag in
-			match reverse with
-				| head::tail -> matcher gram (head::suffix) accept (List.rev tail)
-				| [] -> None
-(* test if whole frag is match *)
-(* if so, call accept on it and suffix *)
-(* if not, test if frag without last is match *)
-(* keep going recursively until empty*)
-	in
-	matcher gram [];;
+                                        | N nonterminal ->
+                                                let headmatcher = matchrules ((snd gram) nonterminal) in
+                                                let tailmatcher = matchrule tail in
+                                                headmatcher (tailmatcher accept) frag
+        and matchrules rules accept frag =
+                match rules with
+                        | [] -> None
+                        | head::tail ->
+                                let headmatcher = matchrule head accept frag in
+                                let tailmatcher = matchrules tail in
+                                match headmatcher with
+                                        | None -> tailmatcher accept frag
+                                        | x -> x
+        in
+	matchrules ((snd gram) (fst gram));;
 
 let make_parser gram =
 	let parser gram frag =
