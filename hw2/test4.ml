@@ -6,6 +6,7 @@ type ('nonterminal, 'terminal) parse_tree =
 	| Leaf of 'terminal
 let make_matcher gram =
 	let rec matchsymbol gram frag symbol =
+		print_endline "matchsymbol";
 (* parse nonterminal combinations and provide tail *)
 (* try to parse max size first *)
 		let first (one,two,three) =
@@ -25,6 +26,7 @@ let make_matcher gram =
 				| [] -> None
 			)
 	and matchrule (acc,gram,frag) rule =
+		print_endline "matchrule";
 		if (acc) then (acc,gram,frag)
 		else
 		let first (one,two,three) =
@@ -43,6 +45,7 @@ let make_matcher gram =
 					)
 				| N nonterminal ->
 					let rec symbolrecursion acc gram frag fragtosearch fragtoappend nonterminal ruletail =
+						print_endline "symbolrecursion";
 						let result = matchsymbol gram fragtosearch nonterminal in
 						(match result with
 							| Some fragtail ->
