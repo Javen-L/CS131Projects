@@ -75,12 +75,14 @@ let make_parser gram =
 			| [] -> None
 		in
 		let suffix = make_matcher gram accept frag in
-		if (suffix = Some []) then None
+			match suffix with
+				| Some (head::tail) -> None
+				| Some [] -> Some (Leaf "Hi")
+(* change to actual parse tree of frag *)
+				| None -> None
 (* make make_matcher work first *)
 (* might not want to use make_matcher, rather construct tree as you go *)
 (* can take helper functions from make_matcher though *)
 (* pass tree recursively *)
-		else Some (Leaf "Hi")
-(* change to actual parse tree of frag *)
 	in
 	parser gram;;
