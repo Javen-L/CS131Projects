@@ -69,6 +69,33 @@ let rec make_matcher gram =
 	matchrules ((snd gram) (fst gram));;
 
 let make_parser gram =
+        let rec parserule rule accept frag =
+                match rule with
+                        | [] -> accept frag
+                        | head::tail ->
+                                match head with
+                                        | T value ->
+                                                (match frag with
+                                                        | [] -> None
+                                                        | fraghead::fragtail ->
+                                                                if (value = fraghead) then
+                                                                        parserule tail accept fragtail
+                                                                else None
+                                                )
+                                        | N nonterminal ->
+                                                let headparser = parserules ((snd gram) nonterminal) in
+                                                let tailparser = parserule tail in
+                                                headparser (tailparser accept) frag
+        and parserules rules accept frag =
+                match rules with
+                        | [] -> None
+                        | head::tail ->
+                                let headparser = parserule head accept frag in
+                                let tailparser = parserules tail in
+                                match headparser with
+                                        | None -> tailparser accept frag
+                                        | x -> x
+        in
 	let parser gram frag =
 		let accept input = match input with
 			| _::_ -> Some input
