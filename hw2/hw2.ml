@@ -46,11 +46,8 @@ let rec matchrule gram rule accept (frag,array) =
                        match head with
                                 | T value ->
                                         (match frag with
-                                                | [] -> (None, None)
-                                                | fraghead::fragtail ->
-                                                        if (value = fraghead) then
-                                                                matchrule gram tail accept (fragtail,array)
-                                                        else (None, None)
+                                                | fraghead::fragtail when (fraghead = value) -> matchrule gram tail accept (fragtail,array)
+						| _ -> (None, None)
                                         )
                                 | N nonterminal ->
                                         let headmatcher = matchrules gram ((snd gram) nonterminal) in
@@ -60,7 +57,7 @@ and matchrules gram rules accept (frag,array) =
         match rules with
                 | [] -> (None,None)
                 | head::tail ->
-                        let headmatcher = matchrule gram head accept (frag, (array@[head])) in
+                        let headmatcher = matchrule gram head accept (frag, array@[head]) in
                         let tailmatcher = matchrules gram tail in
                         match headmatcher with
                                 | (None,_) -> tailmatcher accept (frag, array)
@@ -88,17 +85,12 @@ let make_parser gram =
 			| [] -> Some []
 			| _ -> None
 	in
-	let firstmatchrules rules accept frag =
-		match rules with
-                        | [] -> None
-                        | head::tail ->
-                                let headmatcher = matchrule gram head (accept2 accept) (frag, [head]) in
-                                let tailmatcher = matchrules gram tail in
-                                match headmatcher with
-                                        | (None,_) -> snd (tailmatcher (accept2 accept) (frag, []))
-                                        | (_,y) -> y
+	let matchrules_rhs rules accept frag =
+		let matched = matchrules gram rules (accept2 accept) (frag,[]) in
+		match matched with
+			| (_,value) -> value
         in
-	let rhs_list = firstmatchrules ((snd gram) (fst gram)) accept_empty in
+	let rhs_list = matchrules_rhs ((snd gram) (fst gram)) accept_empty in
 	let rec construct_rule rule rhs_list =
 (* input: rule (list of symbols) *)
 (* output: Node or Leaf array tuple with rhs_list *)
