@@ -18,43 +18,40 @@ let string_of_awksub value =
 		| Num -> "Num"
 ;;
 
+let rec matchrule gram rule accept (frag,array) =
+        match rule with
+                | [] -> accept (frag,array)
+                | head::tail ->
+                       match head with
+                                | T value ->
+                                        (match frag with
+                                                | fraghead::fragtail when (fraghead = value) -> matchrule gram tail accept (fragtail,array)
+                                                | _ -> (None, None)
+                                        )
+                                | N nonterminal ->
+                                        let headmatcher = matchrules gram ((snd gram) nonterminal) in
+                                        let tailmatcher = matchrule gram tail in
+                                        headmatcher (tailmatcher accept) (frag,array)
+and matchrules gram rules accept (frag,array) =
+        match rules with
+                | [] -> (None,None)
+                | head::tail ->
+                        let headmatcher = matchrule gram head accept (frag, array@[head]) in
+                        let tailmatcher = matchrules gram tail in
+                        match headmatcher with
+                                | (None,_) -> tailmatcher accept (frag, array)
+                                | _ -> headmatcher
+;;
+
+let accept2 acceptor (frag, array) = (acceptor frag, Some array);;
+
 let rec make_matcher gram =
-        let rec matchrule rule accept (frag,array) =
-                match rule with
-                        | [] -> accept (frag,array)
-                        | head::tail ->
-                                match head with
-                                        | T value ->
-                                                (match frag with
-                                                        | [] -> (None, None)
-                                                        | fraghead::fragtail ->
-                                                                if (value = fraghead) then
-                                                                        matchrule tail accept (fragtail,array)
-                                                                else (None, None)
-                                                )
-                                        | N nonterminal ->
-                                                let headmatcher = matchrules ((snd gram) nonterminal) in
-                                                let tailmatcher = matchrule tail in
-                                                headmatcher (tailmatcher accept) (frag,array)
-        and matchrules rules accept (frag,array) =
-                match rules with
-                        | [] -> (None,None)
-                        | head::tail ->
-                                let headmatcher = matchrule head accept (frag, (array@[head])) in
-                                let tailmatcher = matchrules tail in
-				match headmatcher with
-                                        | (None,_) -> tailmatcher accept (frag, array)
-                                        | x -> x
-        in
-	let accept2 acceptor (frag, array) =
-                (acceptor frag, Some array)
-        in
 	let firstmatchrules rules accept frag =
                 match rules with
                         | [] -> None
                         | head::tail ->
-                                let headmatcher = matchrule head (accept2 accept) (frag, ([head])) in
-                                let tailmatcher = matchrules tail in
+                                let headmatcher = matchrule gram head (accept2 accept) (frag, ([head])) in
+                                let tailmatcher = matchrules gram tail in
 				match headmatcher with
                                         | (None,_) -> fst (tailmatcher (accept2 accept) (frag, []))
                                         | (x,_) -> x
@@ -62,21 +59,17 @@ let rec make_matcher gram =
 	firstmatchrules ((snd gram) (fst gram));;
 
 let make_parser gram =
-	let parser gram frag =
-		let accept input = match input with
-			| _::_ -> Some input
-			| [] -> None
-		in
-		let suffix = make_matcher gram accept frag in
-		if (suffix = Some []) then None
-(* make make_matcher work first *)
-(* might not want to use make_matcher, rather construct tree as you go *)
-(* can take helper functions from make_matcher though *)
-(* pass tree recursively *)
-		else Some (Leaf "Hi")
-(* change to actual parse tree of frag *)
-	in
-	parser gram;;
+        let accept_empty input =
+                match input with
+                        | [] -> Some []
+                        | _ -> None
+        in
+	let matchrules_rhs rules accept frag =
+                let matched = matchrules gram rules (accept2 accept) (frag,[]) in
+                match matched with
+                        | (_,value) -> value
+        in
+	matchrules_rhs ((snd gram) (fst gram)) accept_empty;;
 
 let accept_all string = Some string
 let accept_empty_suffix = function
