@@ -40,31 +40,31 @@ let rec parse_tree_leaves tree =
 	| Leaf value -> [value];;
 
 let rec matchrule gram rule accept (frag,array) =
-                match rule with
-                        | [] -> accept (frag,array)
-                        | head::tail ->
-                                match head with
-                                        | T value ->
-                                                (match frag with
-                                                        | [] -> (None, None)
-                                                        | fraghead::fragtail ->
-                                                                if (value = fraghead) then
-                                                                        matchrule gram tail accept (fragtail,array)
-                                                                else (None, None)
-                                                )
-                                        | N nonterminal ->
-                                                let headmatcher = matchrules gram ((snd gram) nonterminal) in
-                                                let tailmatcher = matchrule gram tail in
-                                                headmatcher (tailmatcher accept) (frag,array)
-        and matchrules gram rules accept (frag,array) =
-                match rules with
-                        | [] -> (None,None)
-                        | head::tail ->
-                                let headmatcher = matchrule gram head accept (frag, (array@[head])) in
-                                let tailmatcher = matchrules gram tail in
-                                match headmatcher with
-                                        | (None,_) -> tailmatcher accept (frag, array)
-                                        | x -> x
+        match rule with
+                | [] -> accept (frag,array)
+                | head::tail ->
+                       match head with
+                                | T value ->
+                                        (match frag with
+                                                | [] -> (None, None)
+                                                | fraghead::fragtail ->
+                                                        if (value = fraghead) then
+                                                                matchrule gram tail accept (fragtail,array)
+                                                        else (None, None)
+                                        )
+                                | N nonterminal ->
+                                        let headmatcher = matchrules gram ((snd gram) nonterminal) in
+                                        let tailmatcher = matchrule gram tail in
+                                        headmatcher (tailmatcher accept) (frag,array)
+and matchrules gram rules accept (frag,array) =
+        match rules with
+                | [] -> (None,None)
+                | head::tail ->
+                        let headmatcher = matchrule gram head accept (frag, (array@[head])) in
+                        let tailmatcher = matchrules gram tail in
+                        match headmatcher with
+                                | (None,_) -> tailmatcher accept (frag, array)
+                                | _ -> headmatcher
 ;;
 
 let accept2 acceptor (frag, array) = (acceptor frag, Some array);;
@@ -92,35 +92,57 @@ let make_parser gram =
 		match rules with
                         | [] -> None
                         | head::tail ->
-                                let headmatcher = matchrule gram head (accept2 accept) (frag, ([head])) in
+                                let headmatcher = matchrule gram head (accept2 accept) (frag, [head]) in
                                 let tailmatcher = matchrules gram tail in
                                 match headmatcher with
                                         | (None,_) -> snd (tailmatcher (accept2 accept) (frag, []))
                                         | (_,y) -> y
         in
 	let rhs_list = firstmatchrules ((snd gram) (fst gram)) accept_empty in
-	let rec construct_tree rhs_list tree =
+	let rec construct_rule rule rhs_list =
+(* input: rule (list of symbols) *)
+(* output: Node or Leaf array tuple with rhs_list *)
+		match rule with
+			| [] -> (Some [], Some rhs_list)
+			| head::tail ->
+				match head with
+					| T terminal -> (Some [Leaf terminal], Some rhs_list)
+					| N nonterminal ->
+						let head_constructor = construct_tree head rhs_list in
+						match head_constructor with
+							| (Some node, None) ->  (None, None)
+							| (None, _) -> (None, None)
+							| (Some node, Some array) ->
+								let tail_constructor = construct_rule tail array in
+								match tail_constructor with
+									| (Some node, None) ->  (None, None)
+									| (None, _) -> (None, None)
+									| (Some nodearray, Some array2) -> (Some ([node]@nodearray), Some array2)
+	and construct_tree start_symbol rhs_list =
+(* inputs: right-hand side and the start symbol *)
+(* outputs: node for current level tuple with rhs_list *)
 		match rhs_list with
-			| [] -> tree
-			| head::tail -> match head with
-				| T terminal -> Leaf terminal
-				| N nonterminal -> Node (nonterminal, [])
-(* how to add on to tree? *)
+			| None -> (None,None)
+			| Some [] -> (None,None)
+			| Some (head::tail) ->
+				let head_constructor = construct_rule head rhs_list in
+				match head_constructor with
+					| (None, _) -> (None,None)
+					| (Some nodearray, None) -> (None, None)
+					| (Some nodearray, Some array) -> (Some (Node (start_symbol, nodearray)), Some array)
 	in
-	let parser gram frag =
-		let accept input = match input with
-			| _::_ -> Some input
-			| [] -> None
-		in
-		let suffix = make_matcher gram accept frag in
-			match suffix with
-				| Some (head::tail) -> None
-				| Some [] -> Some (Leaf "Hi")
-(* change to actual parse tree of frag *)
-				| None -> None
-(* make make_matcher work first *)
-(* might not want to use make_matcher, rather construct tree as you go *)
-(* can take helper functions from make_matcher though *)
-(* pass tree recursively *)
+	let first_construct_tree start_symbol rhs_list frag =
+(* inputs: right-hand side and the start symbol *)
+(* outputs: node for current level tuple with rhs_list *)
+		let rhs_list2 = rhs_list frag in
+		match rhs_list2 with
+			| None -> None
+			| Some [] -> None
+			| Some (head::tail) ->
+				let head_constructor = construct_rule head rhs_list2 in
+				match head_constructor with
+					| (None, _) -> None
+					| (Some nodearray, None) -> None
+					| (Some nodearray, Some array) -> Some (Node (start_symbol, nodearray))
 	in
-	parser gram;;
+	first_construct_tree (fst gram) rhs_list;;
