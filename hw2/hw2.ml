@@ -111,7 +111,7 @@ let make_parser gram =
 			| None -> (None,None)
 			| Some [] -> (None,None)
 			| Some (head::tail) ->
-				let head_constructor = construct_rule head rhs_list in
+				let head_constructor = construct_rule head (Some tail) in
 				match head_constructor with
 					| (None, _) -> (None,None)
 					| (Some nodearray, None) -> (None, None)
