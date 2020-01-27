@@ -80,17 +80,11 @@ let rec make_matcher gram =
 	firstmatchrules ((snd gram) (fst gram));;
 
 let make_parser gram =
-	let accept_empty input =
-		match input with
-			| [] -> Some []
-			| _ -> None
-	in
 	let matchrules_rhs rules accept frag =
 		let matched = matchrules gram rules (accept2 accept) (frag,[]) in
 		match matched with
 			| (_,value) -> value
         in
-	let rhs_list = matchrules_rhs ((snd gram) (fst gram)) accept_empty in
 	let rec construct_rule rule rhs_list =
 (* input: rule (list of symbols) *)
 (* output: Node or Leaf array tuple with rhs_list *)
@@ -100,7 +94,7 @@ let make_parser gram =
 				match head with
 					| T terminal -> (Some [Leaf terminal], Some rhs_list)
 					| N nonterminal ->
-						let head_constructor = construct_tree head rhs_list in
+						let head_constructor = construct_tree nonterminal rhs_list in
 						match head_constructor with
 							| (Some node, None) ->  (None, None)
 							| (None, _) -> (None, None)
@@ -130,11 +124,17 @@ let make_parser gram =
 		match rhs_list2 with
 			| None -> None
 			| Some [] -> None
-			| Some (head::tail) ->
-				let head_constructor = construct_rule head rhs_list2 in
-				match head_constructor with
+			| Some array ->
+				let constructor = construct_tree start_symbol rhs_list2 in
+				match constructor with
 					| (None, _) -> None
-					| (Some nodearray, None) -> None
-					| (Some nodearray, Some array) -> Some (Node (start_symbol, nodearray))
+					| (Some tree, None) -> None
+					| (Some tree, Some _) -> Some tree
 	in
+	let accept_empty input =
+		match input with
+			| [] -> Some []
+			| _ -> None
+	in
+	let rhs_list = matchrules_rhs ((snd gram) (fst gram)) accept_empty in
 	first_construct_tree (fst gram) rhs_list;;
