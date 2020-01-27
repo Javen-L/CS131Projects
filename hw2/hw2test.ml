@@ -23,3 +23,8 @@ let empty_grammar =
 			[[T "$"; N Start]])
 
 let make_matcher_test = (make_matcher empty_grammar accept_all ["(";"+";"$";")";"+";"(";")"]) = Some ["+";"(";")"];;
+let extract_some input =
+	match input with
+		| Some value -> value
+		| None -> Leaf "i";;
+let make_parser_test = (parse_tree_leaves (extract_some (make_parser empty_grammar ["(";"+";"$";")";"+";"(";")"])) = ["(";"+";"$";")";"+";"(";")"]);;
