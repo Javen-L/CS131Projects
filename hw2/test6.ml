@@ -79,7 +79,13 @@ let make_parser gram =
                         | [] -> (Some [], Some rhs_list)
                         | head::tail ->
                                 match head with
-                                        | T terminal -> (Some [Leaf terminal], Some rhs_list)
+                                        | T terminal ->
+						let tail_constructor = construct_rule tail rhs_list in
+						(match tail_constructor with
+							| (Some node, None) -> (None, None)
+							| (None, _) -> (None, None)
+							| (Some nodearray, Some array2) -> (Some ([Leaf terminal]@nodearray), Some array2)
+						)
                                         | N nonterminal ->
                                                 let head_constructor = construct_tree nonterminal rhs_list in
                                                 match head_constructor with
