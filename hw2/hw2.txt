@@ -1,0 +1,64 @@
+I decided to write make_parser in terms of make_matcher, because make_matcher 
+goes through the rules in order, and returns whether a part of the fragment is
+valid under the grammar. Thus, I implemented the make_matcher helper methods 
+such that it returned the list of rules in order visited along with the 
+suffix required by make_matcher. This means that the helper function is used 
+by both make_matcher and make_parser, avoiding duplication of code.
+
+However, this implementation makes both make_matcher and make_parser 
+less efficient in space and time. The helper function stores the outputs for 
+both make_matcher and make_parser, so the function requires more memory. 
+Furthermore, the helper function has to check and process both outputs at each
+step of the recursion, so these extra checks and processes take more time 
+than they would if they were separated.
+
+Also, there is some functionality in the helper function which is not required
+in make_parser. The helper function requires an acceptor function which it 
+calls on the suffix, but make_parser always passes in the same acceptor, since
+it only accepts empty suffixes, since it is trying to match the entire 
+input fragment. This also means that if the fragment does not match, the 
+helper function goes through unnecessary recursions for make_parser, since 
+make_parser only needs to check the entire fragment, not any of the smaller 
+subsets.
+
+My implementations of make_matcher and make_parser fail if given a 
+grammar that is left-recursive, which means the first nonterminal of a rule is
+the same as the nonterminal being matched. Since the helper function goes 
+through the rules in order, and the symbols within that rule in order, if a 
+rule for a nonterminal contains the same nonterminal as its first symbol, then
+my helper function will go through infinite recursion until stack overflow, 
+because it will attempt to parse the nonterminal from itself.
+
+For example, consider the grammar defined below:
+type nonterminals =
+        | Start | Terminal;;
+let left_recursive_grammar =
+        (Start, function
+                | Start -> [[N Start; N Terminal]]
+                | Terminal -> [[T "Terminal"]]);;
+
+If the matcher produced by make_matcher using this grammar was called on any 
+valid arguments, then that matcher would go through an infinite recursion.
+First, the matcher would check the rule of Start. Start contains two symbols 
+in its rule: Start and Terminal. Since Start is first, it would check Start 
+again. As stated before, Start's rule contains two symbols: Start and Terminal.
+Once again, it would check Start. Since there are no other symbols before 
+Start in Start's rule, the matcher will only check Start, and will not leave 
+this pattern of checking Start until the program ends. This happens, despite 
+there being a Terminal symbol in Start's rule.
+
+There can also be indirect left recursion in grammars such as the one below:
+type nonterminals =
+        | Start | Terminal;;
+let left_recursive_grammar =
+        (Start, function
+                | Start -> [[N Terminal; T "Start"]]
+                | Terminal -> [[N Start; T "Terminal"]]);;
+
+Although Start's rule's first symbol is not Start, and Terminal's rule's first
+symbol is not Terminal, Start's rule's first symbol is Terminal, and 
+Terminal's rule's first symbol is Start.
+This means that my matcher starts at Start, then parses the first symbol in 
+Start's rule, Terminal, and while parsing Terminal, it parses the first symbol
+in Start's rule, Terminal. This causes infinite recursion, which eventually 
+causes stack overflow, despite the other symbols in the rules.
