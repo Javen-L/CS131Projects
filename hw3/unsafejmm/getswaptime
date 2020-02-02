@@ -2,5 +2,5 @@
 
 output=($1'swaptime.csv')
 
-cat $1 | grep '$ time\|Average swap time' | sed 's/$ time timeout 3600 java UnsafeMemory /x/g' | sed 's/Average swap time //g' | sed 's/ ns real,//g' | sed 's/ ns CPU//g' | sed 's/ /,/g' | tr -d '\n' | tr 'x' '\n' | sort &>$output
+cat $1 | grep '$ time\|Average swap time' | sed 's/$ time timeout 3600 java UnsafeMemory /x/g' | sed 's/Average swap time /~/g' | sed 's/ ns real,//g' | sed 's/ ns CPU//g' | sed 's/ /,/g' | tr -d '\n' | tr 'x' '\n' | tr '~' ',' | sort &>$output
 echo "" >>$output
