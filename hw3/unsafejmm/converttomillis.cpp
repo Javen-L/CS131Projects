@@ -15,7 +15,7 @@ int main(int argc, const char* argv[]){
   cin >> cur_char;
   while (!cin.eof()){
     if(!first){
-      if(cur_char >= '0' || cur_char <= '9'){
+      if(cur_char >= '0' && cur_char <= '9'){
 	second_string.push_back(cur_char);
 	first = true;
       } else {
@@ -64,8 +64,6 @@ int main(int argc, const char* argv[]){
 	    if(count == 3){
 	      cout << endl;
 	      count = 0;
-	    } else {
-	      cout << ',';
 	    }
 	    second_string.clear();
 	    other_string.clear();
@@ -77,7 +75,7 @@ int main(int argc, const char* argv[]){
     cin >> cur_char;
   }
   if(!first){
-    if(cur_char >= '0' || cur_char <= '9'){
+    if(cur_char >= '0' && cur_char <= '9'){
 	second_string.push_back(cur_char);
 	first = true;
     } else {
