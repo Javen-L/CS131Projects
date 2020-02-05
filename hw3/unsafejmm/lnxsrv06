@@ -1,4741 +1,1572 @@
-Fri Jan 31 18:08:46 PST 2020
+Wed Feb  5 12:13:12 PST 2020
 model name	: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
 java version "13.0.2" 2020-01-14
 Java(TM) SE Runtime Environment (build 13.0.2+8)
 Java HotSpot(TM) 64-Bit Server VM (build 13.0.2+8, mixed mode, sharing)
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 1
-Total time 0.000349485 s real, 0.00000 s CPU
-Average swap time 3494.85 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 100 5
+Total time 0.00126006 s real, 0.000192356 s CPU
+Average swap time 12600.6 ns real, 1923.56 ns CPU
 
-real	0m0.156s
-user	0m0.136s
+real	0m0.180s
+user	0m0.141s
+sys	0m0.041s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 1 100 5
+Total time 0.00145019 s real, 0.000208784 s CPU
+Average swap time 14501.9 ns real, 2087.84 ns CPU
+
+real	0m0.145s
+user	0m0.140s
+sys	0m0.041s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 5
+Total time 0.00147545 s real, 0.000199754 s CPU
+Average swap time 14754.5 ns real, 1997.54 ns CPU
+
+real	0m0.141s
+user	0m0.148s
+sys	0m0.033s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 5
+Total time 0.00160992 s real, 0.000735634 s CPU
+Average swap time 16099.2 ns real, 7356.34 ns CPU
+
+real	0m0.143s
+user	0m0.133s
+sys	0m0.050s
+
+$ time timeout 3600 java UnsafeMemory Null 1 100 25
+Total time 0.00141110 s real, 0.000198871 s CPU
+Average swap time 14111.0 ns real, 1988.71 ns CPU
+
+real	0m0.135s
+user	0m0.141s
+sys	0m0.039s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 1 100 25
+Total time 0.00124046 s real, 0.000196228 s CPU
+Average swap time 12404.6 ns real, 1962.28 ns CPU
+
+real	0m0.127s
+user	0m0.127s
+sys	0m0.052s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 25
+Total time 0.00155876 s real, 0.000205308 s CPU
+Average swap time 15587.6 ns real, 2053.08 ns CPU
+
+real	0m0.155s
+user	0m0.134s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 25
+Total time 0.00160412 s real, 0.000740096 s CPU
+Average swap time 16041.2 ns real, 7400.96 ns CPU
+
+real	0m0.131s
+user	0m0.133s
+sys	0m0.050s
+
+$ time timeout 3600 java UnsafeMemory Null 1 100 100
+Total time 0.00161018 s real, 0.000192422 s CPU
+Average swap time 16101.8 ns real, 1924.22 ns CPU
+
+real	0m0.129s
+user	0m0.133s
 sys	0m0.043s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 1
-Total time 0.000291604 s real, 0.00000 s CPU
-Average swap time 2916.04 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 100 100
+Total time 0.00134644 s real, 0.000205002 s CPU
+Average swap time 13464.4 ns real, 2050.02 ns CPU
+
+real	0m0.126s
+user	0m0.125s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 100
+Total time 0.00142382 s real, 0.000205500 s CPU
+Average swap time 14238.2 ns real, 2055.00 ns CPU
+
+real	0m0.153s
+user	0m0.133s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 100
+Total time 0.00168824 s real, 0.000805009 s CPU
+Average swap time 16882.4 ns real, 8050.09 ns CPU
 
 real	0m0.127s
 user	0m0.134s
+sys	0m0.049s
+
+$ time timeout 3600 java UnsafeMemory Null 1 10000 5
+Total time 0.00415991 s real, 0.00296657 s CPU
+Average swap time 415.991 ns real, 296.657 ns CPU
+
+real	0m0.132s
+user	0m0.142s
 sys	0m0.044s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 1
-Total time 0.000352328 s real, 0.00000 s CPU
-Average swap time 3523.28 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 5
+Total time 0.00393109 s real, 0.00295738 s CPU
+Average swap time 393.109 ns real, 295.738 ns CPU
 
-real	0m0.126s
-user	0m0.127s
-sys	0m0.055s
+real	0m0.131s
+user	0m0.141s
+sys	0m0.051s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 2
-Total time 0.00137998 s real, 0.000192400 s CPU
-Average swap time 13799.8 ns real, 1924.00 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 5
+Total time 0.00407790 s real, 0.00289709 s CPU
+Average swap time 407.790 ns real, 289.709 ns CPU
 
-real	0m0.148s
-user	0m0.135s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 2
-Total time 0.00145055 s real, 0.000206426 s CPU
-Average swap time 14505.5 ns real, 2064.26 ns CPU
-
-real	0m0.129s
-user	0m0.144s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 2
-Total time 0.00198313 s real, 0.000884049 s CPU
-Average swap time 19831.3 ns real, 8840.49 ns CPU
-
-real	0m0.128s
-user	0m0.138s
+real	0m0.130s
+user	0m0.141s
 sys	0m0.046s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 4
-Total time 0.00145054 s real, 0.000223559 s CPU
-Average swap time 14505.4 ns real, 2235.59 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 5
+Total time 0.00746384 s real, 0.00646025 s CPU
+Average swap time 746.384 ns real, 646.025 ns CPU
 
 real	0m0.140s
-user	0m0.128s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 4
-Total time 0.00140193 s real, 0.000193063 s CPU
-Average swap time 14019.3 ns real, 1930.63 ns CPU
-
-real	0m0.126s
-user	0m0.138s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 4
-Total time 0.00217002 s real, 0.000986535 s CPU
-Average swap time 21700.2 ns real, 9865.35 ns CPU
-
-real	0m0.130s
-user	0m0.141s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 8
-Total time 0.00129390 s real, 0.000211674 s CPU
-Average swap time 12939.0 ns real, 2116.74 ns CPU
-
-real	0m0.123s
-user	0m0.151s
-sys	0m0.031s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 8
-Total time 0.00129146 s real, 0.000223931 s CPU
-Average swap time 12914.6 ns real, 2239.31 ns CPU
-
-real	0m0.147s
-user	0m0.147s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 8
-Total time 0.00178646 s real, 0.000803789 s CPU
-Average swap time 17864.6 ns real, 8037.89 ns CPU
-
-real	0m0.132s
-user	0m0.144s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 16
-Total time 0.00140997 s real, 0.000198654 s CPU
-Average swap time 14099.7 ns real, 1986.54 ns CPU
-
-real	0m0.127s
-user	0m0.142s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 16
-Total time 0.00151003 s real, 0.000195466 s CPU
-Average swap time 15100.3 ns real, 1954.66 ns CPU
-
-real	0m0.129s
-user	0m0.137s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 16
-Total time 0.00178069 s real, 0.000904582 s CPU
-Average swap time 17806.9 ns real, 9045.82 ns CPU
-
-real	0m0.147s
-user	0m0.159s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 32
-Total time 0.00164133 s real, 0.000285547 s CPU
-Average swap time 16413.3 ns real, 2855.47 ns CPU
-
-real	0m0.142s
-user	0m0.146s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 32
-Total time 0.00143269 s real, 0.000193682 s CPU
-Average swap time 14326.9 ns real, 1936.82 ns CPU
-
-real	0m0.126s
-user	0m0.130s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 32
-Total time 0.00177380 s real, 0.000844205 s CPU
-Average swap time 17738.0 ns real, 8442.05 ns CPU
-
-real	0m0.132s
-user	0m0.139s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 64
-Total time 0.00158623 s real, 0.000196072 s CPU
-Average swap time 15862.3 ns real, 1960.72 ns CPU
-
-real	0m0.135s
-user	0m0.156s
-sys	0m0.038s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 64
-Total time 0.00124306 s real, 0.000210990 s CPU
-Average swap time 12430.6 ns real, 2109.90 ns CPU
-
-real	0m0.127s
-user	0m0.135s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 64
-Total time 0.00176134 s real, 0.000780666 s CPU
-Average swap time 17613.4 ns real, 7806.66 ns CPU
-
-real	0m0.129s
-user	0m0.141s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100 128
-Total time 0.00162322 s real, 0.000196266 s CPU
-Average swap time 16232.2 ns real, 1962.66 ns CPU
-
-real	0m0.142s
-user	0m0.154s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100 128
-Total time 0.00134814 s real, 0.000230537 s CPU
-Average swap time 13481.4 ns real, 2305.37 ns CPU
-
-real	0m0.129s
-user	0m0.135s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100 128
-Total time 0.00192236 s real, 0.000977367 s CPU
-Average swap time 19223.6 ns real, 9773.67 ns CPU
-
-real	0m0.143s
-user	0m0.156s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 1
-Total time 0.000355083 s real, 0.00000 s CPU
-Average swap time 35.5083 ns real, 0.00000 ns CPU
-
-real	0m0.143s
-user	0m0.153s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 1
-Total time 0.000246691 s real, 0.00000 s CPU
-Average swap time 24.6691 ns real, 0.00000 ns CPU
-
-real	0m0.129s
-user	0m0.141s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 1
-Total time 0.000323774 s real, 0.00000 s CPU
-Average swap time 32.3774 ns real, 0.00000 ns CPU
-
-real	0m0.128s
-user	0m0.126s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 2
-Total time 0.00485209 s real, 0.00380844 s CPU
-Average swap time 485.209 ns real, 380.844 ns CPU
-
-real	0m0.139s
-user	0m0.160s
-sys	0m0.038s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 2
-Total time 0.00428882 s real, 0.00319714 s CPU
-Average swap time 428.882 ns real, 319.714 ns CPU
-
-real	0m0.135s
 user	0m0.148s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 2
-Total time 0.00625649 s real, 0.00527529 s CPU
-Average swap time 625.649 ns real, 527.529 ns CPU
-
-real	0m0.149s
-user	0m0.178s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 4
-Total time 0.00405072 s real, 0.00296897 s CPU
-Average swap time 405.072 ns real, 296.897 ns CPU
-
-real	0m0.135s
-user	0m0.141s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 4
-Total time 0.00402082 s real, 0.00271321 s CPU
-Average swap time 402.082 ns real, 271.321 ns CPU
-
-real	0m0.150s
-user	0m0.154s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 4
-Total time 0.00655183 s real, 0.00555807 s CPU
-Average swap time 655.183 ns real, 555.807 ns CPU
-
-real	0m0.147s
-user	0m0.159s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 8
-Total time 0.00422158 s real, 0.00280796 s CPU
-Average swap time 422.158 ns real, 280.796 ns CPU
-
-real	0m0.132s
-user	0m0.149s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 8
-Total time 0.00399569 s real, 0.00288138 s CPU
-Average swap time 399.569 ns real, 288.138 ns CPU
-
-real	0m0.136s
-user	0m0.141s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 8
-Total time 0.00652372 s real, 0.00552343 s CPU
-Average swap time 652.372 ns real, 552.343 ns CPU
-
-real	0m0.167s
-user	0m0.166s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 16
-Total time 0.00393816 s real, 0.00270624 s CPU
-Average swap time 393.816 ns real, 270.624 ns CPU
-
-real	0m0.130s
-user	0m0.145s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 16
-Total time 0.00407597 s real, 0.00294230 s CPU
-Average swap time 407.597 ns real, 294.230 ns CPU
-
-real	0m0.130s
-user	0m0.145s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 16
-Total time 0.00664387 s real, 0.00569894 s CPU
-Average swap time 664.387 ns real, 569.894 ns CPU
-
-real	0m0.137s
-user	0m0.164s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 32
-Total time 0.00448994 s real, 0.00319104 s CPU
-Average swap time 448.994 ns real, 319.104 ns CPU
-
-real	0m0.132s
-user	0m0.139s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 32
-Total time 0.00396825 s real, 0.00264573 s CPU
-Average swap time 396.825 ns real, 264.573 ns CPU
-
-real	0m0.148s
-user	0m0.161s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 32
-Total time 0.00643331 s real, 0.00550613 s CPU
-Average swap time 643.331 ns real, 550.613 ns CPU
-
-real	0m0.152s
-user	0m0.164s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 64
-Total time 0.00405404 s real, 0.00283753 s CPU
-Average swap time 405.404 ns real, 283.753 ns CPU
-
-real	0m0.148s
-user	0m0.154s
 sys	0m0.055s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 64
-Total time 0.00387806 s real, 0.00270469 s CPU
-Average swap time 387.806 ns real, 270.469 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 10000 25
+Total time 0.00403182 s real, 0.00277107 s CPU
+Average swap time 403.182 ns real, 277.107 ns CPU
 
-real	0m0.131s
-user	0m0.149s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 64
-Total time 0.00689159 s real, 0.00585040 s CPU
-Average swap time 689.159 ns real, 585.040 ns CPU
-
-real	0m0.138s
-user	0m0.152s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 128
-Total time 0.00408680 s real, 0.00290510 s CPU
-Average swap time 408.680 ns real, 290.510 ns CPU
-
-real	0m0.131s
-user	0m0.144s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 128
-Total time 0.00397901 s real, 0.00273863 s CPU
-Average swap time 397.901 ns real, 273.863 ns CPU
-
-real	0m0.134s
-user	0m0.159s
-sys	0m0.036s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 128
-Total time 0.00718954 s real, 0.00602679 s CPU
-Average swap time 718.954 ns real, 602.679 ns CPU
-
-real	0m0.137s
-user	0m0.164s
-sys	0m0.040s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 1
-Total time 0.000269211 s real, 0.00000 s CPU
-Average swap time 0.269211 ns real, 0.00000 ns CPU
-
-real	0m0.129s
+real	0m0.130s
 user	0m0.143s
 sys	0m0.045s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 1
-Total time 0.000349798 s real, 0.00000 s CPU
-Average swap time 0.349798 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 25
+Total time 0.00409805 s real, 0.00274538 s CPU
+Average swap time 409.805 ns real, 274.538 ns CPU
 
-real	0m0.127s
-user	0m0.136s
-sys	0m0.050s
+real	0m0.132s
+user	0m0.138s
+sys	0m0.053s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 1
-Total time 0.000485705 s real, 0.00000 s CPU
-Average swap time 0.485705 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 25
+Total time 0.00408468 s real, 0.00271986 s CPU
+Average swap time 408.468 ns real, 271.986 ns CPU
 
-real	0m0.141s
-user	0m0.139s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 2
-Total time 0.0363998 s real, 0.0350748 s CPU
-Average swap time 36.3998 ns real, 35.0748 ns CPU
-
-real	0m0.164s
-user	0m0.186s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 2
-Total time 0.0237755 s real, 0.0226905 s CPU
-Average swap time 23.7755 ns real, 22.6905 ns CPU
-
-real	0m0.153s
-user	0m0.160s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 2
-Total time 0.0381741 s real, 0.0369417 s CPU
-Average swap time 38.1741 ns real, 36.9417 ns CPU
-
-real	0m0.171s
-user	0m0.198s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 4
-Total time 0.0307059 s real, 0.0293737 s CPU
-Average swap time 30.7059 ns real, 29.3737 ns CPU
-
-real	0m0.160s
-user	0m0.185s
+real	0m0.126s
+user	0m0.142s
 sys	0m0.047s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 4
-Total time 0.0243824 s real, 0.0229890 s CPU
-Average swap time 24.3824 ns real, 22.9890 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 25
+Total time 0.00650663 s real, 0.00557299 s CPU
+Average swap time 650.663 ns real, 557.299 ns CPU
 
-real	0m0.156s
-user	0m0.188s
-sys	0m0.043s
+real	0m0.131s
+user	0m0.153s
+sys	0m0.047s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 4
-Total time 0.0420016 s real, 0.0410021 s CPU
-Average swap time 42.0016 ns real, 41.0021 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 10000 100
+Total time 0.00395734 s real, 0.00285415 s CPU
+Average swap time 395.734 ns real, 285.415 ns CPU
 
-real	0m0.171s
-user	0m0.206s
-sys	0m0.040s
+real	0m0.130s
+user	0m0.142s
+sys	0m0.047s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 8
-Total time 0.0309635 s real, 0.0296170 s CPU
-Average swap time 30.9635 ns real, 29.6170 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 10000 100
+Total time 0.00404493 s real, 0.00268665 s CPU
+Average swap time 404.493 ns real, 268.665 ns CPU
 
-real	0m0.175s
-user	0m0.198s
-sys	0m0.046s
+real	0m0.132s
+user	0m0.140s
+sys	0m0.052s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 8
-Total time 0.0246529 s real, 0.0234672 s CPU
-Average swap time 24.6529 ns real, 23.4672 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 10000 100
+Total time 0.00407589 s real, 0.00269353 s CPU
+Average swap time 407.589 ns real, 269.353 ns CPU
 
-real	0m0.163s
-user	0m0.182s
-sys	0m0.046s
+real	0m0.129s
+user	0m0.139s
+sys	0m0.050s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 8
-Total time 0.0406181 s real, 0.0395384 s CPU
-Average swap time 40.6181 ns real, 39.5384 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 10000 100
+Total time 0.00677636 s real, 0.00579139 s CPU
+Average swap time 677.636 ns real, 579.139 ns CPU
 
-real	0m0.170s
-user	0m0.207s
-sys	0m0.043s
+real	0m0.137s
+user	0m0.147s
+sys	0m0.054s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 16
-Total time 0.0359692 s real, 0.0347525 s CPU
-Average swap time 35.9692 ns real, 34.7525 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 1000000 5
+Total time 0.0297369 s real, 0.0285381 s CPU
+Average swap time 29.7369 ns real, 28.5381 ns CPU
 
-real	0m0.167s
-user	0m0.193s
-sys	0m0.048s
+real	0m0.159s
+user	0m0.169s
+sys	0m0.051s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 16
-Total time 0.0266980 s real, 0.0255248 s CPU
-Average swap time 26.6980 ns real, 25.5248 ns CPU
-
-real	0m0.147s
-user	0m0.175s
-sys	0m0.042s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 16
-Total time 0.0387876 s real, 0.0376642 s CPU
-Average swap time 38.7876 ns real, 37.6642 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 5
+Total time 0.0389788 s real, 0.0376494 s CPU
+Average swap time 38.9788 ns real, 37.6494 ns CPU
 
 real	0m0.166s
-user	0m0.205s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 32
-Total time 0.0340886 s real, 0.0331252 s CPU
-Average swap time 34.0886 ns real, 33.1252 ns CPU
-
-real	0m0.174s
-user	0m0.199s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 32
-Total time 0.0240471 s real, 0.0228432 s CPU
-Average swap time 24.0471 ns real, 22.8432 ns CPU
-
-real	0m0.151s
-user	0m0.166s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 32
-Total time 0.0393744 s real, 0.0385137 s CPU
-Average swap time 39.3744 ns real, 38.5137 ns CPU
-
-real	0m0.167s
-user	0m0.194s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 64
-Total time 0.0362514 s real, 0.0351197 s CPU
-Average swap time 36.2514 ns real, 35.1197 ns CPU
-
-real	0m0.165s
-user	0m0.185s
+user	0m0.183s
 sys	0m0.050s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 64
-Total time 0.0293456 s real, 0.0282232 s CPU
-Average swap time 29.3456 ns real, 28.2232 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 5
+Total time 0.0323591 s real, 0.0308882 s CPU
+Average swap time 32.3591 ns real, 30.8882 ns CPU
 
-real	0m0.158s
-user	0m0.182s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 64
-Total time 0.0439096 s real, 0.0429745 s CPU
-Average swap time 43.9096 ns real, 42.9745 ns CPU
-
-real	0m0.187s
-user	0m0.191s
-sys	0m0.062s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 128
-Total time 0.0328162 s real, 0.0315652 s CPU
-Average swap time 32.8162 ns real, 31.5652 ns CPU
-
-real	0m0.170s
-user	0m0.183s
+real	0m0.171s
+user	0m0.194s
 sys	0m0.055s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 128
-Total time 0.0262699 s real, 0.0249829 s CPU
-Average swap time 26.2699 ns real, 24.9829 ns CPU
-
-real	0m0.154s
-user	0m0.171s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 128
-Total time 0.0383221 s real, 0.0372642 s CPU
-Average swap time 38.3221 ns real, 37.2642 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 5
+Total time 0.0439992 s real, 0.0429634 s CPU
+Average swap time 43.9992 ns real, 42.9634 ns CPU
 
 real	0m0.173s
-user	0m0.208s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 1
-Total time 0.000292594 s real, 0.00000 s CPU
-Average swap time 0.00292594 ns real, 0.00000 ns CPU
-
-real	0m0.130s
-user	0m0.129s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 1
-Total time 0.000423670 s real, 0.00000 s CPU
-Average swap time 0.00423670 ns real, 0.00000 ns CPU
-
-real	0m0.126s
-user	0m0.128s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 1
-Total time 0.000349625 s real, 0.00000 s CPU
-Average swap time 0.00349625 ns real, 0.00000 ns CPU
-
-real	0m0.130s
-user	0m0.147s
-sys	0m0.036s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 2
-Total time 1.57005 s real, 1.56870 s CPU
-Average swap time 15.7005 ns real, 15.6870 ns CPU
-
-real	0m1.725s
-user	0m1.711s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 2
-Total time 0.725256 s real, 0.724179 s CPU
-Average swap time 7.25256 ns real, 7.24179 ns CPU
-
-real	0m0.887s
-user	0m0.875s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 2
-Total time 1.65224 s real, 1.65078 s CPU
-Average swap time 16.5224 ns real, 16.5078 ns CPU
-
-real	0m1.794s
-user	0m1.819s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 4
-Total time 1.38906 s real, 1.38757 s CPU
-Average swap time 13.8906 ns real, 13.8757 ns CPU
-
-real	0m1.529s
-user	0m1.549s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 4
-Total time 0.719288 s real, 0.718202 s CPU
-Average swap time 7.19288 ns real, 7.18202 ns CPU
-
-real	0m0.850s
-user	0m0.862s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 4
-Total time 1.62986 s real, 1.62833 s CPU
-Average swap time 16.2986 ns real, 16.2833 ns CPU
-
-real	0m1.782s
-user	0m1.803s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 8
-Total time 1.48098 s real, 1.47975 s CPU
-Average swap time 14.8098 ns real, 14.7975 ns CPU
-
-real	0m1.621s
-user	0m1.594s
-sys	0m0.085s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 8
-Total time 0.861119 s real, 0.859515 s CPU
-Average swap time 8.61119 ns real, 8.59515 ns CPU
-
-real	0m0.989s
-user	0m1.008s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 8
-Total time 1.62732 s real, 1.62601 s CPU
-Average swap time 16.2732 ns real, 16.2601 ns CPU
-
-real	0m1.774s
-user	0m1.801s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 16
-Total time 1.77791 s real, 1.77639 s CPU
-Average swap time 17.7791 ns real, 17.7639 ns CPU
-
-real	0m1.921s
-user	0m1.946s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 16
-Total time 0.738951 s real, 0.737468 s CPU
-Average swap time 7.38951 ns real, 7.37468 ns CPU
-
-real	0m0.882s
-user	0m0.877s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 16
-Total time 1.83142 s real, 1.82993 s CPU
-Average swap time 18.3142 ns real, 18.2993 ns CPU
-
-real	0m1.964s
-user	0m1.939s
-sys	0m0.097s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 32
-Total time 1.78945 s real, 1.78785 s CPU
-Average swap time 17.8945 ns real, 17.8785 ns CPU
-
-real	0m1.922s
-user	0m1.884s
-sys	0m0.110s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 32
-Total time 0.690936 s real, 0.689502 s CPU
-Average swap time 6.90936 ns real, 6.89502 ns CPU
-
-real	0m0.823s
-user	0m0.849s
-sys	0m0.040s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 32
-Total time 1.79309 s real, 1.78731 s CPU
-Average swap time 17.9309 ns real, 17.8731 ns CPU
-
-real	0m1.932s
-user	0m1.893s
-sys	0m0.109s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 64
-Total time 1.77303 s real, 1.77164 s CPU
-Average swap time 17.7303 ns real, 17.7164 ns CPU
-
-real	0m1.903s
-user	0m1.881s
-sys	0m0.094s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 64
-Total time 0.959094 s real, 0.956575 s CPU
-Average swap time 9.59094 ns real, 9.56575 ns CPU
-
-real	0m1.091s
-user	0m1.089s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 64
-Total time 1.78107 s real, 1.77942 s CPU
-Average swap time 17.8107 ns real, 17.7942 ns CPU
-
-real	0m1.925s
-user	0m1.898s
-sys	0m0.094s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 128
-Total time 1.53720 s real, 1.53584 s CPU
-Average swap time 15.3720 ns real, 15.3584 ns CPU
-
-real	0m1.706s
-user	0m1.706s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 128
-Total time 0.907228 s real, 0.905953 s CPU
-Average swap time 9.07228 ns real, 9.05953 ns CPU
-
-real	0m1.037s
-user	0m1.066s
-sys	0m0.037s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 128
-Total time 1.65502 s real, 1.65358 s CPU
-Average swap time 16.5502 ns real, 16.5358 ns CPU
-
-real	0m1.797s
-user	0m1.825s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 1
-Total time 0.000613070 s real, 0.00000 s CPU
-Average swap time 12261.4 ns real, 0.00000 ns CPU
-
-real	0m0.140s
-user	0m0.129s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 1
-Total time 0.000598609 s real, 0.00000 s CPU
-Average swap time 11972.2 ns real, 0.00000 ns CPU
-
-real	0m0.127s
-user	0m0.131s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 1
-Total time 0.000734491 s real, 0.00000 s CPU
-Average swap time 14689.8 ns real, 0.00000 ns CPU
-
-real	0m0.148s
-user	0m0.140s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 2
-Total time 0.00210016 s real, 0.000449990 s CPU
-Average swap time 42003.2 ns real, 4499.90 ns CPU
-
-real	0m0.135s
-user	0m0.144s
+user	0m0.202s
 sys	0m0.045s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 2
-Total time 0.00179950 s real, 0.000304821 s CPU
-Average swap time 35989.9 ns real, 3048.21 ns CPU
-
-real	0m0.141s
-user	0m0.146s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 2
-Total time 0.00221306 s real, 0.00119059 s CPU
-Average swap time 44261.3 ns real, 11905.9 ns CPU
-
-real	0m0.136s
-user	0m0.143s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 4
-Total time 0.00170324 s real, 0.000438045 s CPU
-Average swap time 34064.7 ns real, 4380.45 ns CPU
-
-real	0m0.135s
-user	0m0.140s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 4
-Total time 0.00196836 s real, 0.000427667 s CPU
-Average swap time 39367.2 ns real, 4276.67 ns CPU
-output sum mismatch (1 != 0)
-
-real	0m0.130s
-user	0m0.138s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 4
-Total time 0.00254633 s real, 0.00153267 s CPU
-Average swap time 50926.6 ns real, 15326.7 ns CPU
-
-real	0m0.152s
-user	0m0.132s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 8
-Total time 0.00196366 s real, 0.000408931 s CPU
-Average swap time 39273.2 ns real, 4089.31 ns CPU
-
-real	0m0.128s
-user	0m0.135s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 8
-Total time 0.00154458 s real, 0.000375473 s CPU
-Average swap time 30891.6 ns real, 3754.73 ns CPU
-
-real	0m0.144s
-user	0m0.144s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 8
-Total time 0.00262173 s real, 0.00161415 s CPU
-Average swap time 52434.7 ns real, 16141.5 ns CPU
-
-real	0m0.135s
-user	0m0.149s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 16
-Total time 0.00189231 s real, 0.000382948 s CPU
-Average swap time 37846.2 ns real, 3829.48 ns CPU
-
-real	0m0.135s
-user	0m0.138s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 16
-Total time 0.00193087 s real, 0.000406469 s CPU
-Average swap time 38617.5 ns real, 4064.69 ns CPU
-
-real	0m0.128s
-user	0m0.145s
-sys	0m0.038s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 16
-Total time 0.00236977 s real, 0.00148577 s CPU
-Average swap time 47395.3 ns real, 14857.7 ns CPU
-
-real	0m0.147s
-user	0m0.153s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 32
-Total time 0.00197872 s real, 0.000420598 s CPU
-Average swap time 39574.4 ns real, 4205.98 ns CPU
-
-real	0m0.132s
-user	0m0.143s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 32
-Total time 0.00148735 s real, 0.000349344 s CPU
-Average swap time 29747.0 ns real, 3493.44 ns CPU
-
-real	0m0.134s
-user	0m0.128s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 32
-Total time 0.00244061 s real, 0.00123479 s CPU
-Average swap time 48812.2 ns real, 12347.9 ns CPU
-
-real	0m0.132s
-user	0m0.137s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 64
-Total time 0.00179496 s real, 0.000432571 s CPU
-Average swap time 35899.2 ns real, 4325.71 ns CPU
-
-real	0m0.132s
-user	0m0.125s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 64
-Total time 0.00172992 s real, 0.000407047 s CPU
-Average swap time 34598.4 ns real, 4070.47 ns CPU
-output sum mismatch (-1 != 0)
-
-real	0m0.134s
-user	0m0.145s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 64
-Total time 0.00188935 s real, 0.00133561 s CPU
-Average swap time 37787.0 ns real, 13356.1 ns CPU
-
-real	0m0.150s
-user	0m0.149s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100 128
-Total time 0.00193071 s real, 0.000349039 s CPU
-Average swap time 38614.2 ns real, 3490.39 ns CPU
-
-real	0m0.149s
-user	0m0.154s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100 128
-Total time 0.00174722 s real, 0.000364292 s CPU
-Average swap time 34944.3 ns real, 3642.92 ns CPU
-
-real	0m0.135s
-user	0m0.139s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100 128
-Total time 0.00249411 s real, 0.00140286 s CPU
-Average swap time 49882.3 ns real, 14028.6 ns CPU
-
-real	0m0.133s
-user	0m0.147s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 1
-Total time 0.000527390 s real, 0.00000 s CPU
-Average swap time 105.478 ns real, 0.00000 ns CPU
-
-real	0m0.130s
-user	0m0.132s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 1
-Total time 0.000723435 s real, 0.00000 s CPU
-Average swap time 144.687 ns real, 0.00000 ns CPU
-
-real	0m0.128s
-user	0m0.131s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 1
-Total time 0.000637143 s real, 0.00000 s CPU
-Average swap time 127.429 ns real, 0.00000 ns CPU
-
-real	0m0.149s
-user	0m0.158s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 2
-Total time 0.00742370 s real, 0.0117131 s CPU
-Average swap time 1484.74 ns real, 1171.31 ns CPU
-
-real	0m0.141s
-user	0m0.166s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 2
-Total time 0.00607352 s real, 0.00909433 s CPU
-Average swap time 1214.70 ns real, 909.433 ns CPU
-output sum mismatch (19 != 0)
-
-real	0m0.138s
-user	0m0.151s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 2
-Total time 0.0133057 s real, 0.0229485 s CPU
-Average swap time 2661.13 ns real, 2294.85 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 1000000 25
+Total time 0.0299602 s real, 0.0288124 s CPU
+Average swap time 29.9602 ns real, 28.8124 ns CPU
 
 real	0m0.157s
-user	0m0.175s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 4
-Total time 0.00758947 s real, 0.0111491 s CPU
-Average swap time 1517.89 ns real, 1114.91 ns CPU
-
-real	0m0.139s
-user	0m0.152s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 4
-Total time 0.00770083 s real, 0.0120540 s CPU
-Average swap time 1540.17 ns real, 1205.40 ns CPU
-output sum mismatch (7 != 0)
-
-real	0m0.163s
-user	0m0.178s
-sys	0m0.042s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 4
-Total time 0.0135446 s real, 0.0234735 s CPU
-Average swap time 2708.92 ns real, 2347.35 ns CPU
-
-real	0m0.146s
-user	0m0.178s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 8
-Total time 0.00843890 s real, 0.0123177 s CPU
-Average swap time 1687.78 ns real, 1231.77 ns CPU
-
-real	0m0.142s
-user	0m0.159s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 8
-Total time 0.00663237 s real, 0.00989531 s CPU
-Average swap time 1326.47 ns real, 989.531 ns CPU
-output sum mismatch (22 != 0)
-
-real	0m0.146s
-user	0m0.155s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 8
-Total time 0.0130129 s real, 0.0224256 s CPU
-Average swap time 2602.58 ns real, 2242.56 ns CPU
-
-real	0m0.149s
-user	0m0.178s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 16
-Total time 0.00735376 s real, 0.0117241 s CPU
-Average swap time 1470.75 ns real, 1172.41 ns CPU
-
-real	0m0.137s
-user	0m0.156s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 16
-Total time 0.00441700 s real, 0.00525170 s CPU
-Average swap time 883.400 ns real, 525.170 ns CPU
-output sum mismatch (17 != 0)
-
-real	0m0.152s
-user	0m0.157s
+user	0m0.172s
 sys	0m0.049s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 16
-Total time 0.00695073 s real, 0.0105924 s CPU
-Average swap time 1390.15 ns real, 1059.24 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 25
+Total time 0.0460663 s real, 0.0447932 s CPU
+Average swap time 46.0663 ns real, 44.7932 ns CPU
 
-real	0m0.145s
-user	0m0.170s
-sys	0m0.052s
+real	0m0.174s
+user	0m0.191s
+sys	0m0.051s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 32
-Total time 0.00552660 s real, 0.00670696 s CPU
-Average swap time 1105.32 ns real, 670.696 ns CPU
-
-real	0m0.144s
-user	0m0.158s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 32
-Total time 0.00440227 s real, 0.00544271 s CPU
-Average swap time 880.453 ns real, 544.271 ns CPU
-output sum mismatch (-2 != 0)
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 25
+Total time 0.0324009 s real, 0.0311873 s CPU
+Average swap time 32.4009 ns real, 31.1873 ns CPU
 
 real	0m0.160s
-user	0m0.156s
-sys	0m0.057s
+user	0m0.179s
+sys	0m0.043s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 32
-Total time 0.00771131 s real, 0.0124154 s CPU
-Average swap time 1542.26 ns real, 1241.54 ns CPU
-
-real	0m0.140s
-user	0m0.174s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 64
-Total time 0.00564496 s real, 0.00702476 s CPU
-Average swap time 1128.99 ns real, 702.476 ns CPU
-
-real	0m0.148s
-user	0m0.162s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 64
-Total time 0.00722348 s real, 0.0110841 s CPU
-Average swap time 1444.70 ns real, 1108.41 ns CPU
-output sum mismatch (13 != 0)
-
-real	0m0.196s
-user	0m0.155s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 64
-Total time 0.0127178 s real, 0.0210154 s CPU
-Average swap time 2543.57 ns real, 2101.54 ns CPU
-
-real	0m0.201s
-user	0m0.174s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 10000 128
-Total time 0.00888665 s real, 0.0137685 s CPU
-Average swap time 1777.33 ns real, 1376.85 ns CPU
-
-real	0m0.186s
-user	0m0.171s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 10000 128
-Total time 0.00429871 s real, 0.00543829 s CPU
-Average swap time 859.742 ns real, 543.829 ns CPU
-output sum mismatch (-2 != 0)
-
-real	0m0.136s
-user	0m0.151s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 10000 128
-Total time 0.00733649 s real, 0.0116102 s CPU
-Average swap time 1467.30 ns real, 1161.02 ns CPU
-
-real	0m0.153s
-user	0m0.160s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 1
-Total time 0.000671730 s real, 0.00000 s CPU
-Average swap time 1.34346 ns real, 0.00000 ns CPU
-
-real	0m0.133s
-user	0m0.149s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 1
-Total time 0.000506216 s real, 0.00000 s CPU
-Average swap time 1.01243 ns real, 0.00000 ns CPU
-
-real	0m0.147s
-user	0m0.147s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 1
-Total time 0.000654582 s real, 0.00000 s CPU
-Average swap time 1.30916 ns real, 0.00000 ns CPU
-
-real	0m0.149s
-user	0m0.143s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 2
-Total time 0.189261 s real, 0.368656 s CPU
-Average swap time 378.522 ns real, 368.656 ns CPU
-
-real	0m0.318s
-user	0m0.512s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 2
-Total time 0.0539993 s real, 0.103723 s CPU
-Average swap time 107.999 ns real, 103.723 ns CPU
-output sum mismatch (-160 != 0)
-
-real	0m0.188s
-user	0m0.259s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 2
-Total time 0.0682025 s real, 0.128462 s CPU
-Average swap time 136.405 ns real, 128.462 ns CPU
-
-real	0m0.199s
-user	0m0.276s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 4
-Total time 0.127950 s real, 0.239973 s CPU
-Average swap time 255.900 ns real, 239.973 ns CPU
-
-real	0m0.255s
-user	0m0.369s
-sys	0m0.078s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 4
-Total time 0.0427246 s real, 0.0796989 s CPU
-Average swap time 85.4493 ns real, 79.6989 ns CPU
-output sum mismatch (-394 != 0)
-
-real	0m0.187s
-user	0m0.232s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 4
-Total time 0.0841464 s real, 0.159238 s CPU
-Average swap time 168.293 ns real, 159.238 ns CPU
-
-real	0m0.214s
-user	0m0.310s
-sys	0m0.059s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 8
-Total time 0.179743 s real, 0.350836 s CPU
-Average swap time 359.487 ns real, 350.836 ns CPU
-
-real	0m0.323s
-user	0m0.500s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 8
-Total time 0.0803160 s real, 0.156880 s CPU
-Average swap time 160.632 ns real, 156.880 ns CPU
-output sum mismatch (689 != 0)
-
-real	0m0.212s
-user	0m0.300s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 8
-Total time 0.0739837 s real, 0.144566 s CPU
-Average swap time 147.967 ns real, 144.566 ns CPU
-
-real	0m0.202s
-user	0m0.298s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 16
-Total time 0.159495 s real, 0.310720 s CPU
-Average swap time 318.990 ns real, 310.720 ns CPU
-
-real	0m0.298s
-user	0m0.444s
-sys	0m0.072s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 16
-Total time 0.0880748 s real, 0.172547 s CPU
-Average swap time 176.150 ns real, 172.547 ns CPU
-output sum mismatch (-90 != 0)
-
-real	0m0.219s
-user	0m0.328s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 16
-Total time 0.162313 s real, 0.317773 s CPU
-Average swap time 324.625 ns real, 317.773 ns CPU
-
-real	0m0.301s
-user	0m0.490s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 32
-Total time 0.192240 s real, 0.375802 s CPU
-Average swap time 384.480 ns real, 375.802 ns CPU
-
-real	0m0.327s
-user	0m0.528s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 32
-Total time 0.0368933 s real, 0.0694412 s CPU
-Average swap time 73.7867 ns real, 69.4412 ns CPU
-output sum mismatch (-303 != 0)
-
-real	0m0.176s
-user	0m0.230s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 32
-Total time 0.129691 s real, 0.252374 s CPU
-Average swap time 259.383 ns real, 252.374 ns CPU
-
-real	0m0.260s
-user	0m0.421s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 64
-Total time 0.0940314 s real, 0.183003 s CPU
-Average swap time 188.063 ns real, 183.003 ns CPU
-
-real	0m0.229s
-user	0m0.343s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 64
-Total time 0.0370563 s real, 0.0702939 s CPU
-Average swap time 74.1125 ns real, 70.2939 ns CPU
-output sum mismatch (-266 != 0)
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 25
+Total time 0.0469211 s real, 0.0457554 s CPU
+Average swap time 46.9211 ns real, 45.7554 ns CPU
 
 real	0m0.174s
-user	0m0.239s
-sys	0m0.034s
+user	0m0.212s
+sys	0m0.041s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 64
-Total time 0.145066 s real, 0.284910 s CPU
-Average swap time 290.131 ns real, 284.910 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 1000000 100
+Total time 0.0300251 s real, 0.0289678 s CPU
+Average swap time 30.0251 ns real, 28.9678 ns CPU
 
-real	0m0.294s
-user	0m0.451s
-sys	0m0.045s
+real	0m0.153s
+user	0m0.178s
+sys	0m0.042s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 2 1000000 128
-Total time 0.213395 s real, 0.419523 s CPU
-Average swap time 426.789 ns real, 419.523 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 1 1000000 100
+Total time 0.0447871 s real, 0.0433991 s CPU
+Average swap time 44.7871 ns real, 43.3991 ns CPU
 
-real	0m0.345s
-user	0m0.568s
-sys	0m0.054s
+real	0m0.180s
+user	0m0.192s
+sys	0m0.051s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 1000000 128
-Total time 0.0761216 s real, 0.148245 s CPU
-Average swap time 152.243 ns real, 148.245 ns CPU
-output sum mismatch (21 != 0)
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 1000000 100
+Total time 0.0345277 s real, 0.0332809 s CPU
+Average swap time 34.5277 ns real, 33.2809 ns CPU
 
-real	0m0.213s
-user	0m0.299s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 1000000 128
-Total time 0.0488426 s real, 0.0938580 s CPU
-Average swap time 97.6853 ns real, 93.8580 ns CPU
-
-real	0m0.185s
-user	0m0.260s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 1
-Total time 0.000561656 s real, 0.00000 s CPU
-Average swap time 0.0112331 ns real, 0.00000 ns CPU
-
-real	0m0.148s
-user	0m0.129s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 1
-Total time 0.000641027 s real, 0.00000 s CPU
-Average swap time 0.0128205 ns real, 0.00000 ns CPU
-
-real	0m0.127s
-user	0m0.134s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 1
-Total time 0.000461045 s real, 0.00000 s CPU
-Average swap time 0.00922090 ns real, 0.00000 ns CPU
-
-real	0m0.152s
-user	0m0.143s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 2
-Total time 9.35673 s real, 17.8891 s CPU
-Average swap time 187.135 ns real, 178.891 ns CPU
-
-real	0m9.490s
-user	0m17.705s
-sys	0m0.397s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 2
-Total time 1.22989 s real, 2.14800 s CPU
-Average swap time 24.5977 ns real, 21.4800 ns CPU
-output sum mismatch (-77285 != 0)
-
-real	0m1.372s
-user	0m2.299s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 2
-Total time 5.38879 s real, 10.2639 s CPU
-Average swap time 107.776 ns real, 102.639 ns CPU
-
-real	0m5.525s
-user	0m10.300s
-sys	0m0.183s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 4
-Total time 13.5953 s real, 26.9714 s CPU
-Average swap time 271.905 ns real, 269.714 ns CPU
-
-real	0m13.735s
-user	0m26.939s
-sys	0m0.243s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 4
-Total time 1.21038 s real, 2.27785 s CPU
-Average swap time 24.2076 ns real, 22.7785 ns CPU
-output sum mismatch (-14231 != 0)
-
-real	0m1.348s
-user	0m2.443s
+real	0m0.162s
+user	0m0.182s
 sys	0m0.044s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 4
-Total time 5.84743 s real, 11.4997 s CPU
-Average swap time 116.949 ns real, 114.997 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 1000000 100
+Total time 0.0455386 s real, 0.0443047 s CPU
+Average swap time 45.5386 ns real, 44.3047 ns CPU
 
-real	0m5.987s
-user	0m11.675s
-sys	0m0.048s
+real	0m0.174s
+user	0m0.211s
+sys	0m0.046s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 8
-Total time 11.9399 s real, 23.3642 s CPU
-Average swap time 238.797 ns real, 233.642 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 1 100000000 5
+Total time 1.41602 s real, 1.41471 s CPU
+Average swap time 14.1602 ns real, 14.1471 ns CPU
 
-real	0m12.084s
-user	0m23.031s
-sys	0m0.559s
+real	0m1.544s
+user	0m1.567s
+sys	0m0.040s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 8
-Total time 2.14871 s real, 4.25200 s CPU
-Average swap time 42.9742 ns real, 42.5200 ns CPU
-output sum mismatch (-10330 != 0)
+$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 5
+Total time 2.27044 s real, 2.26839 s CPU
+Average swap time 22.7044 ns real, 22.6839 ns CPU
 
-real	0m2.284s
-user	0m4.360s
-sys	0m0.100s
+real	0m2.401s
+user	0m2.432s
+sys	0m0.056s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 8
-Total time 3.81827 s real, 7.40996 s CPU
-Average swap time 76.3655 ns real, 74.0996 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 5
+Total time 1.60322 s real, 1.60136 s CPU
+Average swap time 16.0322 ns real, 16.0136 ns CPU
 
-real	0m3.966s
-user	0m7.484s
-sys	0m0.159s
+real	0m1.734s
+user	0m1.750s
+sys	0m0.050s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 16
-Total time 12.8685 s real, 25.3171 s CPU
-Average swap time 257.369 ns real, 253.171 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 5
+Total time 2.28384 s real, 2.28193 s CPU
+Average swap time 22.8384 ns real, 22.8193 ns CPU
 
-real	0m13.005s
-user	0m24.941s
-sys	0m0.587s
+real	0m2.416s
+user	0m2.442s
+sys	0m0.051s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 16
-Total time 2.47490 s real, 4.89147 s CPU
-Average swap time 49.4980 ns real, 48.9147 ns CPU
-output sum mismatch (-7935 != 0)
+$ time timeout 3600 java UnsafeMemory Null 1 100000000 25
+Total time 1.37171 s real, 1.37008 s CPU
+Average swap time 13.7171 ns real, 13.7008 ns CPU
+
+real	0m1.501s
+user	0m1.531s
+sys	0m0.039s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 25
+Total time 2.67129 s real, 2.66956 s CPU
+Average swap time 26.7129 ns real, 26.6956 ns CPU
+
+real	0m2.803s
+user	0m2.818s
+sys	0m0.062s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 25
+Total time 2.28613 s real, 2.28415 s CPU
+Average swap time 22.8613 ns real, 22.8415 ns CPU
+
+real	0m2.416s
+user	0m2.439s
+sys	0m0.051s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 25
+Total time 2.58680 s real, 2.58481 s CPU
+Average swap time 25.8680 ns real, 25.8481 ns CPU
+
+real	0m2.728s
+user	0m2.748s
+sys	0m0.056s
+
+$ time timeout 3600 java UnsafeMemory Null 1 100000000 100
+Total time 1.40588 s real, 1.40450 s CPU
+Average swap time 14.0588 ns real, 14.0450 ns CPU
+
+real	0m1.537s
+user	0m1.550s
+sys	0m0.049s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 1 100000000 100
+Total time 2.59629 s real, 2.59436 s CPU
+Average swap time 25.9629 ns real, 25.9436 ns CPU
+
+real	0m2.728s
+user	0m2.747s
+sys	0m0.059s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 1 100000000 100
+Total time 1.89141 s real, 1.88981 s CPU
+Average swap time 18.9141 ns real, 18.8981 ns CPU
+
+real	0m2.019s
+user	0m2.042s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 1 100000000 100
+Total time 2.48004 s real, 2.47820 s CPU
+Average swap time 24.8004 ns real, 24.7820 ns CPU
 
 real	0m2.615s
-user	0m4.981s
-sys	0m0.115s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 16
-Total time 10.6532 s real, 21.1273 s CPU
-Average swap time 213.064 ns real, 211.273 ns CPU
-
-real	0m10.799s
-user	0m21.238s
-sys	0m0.116s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 32
-Total time 10.7495 s real, 21.4481 s CPU
-Average swap time 214.989 ns real, 214.481 ns CPU
-
-real	0m10.883s
-user	0m21.165s
-sys	0m0.493s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 32
-Total time 3.54788 s real, 6.90345 s CPU
-Average swap time 70.9576 ns real, 69.0345 ns CPU
-output sum mismatch (11230 != 0)
-
-real	0m3.692s
-user	0m6.961s
-sys	0m0.156s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 32
-Total time 7.90523 s real, 15.6278 s CPU
-Average swap time 158.105 ns real, 156.278 ns CPU
-
-real	0m8.052s
-user	0m15.806s
-sys	0m0.059s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 64
-Total time 14.1046 s real, 28.1736 s CPU
-Average swap time 282.093 ns real, 281.736 ns CPU
-
-real	0m14.236s
-user	0m28.070s
-sys	0m0.312s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 64
-Total time 2.00400 s real, 3.97717 s CPU
-Average swap time 40.0800 ns real, 39.7717 ns CPU
-output sum mismatch (14255 != 0)
-
-real	0m2.140s
-user	0m4.132s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 64
-Total time 7.31335 s real, 14.4173 s CPU
-Average swap time 146.267 ns real, 144.173 ns CPU
-
-real	0m7.452s
-user	0m14.586s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 2 100000000 128
-Total time 12.9521 s real, 25.8016 s CPU
-Average swap time 259.041 ns real, 258.016 ns CPU
-
-real	0m13.092s
-user	0m25.612s
-sys	0m0.411s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 2 100000000 128
-Total time 5.23491 s real, 10.4022 s CPU
-Average swap time 104.698 ns real, 104.022 ns CPU
-output sum mismatch (-11253 != 0)
-
-real	0m5.375s
-user	0m10.537s
-sys	0m0.078s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 2 100000000 128
-Total time 4.80301 s real, 9.31122 s CPU
-Average swap time 96.0603 ns real, 93.1122 ns CPU
-
-real	0m4.953s
-user	0m9.491s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 1
-Total time 0.000981062 s real, 0.00000 s CPU
-Average swap time 39242.5 ns real, 0.00000 ns CPU
-
-real	0m0.145s
-user	0m0.140s
+user	0m2.651s
 sys	0m0.052s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 1
-Total time 0.00111687 s real, 0.00000 s CPU
-Average swap time 44674.8 ns real, 0.00000 ns CPU
-
-real	0m0.144s
-user	0m0.136s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 1
-Total time 0.00144953 s real, 0.00000 s CPU
-Average swap time 57981.2 ns real, 0.00000 ns CPU
-
-real	0m0.148s
-user	0m0.150s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 2
-Total time 0.00189578 s real, 0.000586091 s CPU
-Average swap time 75831.3 ns real, 5860.91 ns CPU
-
-real	0m0.143s
-user	0m0.148s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 2
-Total time 0.00230196 s real, 0.000474912 s CPU
-Average swap time 92078.6 ns real, 4749.12 ns CPU
-output sum mismatch (-4 != 0)
-
-real	0m0.129s
-user	0m0.144s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 2
-Total time 0.00276401 s real, 0.00214170 s CPU
-Average swap time 110560 ns real, 21417.0 ns CPU
-
-real	0m0.133s
-user	0m0.137s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 4
-Total time 0.00218730 s real, 0.000567404 s CPU
-Average swap time 87491.8 ns real, 5674.04 ns CPU
-
-real	0m0.143s
-user	0m0.152s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 4
-Total time 0.00201176 s real, 0.000459257 s CPU
-Average swap time 80470.2 ns real, 4592.57 ns CPU
-output sum mismatch (-2 != 0)
-
-real	0m0.162s
-user	0m0.156s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 4
-Total time 0.00270326 s real, 0.00225898 s CPU
-Average swap time 108130 ns real, 22589.8 ns CPU
-
-real	0m0.137s
-user	0m0.143s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 8
-Total time 0.00237289 s real, 0.000629565 s CPU
-Average swap time 94915.4 ns real, 6295.65 ns CPU
-
-real	0m0.134s
-user	0m0.132s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 8
-Total time 0.00198554 s real, 0.000445672 s CPU
-Average swap time 79421.8 ns real, 4456.72 ns CPU
-output sum mismatch (-3 != 0)
-
-real	0m0.128s
-user	0m0.138s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 8
-Total time 0.00259244 s real, 0.00218520 s CPU
-Average swap time 103698 ns real, 21852.0 ns CPU
-
-real	0m0.144s
-user	0m0.159s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 16
-Total time 0.00243774 s real, 0.000615861 s CPU
-Average swap time 97509.5 ns real, 6158.61 ns CPU
-
-real	0m0.137s
-user	0m0.143s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 16
-Total time 0.00194000 s real, 0.000435351 s CPU
-Average swap time 77599.8 ns real, 4353.51 ns CPU
-output sum mismatch (1 != 0)
-
-real	0m0.141s
-user	0m0.139s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 16
-Total time 0.00284635 s real, 0.00249155 s CPU
-Average swap time 113854 ns real, 24915.5 ns CPU
-
-real	0m0.129s
-user	0m0.157s
-sys	0m0.031s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 32
-Total time 0.00244893 s real, 0.000696084 s CPU
-Average swap time 97957.2 ns real, 6960.84 ns CPU
-
-real	0m0.132s
-user	0m0.139s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 32
-Total time 0.00221909 s real, 0.000455572 s CPU
-Average swap time 88763.4 ns real, 4555.72 ns CPU
-output sum mismatch (3 != 0)
-
-real	0m0.134s
-user	0m0.146s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 32
-Total time 0.00266558 s real, 0.00228384 s CPU
-Average swap time 106623 ns real, 22838.4 ns CPU
-
-real	0m0.135s
-user	0m0.149s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 64
-Total time 0.00229970 s real, 0.000707861 s CPU
-Average swap time 91988.1 ns real, 7078.61 ns CPU
-
-real	0m0.144s
-user	0m0.148s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 64
-Total time 0.00192885 s real, 0.000500199 s CPU
-Average swap time 77154.1 ns real, 5001.99 ns CPU
-output sum mismatch (-1 != 0)
-
-real	0m0.133s
-user	0m0.150s
-sys	0m0.038s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 64
-Total time 0.00270363 s real, 0.00216800 s CPU
-Average swap time 108145 ns real, 21680.0 ns CPU
-
-real	0m0.141s
-user	0m0.137s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100 128
-Total time 0.00189353 s real, 0.000524560 s CPU
-Average swap time 75741.2 ns real, 5245.60 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 8 100 5
+Total time 0.00465508 s real, 0.000622017 s CPU
+Average swap time 372406 ns real, 6220.17 ns CPU
 
 real	0m0.138s
-user	0m0.135s
-sys	0m0.059s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100 128
-Total time 0.00191011 s real, 0.000472868 s CPU
-Average swap time 76404.3 ns real, 4728.68 ns CPU
-
-real	0m0.134s
-user	0m0.132s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100 128
-Total time 0.00242803 s real, 0.00201626 s CPU
-Average swap time 97121.3 ns real, 20162.6 ns CPU
-
-real	0m0.148s
-user	0m0.163s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 1
-Total time 0.00100279 s real, 0.00000 s CPU
-Average swap time 401.117 ns real, 0.00000 ns CPU
-
-real	0m0.132s
-user	0m0.138s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 1
-Total time 0.00106849 s real, 0.00000 s CPU
-Average swap time 427.397 ns real, 0.00000 ns CPU
-
-real	0m0.126s
-user	0m0.142s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 1
-Total time 0.00116046 s real, 0.00000 s CPU
-Average swap time 464.184 ns real, 0.00000 ns CPU
-
-real	0m0.145s
-user	0m0.149s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 2
-Total time 0.00780784 s real, 0.0220048 s CPU
-Average swap time 3123.13 ns real, 2200.48 ns CPU
-
-real	0m0.140s
-user	0m0.165s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 2
-Total time 0.00818596 s real, 0.0243923 s CPU
-Average swap time 3274.39 ns real, 2439.23 ns CPU
-output sum mismatch (-39 != 0)
-
-real	0m0.149s
-user	0m0.169s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 2
-Total time 0.0134286 s real, 0.0432400 s CPU
-Average swap time 5371.44 ns real, 4324.00 ns CPU
-
-real	0m0.146s
-user	0m0.184s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 4
-Total time 0.00819691 s real, 0.0215120 s CPU
-Average swap time 3278.76 ns real, 2151.20 ns CPU
-
-real	0m0.139s
-user	0m0.165s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 4
-Total time 0.00776291 s real, 0.0231090 s CPU
-Average swap time 3105.17 ns real, 2310.90 ns CPU
-output sum mismatch (-29 != 0)
-
-real	0m0.145s
-user	0m0.164s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 4
-Total time 0.0145408 s real, 0.0485552 s CPU
-Average swap time 5816.33 ns real, 4855.52 ns CPU
-
-real	0m0.143s
-user	0m0.206s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 8
-Total time 0.00883748 s real, 0.0241515 s CPU
-Average swap time 3534.99 ns real, 2415.15 ns CPU
-
-real	0m0.135s
-user	0m0.175s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 8
-Total time 0.00883157 s real, 0.0277536 s CPU
-Average swap time 3532.63 ns real, 2775.36 ns CPU
-output sum mismatch (42 != 0)
-
-real	0m0.140s
-user	0m0.170s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 8
-Total time 0.0141910 s real, 0.0474530 s CPU
-Average swap time 5676.42 ns real, 4745.30 ns CPU
-
-real	0m0.157s
-user	0m0.202s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 16
-Total time 0.00903103 s real, 0.0244705 s CPU
-Average swap time 3612.41 ns real, 2447.05 ns CPU
-
-real	0m0.145s
-user	0m0.174s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 16
-Total time 0.00853762 s real, 0.0259075 s CPU
-Average swap time 3415.05 ns real, 2590.75 ns CPU
-output sum mismatch (29 != 0)
-
-real	0m0.139s
-user	0m0.157s
-sys	0m0.068s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 16
-Total time 0.0118262 s real, 0.0374510 s CPU
-Average swap time 4730.50 ns real, 3745.10 ns CPU
-
-real	0m0.138s
-user	0m0.189s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 32
-Total time 0.00875100 s real, 0.0236263 s CPU
-Average swap time 3500.40 ns real, 2362.63 ns CPU
-
-real	0m0.142s
-user	0m0.157s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 32
-Total time 0.00900207 s real, 0.0261489 s CPU
-Average swap time 3600.83 ns real, 2614.89 ns CPU
-output sum mismatch (6 != 0)
-
-real	0m0.152s
-user	0m0.185s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 32
-Total time 0.0125006 s real, 0.0422946 s CPU
-Average swap time 5000.22 ns real, 4229.46 ns CPU
-
-real	0m0.151s
-user	0m0.199s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 64
-Total time 0.00873541 s real, 0.0231587 s CPU
-Average swap time 3494.16 ns real, 2315.87 ns CPU
-
-real	0m0.159s
-user	0m0.160s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 64
-Total time 0.00871758 s real, 0.0273439 s CPU
-Average swap time 3487.03 ns real, 2734.39 ns CPU
-output sum mismatch (-28 != 0)
-
-real	0m0.136s
-user	0m0.169s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 64
-Total time 0.0138691 s real, 0.0461917 s CPU
-Average swap time 5547.64 ns real, 4619.17 ns CPU
-
-real	0m0.140s
-user	0m0.207s
-sys	0m0.042s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 10000 128
-Total time 0.00848713 s real, 0.0232797 s CPU
-Average swap time 3394.85 ns real, 2327.97 ns CPU
-
-real	0m0.145s
-user	0m0.177s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 10000 128
-Total time 0.00858322 s real, 0.0266421 s CPU
-Average swap time 3433.29 ns real, 2664.21 ns CPU
-output sum mismatch (10 != 0)
-
-real	0m0.143s
-user	0m0.169s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 10000 128
-Total time 0.0127562 s real, 0.0418351 s CPU
-Average swap time 5102.47 ns real, 4183.51 ns CPU
-
-real	0m0.141s
-user	0m0.204s
-sys	0m0.034s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 1
-Total time 0.000913008 s real, 0.00000 s CPU
-Average swap time 3.65203 ns real, 0.00000 ns CPU
-
-real	0m0.132s
-user	0m0.136s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 1
-Total time 0.00105908 s real, 0.00000 s CPU
-Average swap time 4.23633 ns real, 0.00000 ns CPU
-
-real	0m0.127s
-user	0m0.135s
-sys	0m0.044s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 1
-Total time 0.00105697 s real, 0.00000 s CPU
-Average swap time 4.22788 ns real, 0.00000 ns CPU
-
-real	0m0.134s
-user	0m0.142s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 2
-Total time 0.288949 s real, 0.995382 s CPU
-Average swap time 1155.80 ns real, 995.382 ns CPU
-
-real	0m0.421s
-user	0m1.048s
-sys	0m0.150s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 2
-Total time 0.110868 s real, 0.387956 s CPU
-Average swap time 443.473 ns real, 387.956 ns CPU
-output sum mismatch (-779 != 0)
-
-real	0m0.246s
-user	0m0.546s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 2
-Total time 0.120598 s real, 0.439491 s CPU
-Average swap time 482.393 ns real, 439.491 ns CPU
-
-real	0m0.252s
-user	0m0.597s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 4
-Total time 0.285440 s real, 0.982778 s CPU
-Average swap time 1141.76 ns real, 982.778 ns CPU
-
-real	0m0.414s
-user	0m1.045s
-sys	0m0.138s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 4
-Total time 0.0656643 s real, 0.250744 s CPU
-Average swap time 262.657 ns real, 250.744 ns CPU
-output sum mismatch (1622 != 0)
-
-real	0m0.212s
-user	0m0.407s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 4
-Total time 0.159490 s real, 0.611529 s CPU
-Average swap time 637.960 ns real, 611.529 ns CPU
-
-real	0m0.291s
-user	0m0.769s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 8
-Total time 0.278633 s real, 0.955437 s CPU
-Average swap time 1114.53 ns real, 955.437 ns CPU
-
-real	0m0.405s
-user	0m1.001s
-sys	0m0.157s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 8
-Total time 0.0893132 s real, 0.346657 s CPU
-Average swap time 357.253 ns real, 346.657 ns CPU
-output sum mismatch (-597 != 0)
-
-real	0m0.224s
-user	0m0.519s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 8
-Total time 0.174579 s real, 0.664404 s CPU
-Average swap time 698.316 ns real, 664.404 ns CPU
-
-real	0m0.320s
-user	0m0.834s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 16
-Total time 0.260607 s real, 0.859810 s CPU
-Average swap time 1042.43 ns real, 859.810 ns CPU
-
-real	0m0.398s
-user	0m0.905s
-sys	0m0.157s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 16
-Total time 0.0839191 s real, 0.314174 s CPU
-Average swap time 335.676 ns real, 314.174 ns CPU
-output sum mismatch (-493 != 0)
-
-real	0m0.237s
-user	0m0.476s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 16
-Total time 0.178289 s real, 0.672230 s CPU
-Average swap time 713.156 ns real, 672.230 ns CPU
-
-real	0m0.324s
-user	0m0.860s
-sys	0m0.041s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 32
-Total time 0.271958 s real, 0.920007 s CPU
-Average swap time 1087.83 ns real, 920.007 ns CPU
-
-real	0m0.406s
-user	0m0.976s
-sys	0m0.153s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 32
-Total time 0.113837 s real, 0.436184 s CPU
-Average swap time 455.348 ns real, 436.184 ns CPU
-output sum mismatch (189 != 0)
-
-real	0m0.248s
-user	0m0.576s
-sys	0m0.066s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 32
-Total time 0.119359 s real, 0.417142 s CPU
-Average swap time 477.436 ns real, 417.142 ns CPU
-
-real	0m0.252s
-user	0m0.589s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 64
-Total time 0.282916 s real, 0.931165 s CPU
-Average swap time 1131.66 ns real, 931.165 ns CPU
-
-real	0m0.427s
-user	0m0.980s
-sys	0m0.169s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 64
-Total time 0.0989971 s real, 0.382351 s CPU
-Average swap time 395.988 ns real, 382.351 ns CPU
-output sum mismatch (-958 != 0)
-
-real	0m0.233s
-user	0m0.542s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 64
-Total time 0.166835 s real, 0.485244 s CPU
-Average swap time 667.341 ns real, 485.244 ns CPU
-
-real	0m0.295s
-user	0m0.658s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 1000000 128
-Total time 0.311319 s real, 1.03558 s CPU
-Average swap time 1245.28 ns real, 1035.58 ns CPU
-
-real	0m0.442s
-user	0m1.069s
-sys	0m0.173s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 1000000 128
-Total time 0.0869237 s real, 0.337254 s CPU
-Average swap time 347.695 ns real, 337.254 ns CPU
-output sum mismatch (202 != 0)
-
-real	0m0.216s
-user	0m0.491s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 1000000 128
-Total time 0.103167 s real, 0.398975 s CPU
-Average swap time 412.667 ns real, 398.975 ns CPU
-
-real	0m0.234s
-user	0m0.568s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 1
-Total time 0.00110619 s real, 0.00000 s CPU
-Average swap time 0.0442478 ns real, 0.00000 ns CPU
-
-real	0m0.137s
-user	0m0.141s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 1
-Total time 0.000902574 s real, 0.00000 s CPU
-Average swap time 0.0361030 ns real, 0.00000 ns CPU
-
-real	0m0.128s
-user	0m0.132s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 1
-Total time 0.00145080 s real, 0.00000 s CPU
-Average swap time 0.0580320 ns real, 0.00000 ns CPU
-
-real	0m0.149s
-user	0m0.150s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 2
-Total time 19.7665 s real, 68.9063 s CPU
-Average swap time 790.661 ns real, 689.063 ns CPU
-
-real	0m19.903s
-user	1m1.059s
-sys	0m8.062s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 2
-Total time 1.50591 s real, 4.92654 s CPU
-Average swap time 60.2366 ns real, 49.2654 ns CPU
-output sum mismatch (-71889 != 0)
-
-real	0m1.639s
-user	0m5.050s
-sys	0m0.084s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 2
-Total time 7.92045 s real, 31.1190 s CPU
-Average swap time 316.818 ns real, 311.190 ns CPU
-
-real	0m8.055s
-user	0m31.070s
-sys	0m0.282s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 4
-Total time 22.4744 s real, 76.8431 s CPU
-Average swap time 898.978 ns real, 768.431 ns CPU
-
-real	0m22.609s
-user	1m7.855s
-sys	0m9.204s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 4
-Total time 1.57656 s real, 5.93257 s CPU
-Average swap time 63.0624 ns real, 59.3257 ns CPU
-output sum mismatch (1374 != 0)
-
-real	0m1.731s
-user	0m6.084s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 4
-Total time 11.7227 s real, 44.8928 s CPU
-Average swap time 468.908 ns real, 448.928 ns CPU
-
-real	0m11.869s
-user	0m44.726s
-sys	0m0.409s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 8
-Total time 17.6666 s real, 61.5274 s CPU
-Average swap time 706.665 ns real, 615.274 ns CPU
-
-real	0m17.804s
-user	0m54.085s
-sys	0m7.663s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 8
-Total time 3.41629 s real, 13.3957 s CPU
-Average swap time 136.652 ns real, 133.957 ns CPU
-output sum mismatch (23906 != 0)
-
-real	0m3.560s
-user	0m13.472s
-sys	0m0.134s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 8
-Total time 11.1932 s real, 41.0720 s CPU
-Average swap time 447.729 ns real, 410.720 ns CPU
-
-real	0m11.321s
-user	0m40.374s
-sys	0m0.922s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 16
-Total time 20.2882 s real, 68.9913 s CPU
-Average swap time 811.527 ns real, 689.913 ns CPU
-
-real	0m20.415s
-user	1m0.691s
-sys	0m8.519s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 16
-Total time 4.97631 s real, 19.5536 s CPU
-Average swap time 199.052 ns real, 195.536 ns CPU
-output sum mismatch (31171 != 0)
-
-real	0m5.108s
-user	0m19.586s
-sys	0m0.179s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 16
-Total time 13.6924 s real, 53.5354 s CPU
-Average swap time 547.694 ns real, 535.354 ns CPU
-
-real	0m13.838s
-user	0m53.701s
-sys	0m0.090s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 32
-Total time 23.8156 s real, 80.0198 s CPU
-Average swap time 952.622 ns real, 800.198 ns CPU
-
-real	0m23.952s
-user	1m10.406s
-sys	0m9.831s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 32
-Total time 5.39362 s real, 20.8320 s CPU
-Average swap time 215.745 ns real, 208.320 ns CPU
-output sum mismatch (26732 != 0)
-
-real	0m5.535s
-user	0m20.808s
-sys	0m0.234s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 32
-Total time 9.23426 s real, 36.2822 s CPU
-Average swap time 369.370 ns real, 362.822 ns CPU
-
-real	0m9.378s
-user	0m35.986s
-sys	0m0.548s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 64
-Total time 20.8440 s real, 71.2640 s CPU
-Average swap time 833.760 ns real, 712.640 ns CPU
-
-real	0m20.971s
-user	1m2.491s
-sys	0m8.991s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 64
-Total time 4.65437 s real, 18.0702 s CPU
-Average swap time 186.175 ns real, 180.702 ns CPU
-output sum mismatch (-14855 != 0)
-
-real	0m4.830s
-user	0m18.250s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 64
-Total time 10.0909 s real, 39.8232 s CPU
-Average swap time 403.637 ns real, 398.232 ns CPU
-
-real	0m10.271s
-user	0m39.940s
-sys	0m0.139s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 4 100000000 128
-Total time 20.4819 s real, 68.0609 s CPU
-Average swap time 819.274 ns real, 680.609 ns CPU
-
-real	0m20.745s
-user	0m59.227s
-sys	0m9.062s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 4 100000000 128
-Total time 5.89216 s real, 23.1228 s CPU
-Average swap time 235.686 ns real, 231.228 ns CPU
-output sum mismatch (-10922 != 0)
-
-real	0m6.221s
-user	0m23.157s
-sys	0m0.202s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 4 100000000 128
-Total time 5.41695 s real, 21.2210 s CPU
-Average swap time 216.678 ns real, 212.210 ns CPU
-
-real	0m5.560s
-user	0m21.183s
-sys	0m0.267s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 1
-Total time 0.00175075 s real, 0.00000 s CPU
-Average swap time 140060 ns real, 0.00000 ns CPU
-
-real	0m0.152s
-user	0m0.123s
-sys	0m0.067s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 1
-Total time 0.00181792 s real, 0.00000 s CPU
-Average swap time 145434 ns real, 0.00000 ns CPU
-
-real	0m0.140s
-user	0m0.149s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 1
-Total time 0.00168076 s real, 0.00000 s CPU
-Average swap time 134460 ns real, 0.00000 ns CPU
-
-real	0m0.162s
-user	0m0.147s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 2
-Total time 0.00231009 s real, 0.000807046 s CPU
-Average swap time 184808 ns real, 8070.46 ns CPU
-
-real	0m0.133s
-user	0m0.143s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 2
-Total time 0.00223858 s real, 0.000507410 s CPU
-Average swap time 179087 ns real, 5074.10 ns CPU
-output sum mismatch (-2 != 0)
-
-real	0m0.149s
-user	0m0.159s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 2
-Total time 0.00314629 s real, 0.00383175 s CPU
-Average swap time 251703 ns real, 38317.5 ns CPU
-
-real	0m0.135s
-user	0m0.143s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 4
-Total time 0.00254996 s real, 0.000986989 s CPU
-Average swap time 203997 ns real, 9869.89 ns CPU
-
-real	0m0.136s
-user	0m0.149s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 4
-Total time 0.00208137 s real, 0.000655647 s CPU
-Average swap time 166510 ns real, 6556.47 ns CPU
-output sum mismatch (14 != 0)
-
-real	0m0.128s
-user	0m0.150s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 4
-Total time 0.00367428 s real, 0.00446250 s CPU
-Average swap time 293942 ns real, 44625.0 ns CPU
-
-real	0m0.130s
-user	0m0.154s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 8
-Total time 0.00215482 s real, 0.000956890 s CPU
-Average swap time 172386 ns real, 9568.90 ns CPU
-
-real	0m0.130s
-user	0m0.150s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 8
-Total time 0.00476307 s real, 0.000637640 s CPU
-Average swap time 381046 ns real, 6376.40 ns CPU
-output sum mismatch (4 != 0)
-
-real	0m0.131s
-user	0m0.149s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 8
-Total time 0.00327351 s real, 0.00340901 s CPU
-Average swap time 261880 ns real, 34090.1 ns CPU
-
-real	0m0.133s
-user	0m0.154s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 16
-Total time 0.00315808 s real, 0.00106604 s CPU
-Average swap time 252646 ns real, 10660.4 ns CPU
-
-real	0m0.142s
-user	0m0.148s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 16
-Total time 0.00221797 s real, 0.000518735 s CPU
-Average swap time 177438 ns real, 5187.35 ns CPU
-output sum mismatch (-1 != 0)
-
-real	0m0.148s
-user	0m0.146s
-sys	0m0.037s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 16
-Total time 0.00291352 s real, 0.00340389 s CPU
-Average swap time 233082 ns real, 34038.9 ns CPU
-
-real	0m0.190s
-user	0m0.159s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 32
-Total time 0.00388219 s real, 0.00126951 s CPU
-Average swap time 310575 ns real, 12695.1 ns CPU
-
-real	0m0.189s
-user	0m0.138s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 32
-Total time 0.00245875 s real, 0.000582170 s CPU
-Average swap time 196700 ns real, 5821.70 ns CPU
-
-real	0m0.187s
-user	0m0.141s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 32
-Total time 0.00308290 s real, 0.00395580 s CPU
-Average swap time 246632 ns real, 39558.0 ns CPU
-
-real	0m0.144s
-user	0m0.178s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 64
-Total time 0.00231560 s real, 0.00118445 s CPU
-Average swap time 185248 ns real, 11844.5 ns CPU
-
-real	0m0.147s
-user	0m0.142s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 64
-Total time 0.00275153 s real, 0.000624500 s CPU
-Average swap time 220122 ns real, 6245.00 ns CPU
-
-real	0m0.154s
-user	0m0.146s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 64
-Total time 0.00418110 s real, 0.00404994 s CPU
-Average swap time 334488 ns real, 40499.4 ns CPU
-
-real	0m0.161s
-user	0m0.164s
-sys	0m0.059s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100 128
-Total time 0.00282075 s real, 0.000813870 s CPU
-Average swap time 225660 ns real, 8138.70 ns CPU
-
-real	0m0.146s
-user	0m0.138s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 128
-Total time 0.00295095 s real, 0.000605960 s CPU
-Average swap time 236076 ns real, 6059.60 ns CPU
-output sum mismatch (-1 != 0)
-
-real	0m0.150s
-user	0m0.160s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 128
-Total time 0.00306441 s real, 0.00383603 s CPU
-Average swap time 245153 ns real, 38360.3 ns CPU
-
-real	0m0.144s
-user	0m0.149s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 1
-Total time 0.00140966 s real, 0.00000 s CPU
-Average swap time 1127.73 ns real, 0.00000 ns CPU
-
-real	0m0.142s
-user	0m0.137s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 1
-Total time 0.00146601 s real, 0.00000 s CPU
-Average swap time 1172.80 ns real, 0.00000 ns CPU
-
-real	0m0.142s
-user	0m0.140s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 1
-Total time 0.00167116 s real, 0.00000 s CPU
-Average swap time 1336.93 ns real, 0.00000 ns CPU
-
-real	0m0.142s
-user	0m0.148s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 2
-Total time 0.00948330 s real, 0.0280895 s CPU
-Average swap time 7586.64 ns real, 2808.95 ns CPU
-
-real	0m0.152s
-user	0m0.178s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 2
-Total time 0.00880791 s real, 0.0476112 s CPU
-Average swap time 7046.33 ns real, 4761.12 ns CPU
-output sum mismatch (259 != 0)
-
-real	0m0.143s
-user	0m0.199s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 2
-Total time 0.0105641 s real, 0.0502672 s CPU
-Average swap time 8451.25 ns real, 5026.72 ns CPU
-
-real	0m0.146s
-user	0m0.208s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 4
-Total time 0.00891451 s real, 0.0297591 s CPU
-Average swap time 7131.61 ns real, 2975.91 ns CPU
-
-real	0m0.136s
-user	0m0.174s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 4
-Total time 0.00759068 s real, 0.0414561 s CPU
-Average swap time 6072.55 ns real, 4145.61 ns CPU
-output sum mismatch (36 != 0)
-
-real	0m0.137s
-user	0m0.183s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 4
-Total time 0.0136042 s real, 0.0789772 s CPU
-Average swap time 10883.4 ns real, 7897.72 ns CPU
-
-real	0m0.167s
-user	0m0.257s
-sys	0m0.047s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 8
-Total time 0.00913777 s real, 0.0176230 s CPU
-Average swap time 7310.22 ns real, 1762.30 ns CPU
-
-real	0m0.153s
-user	0m0.182s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 8
-Total time 0.00774599 s real, 0.0330087 s CPU
-Average swap time 6196.80 ns real, 3300.87 ns CPU
-output sum mismatch (-2 != 0)
-
-real	0m0.162s
-user	0m0.193s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 8
-Total time 0.0151451 s real, 0.0858431 s CPU
-Average swap time 12116.1 ns real, 8584.31 ns CPU
-
-real	0m0.148s
-user	0m0.254s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 16
-Total time 0.00914853 s real, 0.0259005 s CPU
-Average swap time 7318.83 ns real, 2590.05 ns CPU
-
-real	0m0.140s
-user	0m0.175s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 16
-Total time 0.00929267 s real, 0.0528173 s CPU
-Average swap time 7434.14 ns real, 5281.73 ns CPU
-output sum mismatch (70 != 0)
-
-real	0m0.144s
-user	0m0.210s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 16
-Total time 0.0121736 s real, 0.0743986 s CPU
-Average swap time 9738.84 ns real, 7439.86 ns CPU
-
-real	0m0.148s
-user	0m0.246s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 32
-Total time 0.00900751 s real, 0.0269370 s CPU
-Average swap time 7206.01 ns real, 2693.70 ns CPU
-
-real	0m0.143s
-user	0m0.183s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 32
-Total time 0.00656168 s real, 0.0254463 s CPU
-Average swap time 5249.34 ns real, 2544.63 ns CPU
-output sum mismatch (43 != 0)
-
-real	0m0.152s
-user	0m0.176s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 32
-Total time 0.0130838 s real, 0.0666977 s CPU
-Average swap time 10467.1 ns real, 6669.77 ns CPU
-
-real	0m0.174s
-user	0m0.234s
-sys	0m0.066s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 64
-Total time 0.00872920 s real, 0.0197636 s CPU
-Average swap time 6983.36 ns real, 1976.36 ns CPU
-
-real	0m0.151s
-user	0m0.168s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 64
-Total time 0.00418375 s real, 0.0145915 s CPU
-Average swap time 3347.00 ns real, 1459.15 ns CPU
-output sum mismatch (11 != 0)
-
-real	0m0.137s
-user	0m0.176s
-sys	0m0.042s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 64
-Total time 0.0153101 s real, 0.0776812 s CPU
-Average swap time 12248.1 ns real, 7768.12 ns CPU
-
-real	0m0.159s
-user	0m0.238s
-sys	0m0.069s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 128
-Total time 0.00793166 s real, 0.0170112 s CPU
-Average swap time 6345.33 ns real, 1701.12 ns CPU
-
-real	0m0.141s
-user	0m0.166s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 128
-Total time 0.00927560 s real, 0.0465537 s CPU
-Average swap time 7420.48 ns real, 4655.37 ns CPU
-output sum mismatch (11 != 0)
-
-real	0m0.148s
-user	0m0.207s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 128
-Total time 0.0153985 s real, 0.0925066 s CPU
-Average swap time 12318.8 ns real, 9250.66 ns CPU
-
-real	0m0.154s
-user	0m0.268s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 1
-Total time 0.00179508 s real, 0.00000 s CPU
-Average swap time 14.3606 ns real, 0.00000 ns CPU
-
-real	0m0.138s
-user	0m0.161s
-sys	0m0.039s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 1
-Total time 0.00169838 s real, 0.00000 s CPU
-Average swap time 13.5870 ns real, 0.00000 ns CPU
-
-real	0m0.135s
-user	0m0.145s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 1
-Total time 0.00152197 s real, 0.00000 s CPU
-Average swap time 12.1757 ns real, 0.00000 ns CPU
-
-real	0m0.149s
-user	0m0.147s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 2
-Total time 0.229695 s real, 0.771611 s CPU
-Average swap time 1837.56 ns real, 771.611 ns CPU
-
-real	0m0.369s
-user	0m0.852s
-sys	0m0.143s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 2
-Total time 0.0896406 s real, 0.643509 s CPU
-Average swap time 717.125 ns real, 643.509 ns CPU
-output sum mismatch (8074 != 0)
-
-real	0m0.237s
-user	0m0.805s
-sys	0m0.072s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 2
-Total time 0.263644 s real, 1.62450 s CPU
-Average swap time 2109.15 ns real, 1624.50 ns CPU
-
-real	0m0.403s
-user	0m1.808s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 4
-Total time 0.185706 s real, 0.563052 s CPU
-Average swap time 1485.64 ns real, 563.052 ns CPU
-
-real	0m0.327s
-user	0m0.688s
-sys	0m0.109s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 4
-Total time 0.116468 s real, 0.892456 s CPU
-Average swap time 931.745 ns real, 892.456 ns CPU
-output sum mismatch (3710 != 0)
-
-real	0m0.251s
-user	0m1.042s
-sys	0m0.068s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 4
-Total time 0.219932 s real, 1.64844 s CPU
-Average swap time 1759.45 ns real, 1648.44 ns CPU
-
-real	0m0.370s
-user	0m1.837s
-sys	0m0.069s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 8
-Total time 0.215672 s real, 0.710076 s CPU
-Average swap time 1725.38 ns real, 710.076 ns CPU
-
-real	0m0.351s
-user	0m0.768s
-sys	0m0.164s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 8
-Total time 0.129147 s real, 0.985954 s CPU
-Average swap time 1033.18 ns real, 985.954 ns CPU
-output sum mismatch (1288 != 0)
-
-real	0m0.274s
-user	0m1.146s
-sys	0m0.068s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 8
-Total time 0.183101 s real, 1.32312 s CPU
-Average swap time 1464.81 ns real, 1323.12 ns CPU
-
-real	0m0.349s
-user	0m1.505s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 16
-Total time 0.218613 s real, 0.704678 s CPU
-Average swap time 1748.90 ns real, 704.678 ns CPU
-
-real	0m0.348s
-user	0m0.778s
-sys	0m0.138s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 16
-Total time 0.131569 s real, 1.01761 s CPU
-Average swap time 1052.56 ns real, 1017.61 ns CPU
-output sum mismatch (2111 != 0)
-
-real	0m0.291s
-user	0m1.189s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 16
-Total time 0.211001 s real, 1.59155 s CPU
-Average swap time 1688.01 ns real, 1591.55 ns CPU
-
-real	0m0.357s
-user	0m1.747s
-sys	0m0.085s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 32
-Total time 0.227446 s real, 0.741641 s CPU
-Average swap time 1819.57 ns real, 741.641 ns CPU
-
-real	0m0.364s
-user	0m0.831s
-sys	0m0.130s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 32
-Total time 0.136240 s real, 1.04492 s CPU
-Average swap time 1089.92 ns real, 1044.92 ns CPU
-output sum mismatch (2082 != 0)
-
-real	0m0.267s
-user	0m1.186s
-sys	0m0.076s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 32
-Total time 0.296965 s real, 2.02979 s CPU
-Average swap time 2375.72 ns real, 2029.79 ns CPU
-
-real	0m0.432s
-user	0m2.210s
-sys	0m0.071s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 64
-Total time 0.197624 s real, 0.611978 s CPU
-Average swap time 1581.00 ns real, 611.978 ns CPU
-
-real	0m0.332s
-user	0m0.680s
-sys	0m0.142s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 64
-Total time 0.0869504 s real, 0.634674 s CPU
-Average swap time 695.603 ns real, 634.674 ns CPU
-output sum mismatch (1504 != 0)
-
-real	0m0.227s
-user	0m0.803s
-sys	0m0.061s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 64
-Total time 0.221141 s real, 1.48015 s CPU
-Average swap time 1769.13 ns real, 1480.15 ns CPU
-
-real	0m0.368s
-user	0m1.665s
-sys	0m0.074s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 128
-Total time 0.219926 s real, 0.680796 s CPU
-Average swap time 1759.41 ns real, 680.796 ns CPU
-
-real	0m0.363s
-user	0m0.766s
-sys	0m0.141s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 128
-Total time 0.182875 s real, 1.29226 s CPU
-Average swap time 1463.00 ns real, 1292.26 ns CPU
-output sum mismatch (966 != 0)
-
-real	0m0.323s
-user	0m1.466s
-sys	0m0.067s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 128
-Total time 0.164693 s real, 1.14682 s CPU
-Average swap time 1317.54 ns real, 1146.82 ns CPU
-
-real	0m0.296s
-user	0m1.330s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 1
-Total time 0.00178788 s real, 0.00000 s CPU
-Average swap time 0.143030 ns real, 0.00000 ns CPU
-
-real	0m0.132s
-user	0m0.142s
-sys	0m0.046s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 1
-Total time 0.00179410 s real, 0.00000 s CPU
-Average swap time 0.143528 ns real, 0.00000 ns CPU
-
-real	0m0.133s
-user	0m0.140s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 1
-Total time 0.00187087 s real, 0.00000 s CPU
-Average swap time 0.149670 ns real, 0.00000 ns CPU
-
-real	0m0.132s
-user	0m0.140s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 2
-Total time 15.2718 s real, 50.5002 s CPU
-Average swap time 1221.74 ns real, 505.002 ns CPU
-
-real	0m15.409s
-user	0m44.525s
-sys	0m6.206s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 2
-Total time 1.10393 s real, 7.56334 s CPU
-Average swap time 88.3146 ns real, 75.6334 ns CPU
-output sum mismatch (4186 != 0)
-
-real	0m1.256s
-user	0m7.707s
-sys	0m0.069s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 2
-Total time 6.85481 s real, 53.7712 s CPU
-Average swap time 548.385 ns real, 537.712 ns CPU
-
-real	0m6.995s
-user	0m53.455s
-sys	0m0.555s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 4
-Total time 12.0547 s real, 39.9378 s CPU
-Average swap time 964.377 ns real, 399.378 ns CPU
-
-real	0m12.185s
-user	0m35.313s
-sys	0m4.843s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 4
-Total time 1.56299 s real, 10.3870 s CPU
-Average swap time 125.039 ns real, 103.870 ns CPU
-output sum mismatch (408688 != 0)
-
-real	0m1.695s
-user	0m10.541s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 4
-Total time 6.25580 s real, 45.2768 s CPU
-Average swap time 500.464 ns real, 452.768 ns CPU
-
-real	0m6.390s
-user	0m45.163s
-sys	0m0.351s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 8
-Total time 14.8751 s real, 54.4118 s CPU
-Average swap time 1190.01 ns real, 544.118 ns CPU
-
-real	0m15.007s
-user	0m47.046s
-sys	0m7.576s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 8
-Total time 1.57649 s real, 10.8492 s CPU
-Average swap time 126.119 ns real, 108.492 ns CPU
-output sum mismatch (406265 != 0)
-
-real	0m1.712s
-user	0m10.980s
-sys	0m0.078s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 8
-Total time 11.6457 s real, 78.8117 s CPU
-Average swap time 931.653 ns real, 788.117 ns CPU
-
-real	0m11.783s
-user	1m18.584s
-sys	0m0.472s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 16
-Total time 15.2448 s real, 52.4365 s CPU
-Average swap time 1219.59 ns real, 524.365 ns CPU
-
-real	0m15.381s
-user	0m45.857s
-sys	0m6.806s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 16
-Total time 4.80057 s real, 36.4306 s CPU
-Average swap time 384.045 ns real, 364.306 ns CPU
-output sum mismatch (2475 != 0)
-
-real	0m4.964s
-user	0m36.104s
-sys	0m0.558s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 16
-Total time 11.0626 s real, 84.9557 s CPU
-Average swap time 885.005 ns real, 849.557 ns CPU
-
-real	0m11.203s
-user	1m24.717s
-sys	0m0.487s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 32
-Total time 17.4485 s real, 56.4218 s CPU
-Average swap time 1395.88 ns real, 564.218 ns CPU
-
-real	0m17.594s
-user	0m49.550s
-sys	0m7.109s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 32
-Total time 5.51581 s real, 42.6032 s CPU
-Average swap time 441.265 ns real, 426.032 ns CPU
-output sum mismatch (-7874 != 0)
-
-real	0m5.675s
-user	0m42.197s
-sys	0m0.621s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 32
-Total time 9.85972 s real, 77.4088 s CPU
-Average swap time 788.778 ns real, 774.088 ns CPU
-
-real	0m10.054s
-user	1m17.203s
-sys	0m0.453s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 64
-Total time 17.3932 s real, 55.6049 s CPU
-Average swap time 1391.46 ns real, 556.049 ns CPU
-
-real	0m17.542s
-user	0m48.678s
-sys	0m7.161s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 64
-Total time 5.16172 s real, 40.7379 s CPU
-Average swap time 412.937 ns real, 407.379 ns CPU
-output sum mismatch (-36650 != 0)
-
-real	0m5.294s
-user	0m40.597s
-sys	0m0.361s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 64
-Total time 8.42225 s real, 65.0325 s CPU
-Average swap time 673.780 ns real, 650.325 ns CPU
-
-real	0m8.567s
-user	1m4.762s
-sys	0m0.520s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 128
-Total time 18.1979 s real, 58.1426 s CPU
-Average swap time 1455.83 ns real, 581.426 ns CPU
-
-real	0m18.332s
-user	0m50.734s
-sys	0m7.630s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 128
-Total time 5.36383 s real, 41.8399 s CPU
-Average swap time 429.106 ns real, 418.399 ns CPU
-output sum mismatch (-21696 != 0)
-
-real	0m5.518s
-user	0m41.667s
-sys	0m0.394s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 128
-Total time 5.83371 s real, 45.6962 s CPU
-Average swap time 466.696 ns real, 456.962 ns CPU
-
-real	0m5.967s
-user	0m45.364s
-sys	0m0.586s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 1
-Total time 0.00317234 s real, 0.00000 s CPU
-Average swap time 507574 ns real, 0.00000 ns CPU
-
-real	0m0.122s
 user	0m0.133s
 sys	0m0.053s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 1
-Total time 0.00332552 s real, 0.00000 s CPU
-Average swap time 532084 ns real, 0.00000 ns CPU
-
-real	0m0.149s
-user	0m0.145s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 1
-Total time 0.00273375 s real, 0.00000 s CPU
-Average swap time 437400 ns real, 0.00000 ns CPU
-
-real	0m0.142s
-user	0m0.152s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 2
-Total time 0.00640294 s real, 0.000861194 s CPU
-Average swap time 1.02447e+06 ns real, 8611.94 ns CPU
-
-real	0m0.153s
-user	0m0.150s
-sys	0m0.061s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 2
-Total time 0.00600192 s real, 0.000598033 s CPU
-Average swap time 960308 ns real, 5980.33 ns CPU
-output sum mismatch (2 != 0)
+$ time timeout 3600 java UnsafeMemory Synchronized 8 100 5
+Total time 0.00447559 s real, 0.00121397 s CPU
+Average swap time 358047 ns real, 12139.7 ns CPU
 
 real	0m0.135s
-user	0m0.156s
-sys	0m0.042s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 2
-Total time 0.00598739 s real, 0.00314666 s CPU
-Average swap time 957983 ns real, 31466.6 ns CPU
-
-real	0m0.141s
-user	0m0.152s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 4
-Total time 0.00569347 s real, 0.000686374 s CPU
-Average swap time 910955 ns real, 6863.74 ns CPU
-
-real	0m0.151s
-user	0m0.166s
-sys	0m0.042s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 4
-Total time 0.00708067 s real, 0.000583355 s CPU
-Average swap time 1.13291e+06 ns real, 5833.55 ns CPU
-
-real	0m0.137s
-user	0m0.146s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 4
-Total time 0.00662463 s real, 0.00161484 s CPU
-Average swap time 1.05994e+06 ns real, 16148.4 ns CPU
-
-real	0m0.148s
-user	0m0.158s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 8
-Total time 0.00562379 s real, 0.000703044 s CPU
-Average swap time 899807 ns real, 7030.44 ns CPU
-
-real	0m0.130s
-user	0m0.145s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 8
-Total time 0.00643369 s real, 0.000701295 s CPU
-Average swap time 1.02939e+06 ns real, 7012.95 ns CPU
-output sum mismatch (1 != 0)
-
-real	0m0.136s
-user	0m0.139s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 8
-Total time 0.00617302 s real, 0.00338735 s CPU
-Average swap time 987684 ns real, 33873.5 ns CPU
-
-real	0m0.154s
-user	0m0.176s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 16
-Total time 0.00502724 s real, 0.000881984 s CPU
-Average swap time 804359 ns real, 8819.84 ns CPU
-
-real	0m0.129s
-user	0m0.139s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 16
-Total time 0.00603083 s real, 0.000871156 s CPU
-Average swap time 964933 ns real, 8711.56 ns CPU
-output sum mismatch (1 != 0)
-
-real	0m0.142s
-user	0m0.141s
-sys	0m0.062s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 16
-Total time 0.00602556 s real, 0.00353281 s CPU
-Average swap time 964090 ns real, 35328.1 ns CPU
-
-real	0m0.132s
-user	0m0.151s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 32
-Total time 0.00721486 s real, 0.000951367 s CPU
-Average swap time 1.15438e+06 ns real, 9513.67 ns CPU
-
-real	0m0.138s
-user	0m0.141s
-sys	0m0.063s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 32
-Total time 0.00564035 s real, 0.000923646 s CPU
-Average swap time 902457 ns real, 9236.46 ns CPU
-output sum mismatch (3 != 0)
-
-real	0m0.135s
-user	0m0.141s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 32
-Total time 0.00631322 s real, 0.00343352 s CPU
-Average swap time 1.01012e+06 ns real, 34335.2 ns CPU
-
-real	0m0.141s
-user	0m0.155s
+user	0m0.143s
 sys	0m0.047s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 64
-Total time 0.00594826 s real, 0.000866500 s CPU
-Average swap time 951721 ns real, 8665.00 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 5
+Total time 0.00421504 s real, 0.000687129 s CPU
+Average swap time 337204 ns real, 6871.29 ns CPU
+output sum mismatch (2 != 0)
 
-real	0m0.142s
-user	0m0.147s
+real	0m0.134s
+user	0m0.139s
 sys	0m0.053s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 64
-Total time 0.00554042 s real, 0.000856114 s CPU
-Average swap time 886468 ns real, 8561.14 ns CPU
-output sum mismatch (-1 != 0)
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 5
+Total time 0.00406556 s real, 0.00329069 s CPU
+Average swap time 325245 ns real, 32906.9 ns CPU
 
-real	0m0.141s
-user	0m0.152s
-sys	0m0.046s
+real	0m0.154s
+user	0m0.137s
+sys	0m0.057s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 64
-Total time 0.00606483 s real, 0.00398627 s CPU
-Average swap time 970372 ns real, 39862.7 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 8 100 25
+Total time 0.00361969 s real, 0.000641901 s CPU
+Average swap time 289575 ns real, 6419.01 ns CPU
 
-real	0m0.142s
-user	0m0.151s
-sys	0m0.059s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100 128
-Total time 0.00586683 s real, 0.000594404 s CPU
-Average swap time 938693 ns real, 5944.04 ns CPU
-
-real	0m0.136s
-user	0m0.143s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 128
-Total time 0.00552158 s real, 0.000636138 s CPU
-Average swap time 883453 ns real, 6361.38 ns CPU
-
-real	0m0.133s
-user	0m0.144s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 128
-Total time 0.00635833 s real, 0.00335129 s CPU
-Average swap time 1.01733e+06 ns real, 33512.9 ns CPU
-
-real	0m0.143s
-user	0m0.158s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 1
-Total time 0.00283692 s real, 0.00000 s CPU
-Average swap time 4539.08 ns real, 0.00000 ns CPU
-
-real	0m0.129s
-user	0m0.142s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 1
-Total time 0.00358154 s real, 0.00000 s CPU
-Average swap time 5730.47 ns real, 0.00000 ns CPU
-
-real	0m0.126s
-user	0m0.141s
-sys	0m0.048s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 1
-Total time 0.00273555 s real, 0.00000 s CPU
-Average swap time 4376.88 ns real, 0.00000 ns CPU
-
-real	0m0.132s
+real	0m0.130s
 user	0m0.140s
 sys	0m0.047s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 2
-Total time 0.0104451 s real, 0.0254872 s CPU
-Average swap time 16712.1 ns real, 2548.72 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 8 100 25
+Total time 0.00478367 s real, 0.00132712 s CPU
+Average swap time 382693 ns real, 13271.2 ns CPU
 
-real	0m0.142s
-user	0m0.178s
+real	0m0.134s
+user	0m0.132s
+sys	0m0.057s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 25
+Total time 0.00452980 s real, 0.000440594 s CPU
+Average swap time 362384 ns real, 4405.94 ns CPU
+
+real	0m0.132s
+user	0m0.137s
+sys	0m0.057s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 25
+Total time 0.00481465 s real, 0.00228452 s CPU
+Average swap time 385172 ns real, 22845.2 ns CPU
+
+real	0m0.135s
+user	0m0.134s
+sys	0m0.058s
+
+$ time timeout 3600 java UnsafeMemory Null 8 100 100
+Total time 0.00528646 s real, 0.000661926 s CPU
+Average swap time 422916 ns real, 6619.26 ns CPU
+
+real	0m0.133s
+user	0m0.138s
+sys	0m0.050s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 100 100
+Total time 0.00409463 s real, 0.000922995 s CPU
+Average swap time 327571 ns real, 9229.95 ns CPU
+
+real	0m0.130s
+user	0m0.135s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100 100
+Total time 0.00385294 s real, 0.000707920 s CPU
+Average swap time 308235 ns real, 7079.20 ns CPU
+
+real	0m0.130s
+user	0m0.130s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100 100
+Total time 0.00471109 s real, 0.00388634 s CPU
+Average swap time 376887 ns real, 38863.4 ns CPU
+
+real	0m0.134s
+user	0m0.145s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory Null 8 10000 5
+Total time 0.0108363 s real, 0.0493698 s CPU
+Average swap time 8669.06 ns real, 4936.98 ns CPU
+
+real	0m0.132s
+user	0m0.195s
+sys	0m0.045s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 5
+Total time 0.0101824 s real, 0.0287491 s CPU
+Average swap time 8145.92 ns real, 2874.91 ns CPU
+
+real	0m0.138s
+user	0m0.172s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 5
+Total time 0.0108977 s real, 0.0502900 s CPU
+Average swap time 8718.20 ns real, 5029.00 ns CPU
+output sum mismatch (116 != 0)
+
+real	0m0.152s
+user	0m0.194s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 5
+Total time 0.0169045 s real, 0.0970209 s CPU
+Average swap time 13523.6 ns real, 9702.09 ns CPU
+
+real	0m0.146s
+user	0m0.257s
+sys	0m0.049s
+
+$ time timeout 3600 java UnsafeMemory Null 8 10000 25
+Total time 0.0119968 s real, 0.0580769 s CPU
+Average swap time 9597.47 ns real, 5807.69 ns CPU
+
+real	0m0.158s
+user	0m0.200s
 sys	0m0.054s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 2
-Total time 0.00964809 s real, 0.0402767 s CPU
-Average swap time 15436.9 ns real, 4027.67 ns CPU
-output sum mismatch (39 != 0)
+$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 25
+Total time 0.00965900 s real, 0.0204916 s CPU
+Average swap time 7727.20 ns real, 2049.16 ns CPU
 
-real	0m0.143s
-user	0m0.184s
+real	0m0.136s
+user	0m0.167s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 25
+Total time 0.0115713 s real, 0.0632077 s CPU
+Average swap time 9257.04 ns real, 6320.77 ns CPU
+output sum mismatch (-6 != 0)
+
+real	0m0.136s
+user	0m0.211s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 25
+Total time 0.0131501 s real, 0.0719888 s CPU
+Average swap time 10520.1 ns real, 7198.88 ns CPU
+
+real	0m0.139s
+user	0m0.230s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory Null 8 10000 100
+Total time 0.0105060 s real, 0.0505132 s CPU
+Average swap time 8404.82 ns real, 5051.32 ns CPU
+
+real	0m0.138s
+user	0m0.205s
+sys	0m0.045s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 10000 100
+Total time 0.0106806 s real, 0.0252399 s CPU
+Average swap time 8544.46 ns real, 2523.99 ns CPU
+
+real	0m0.137s
+user	0m0.156s
 sys	0m0.061s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 2
-Total time 0.0130449 s real, 0.0972381 s CPU
-Average swap time 20871.9 ns real, 9723.81 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 10000 100
+Total time 0.00927302 s real, 0.0367078 s CPU
+Average swap time 7418.41 ns real, 3670.78 ns CPU
+output sum mismatch (-6 != 0)
+
+real	0m0.139s
+user	0m0.182s
+sys	0m0.051s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 10000 100
+Total time 0.0135533 s real, 0.0755546 s CPU
+Average swap time 10842.7 ns real, 7555.46 ns CPU
+
+real	0m0.143s
+user	0m0.232s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory Null 8 1000000 5
+Total time 0.104503 s real, 0.728601 s CPU
+Average swap time 836.025 ns real, 728.601 ns CPU
+
+real	0m0.229s
+user	0m0.890s
+sys	0m0.049s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 5
+Total time 0.303756 s real, 1.02458 s CPU
+Average swap time 2430.05 ns real, 1024.58 ns CPU
+
+real	0m0.434s
+user	0m1.091s
+sys	0m0.139s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 5
+Total time 0.136028 s real, 1.02885 s CPU
+Average swap time 1088.22 ns real, 1028.85 ns CPU
+output sum mismatch (2216 != 0)
+
+real	0m0.275s
+user	0m1.187s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 5
+Total time 0.246942 s real, 1.63251 s CPU
+Average swap time 1975.54 ns real, 1632.51 ns CPU
+
+real	0m0.378s
+user	0m1.830s
+sys	0m0.051s
+
+$ time timeout 3600 java UnsafeMemory Null 8 1000000 25
+Total time 0.126808 s real, 0.824405 s CPU
+Average swap time 1014.47 ns real, 824.405 ns CPU
+
+real	0m0.255s
+user	0m0.984s
+sys	0m0.054s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 25
+Total time 0.233766 s real, 0.722917 s CPU
+Average swap time 1870.13 ns real, 722.917 ns CPU
+
+real	0m0.364s
+user	0m0.810s
+sys	0m0.121s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 25
+Total time 0.126250 s real, 0.952757 s CPU
+Average swap time 1010.00 ns real, 952.757 ns CPU
+output sum mismatch (1368 != 0)
+
+real	0m0.257s
+user	0m1.118s
+sys	0m0.042s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 25
+Total time 0.281745 s real, 1.95795 s CPU
+Average swap time 2253.96 ns real, 1957.95 ns CPU
+
+real	0m0.411s
+user	0m2.161s
+sys	0m0.049s
+
+$ time timeout 3600 java UnsafeMemory Null 8 1000000 100
+Total time 0.210139 s real, 1.50312 s CPU
+Average swap time 1681.11 ns real, 1503.12 ns CPU
+
+real	0m0.337s
+user	0m1.657s
+sys	0m0.056s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 1000000 100
+Total time 0.296775 s real, 0.966844 s CPU
+Average swap time 2374.20 ns real, 966.844 ns CPU
+
+real	0m0.426s
+user	0m1.021s
+sys	0m0.153s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 1000000 100
+Total time 0.278320 s real, 2.04995 s CPU
+Average swap time 2226.56 ns real, 2049.95 ns CPU
+output sum mismatch (297 != 0)
+
+real	0m0.407s
+user	0m2.217s
+sys	0m0.052s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 1000000 100
+Total time 0.268050 s real, 1.72706 s CPU
+Average swap time 2144.40 ns real, 1727.06 ns CPU
+
+real	0m0.407s
+user	0m1.909s
+sys	0m0.063s
+
+$ time timeout 3600 java UnsafeMemory Null 8 100000000 5
+Total time 0.259944 s real, 1.99800 s CPU
+Average swap time 20.7955 ns real, 19.9800 ns CPU
+
+real	0m0.388s
+user	0m2.134s
+sys	0m0.069s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 5
+Total time 28.4932 s real, 96.9531 s CPU
+Average swap time 2279.46 ns real, 969.531 ns CPU
+
+real	0m28.623s
+user	1m30.098s
+sys	0m7.078s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 5
+Total time 4.04105 s real, 32.1457 s CPU
+Average swap time 323.284 ns real, 321.457 ns CPU
+output sum mismatch (-34278 != 0)
+
+real	0m4.183s
+user	0m32.312s
+sys	0m0.050s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 5
+Total time 4.99588 s real, 39.4135 s CPU
+Average swap time 399.670 ns real, 394.135 ns CPU
+
+real	0m5.134s
+user	0m39.592s
+sys	0m0.064s
+
+$ time timeout 3600 java UnsafeMemory Null 8 100000000 25
+Total time 0.261213 s real, 2.01055 s CPU
+Average swap time 20.8971 ns real, 20.1055 ns CPU
+
+real	0m0.391s
+user	0m2.177s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 25
+Total time 24.5215 s real, 79.1872 s CPU
+Average swap time 1961.72 ns real, 791.872 ns CPU
+
+real	0m24.652s
+user	1m13.617s
+sys	0m5.805s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 25
+Total time 5.68600 s real, 45.3797 s CPU
+Average swap time 454.880 ns real, 453.797 ns CPU
+output sum mismatch (24694 != 0)
+
+real	0m5.821s
+user	0m45.544s
+sys	0m0.064s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 25
+Total time 5.23277 s real, 41.1044 s CPU
+Average swap time 418.622 ns real, 411.044 ns CPU
+
+real	0m5.372s
+user	0m41.286s
+sys	0m0.074s
+
+$ time timeout 3600 java UnsafeMemory Null 8 100000000 100
+Total time 0.270472 s real, 2.08326 s CPU
+Average swap time 21.6378 ns real, 20.8326 ns CPU
+
+real	0m0.401s
+user	0m2.240s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 8 100000000 100
+Total time 26.7584 s real, 88.6661 s CPU
+Average swap time 2140.67 ns real, 886.661 ns CPU
+
+real	0m26.889s
+user	1m23.296s
+sys	0m5.603s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 8 100000000 100
+Total time 5.57740 s real, 44.4828 s CPU
+Average swap time 446.192 ns real, 444.828 ns CPU
+output sum mismatch (-25591 != 0)
+
+real	0m5.720s
+user	0m44.653s
+sys	0m0.061s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 8 100000000 100
+Total time 5.89111 s real, 46.8332 s CPU
+Average swap time 471.288 ns real, 468.332 ns CPU
+
+real	0m6.025s
+user	0m47.017s
+sys	0m0.061s
+
+$ time timeout 3600 java UnsafeMemory Null 16 100 5
+Total time 0.00714569 s real, 0.000790656 s CPU
+Average swap time 1.14331e+06 ns real, 7906.56 ns CPU
+
+real	0m0.136s
+user	0m0.149s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 100 5
+Total time 0.00617439 s real, 0.00123642 s CPU
+Average swap time 987903 ns real, 12364.2 ns CPU
+
+real	0m0.152s
+user	0m0.141s
+sys	0m0.054s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 5
+Total time 0.00618090 s real, 0.000502678 s CPU
+Average swap time 988944 ns real, 5026.78 ns CPU
+
+real	0m0.137s
+user	0m0.134s
+sys	0m0.059s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 5
+Total time 0.00676310 s real, 0.00237320 s CPU
+Average swap time 1.08210e+06 ns real, 23732.0 ns CPU
+
+real	0m0.138s
+user	0m0.151s
+sys	0m0.050s
+
+$ time timeout 3600 java UnsafeMemory Null 16 100 25
+Total time 0.00715578 s real, 0.000410704 s CPU
+Average swap time 1.14493e+06 ns real, 4107.04 ns CPU
+
+real	0m0.136s
+user	0m0.148s
+sys	0m0.046s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 100 25
+Total time 0.00627666 s real, 0.00105491 s CPU
+Average swap time 1.00427e+06 ns real, 10549.1 ns CPU
+
+real	0m0.132s
+user	0m0.152s
+sys	0m0.044s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 25
+Total time 0.00660822 s real, 0.000583351 s CPU
+Average swap time 1.05731e+06 ns real, 5833.51 ns CPU
+output sum mismatch (1 != 0)
+
+real	0m0.173s
+user	0m0.138s
+sys	0m0.058s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 25
+Total time 0.00749414 s real, 0.00259068 s CPU
+Average swap time 1.19906e+06 ns real, 25906.8 ns CPU
+
+real	0m0.139s
+user	0m0.144s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory Null 16 100 100
+Total time 0.00715109 s real, 0.000501092 s CPU
+Average swap time 1.14417e+06 ns real, 5010.92 ns CPU
+
+real	0m0.135s
+user	0m0.137s
+sys	0m0.056s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 100 100
+Total time 0.00638971 s real, 0.000974838 s CPU
+Average swap time 1.02235e+06 ns real, 9748.38 ns CPU
+
+real	0m0.149s
+user	0m0.143s
+sys	0m0.050s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100 100
+Total time 0.00919049 s real, 0.000725551 s CPU
+Average swap time 1.47048e+06 ns real, 7255.51 ns CPU
+
+real	0m0.151s
+user	0m0.142s
+sys	0m0.056s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100 100
+Total time 0.00848285 s real, 0.00252233 s CPU
+Average swap time 1.35726e+06 ns real, 25223.3 ns CPU
+
+real	0m0.148s
+user	0m0.147s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory Null 16 10000 5
+Total time 0.0128201 s real, 0.0670468 s CPU
+Average swap time 20512.2 ns real, 6704.68 ns CPU
+
+real	0m0.140s
+user	0m0.207s
+sys	0m0.062s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 5
+Total time 0.0154154 s real, 0.0241650 s CPU
+Average swap time 24664.6 ns real, 2416.50 ns CPU
+
+real	0m0.143s
+user	0m0.189s
+sys	0m0.045s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 5
+Total time 0.00989137 s real, 0.0431708 s CPU
+Average swap time 15826.2 ns real, 4317.08 ns CPU
+output sum mismatch (108 != 0)
+
+real	0m0.148s
+user	0m0.194s
+sys	0m0.053s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 5
+Total time 0.0212304 s real, 0.160579 s CPU
+Average swap time 33968.7 ns real, 16057.9 ns CPU
+
+real	0m0.148s
+user	0m0.317s
+sys	0m0.066s
+
+$ time timeout 3600 java UnsafeMemory Null 16 10000 25
+Total time 0.00870184 s real, 0.0202519 s CPU
+Average swap time 13922.9 ns real, 2025.19 ns CPU
+
+real	0m0.138s
+user	0m0.176s
+sys	0m0.047s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 25
+Total time 0.0145338 s real, 0.0239286 s CPU
+Average swap time 23254.0 ns real, 2392.86 ns CPU
+
+real	0m0.141s
+user	0m0.170s
+sys	0m0.060s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 25
+Total time 0.00977210 s real, 0.0262511 s CPU
+Average swap time 15635.4 ns real, 2625.11 ns CPU
+output sum mismatch (-11 != 0)
+
+real	0m0.140s
+user	0m0.167s
+sys	0m0.059s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 25
+Total time 0.0166446 s real, 0.105373 s CPU
+Average swap time 26631.4 ns real, 10537.3 ns CPU
 
 real	0m0.146s
 user	0m0.266s
-sys	0m0.057s
+sys	0m0.063s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 4
-Total time 0.00985497 s real, 0.0237420 s CPU
-Average swap time 15767.9 ns real, 2374.20 ns CPU
-
-real	0m0.139s
-user	0m0.177s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 4
-Total time 0.00894864 s real, 0.0326910 s CPU
-Average swap time 14317.8 ns real, 3269.10 ns CPU
-output sum mismatch (31 != 0)
-
-real	0m0.132s
-user	0m0.177s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 4
-Total time 0.0160943 s real, 0.110246 s CPU
-Average swap time 25750.9 ns real, 11024.6 ns CPU
-
-real	0m0.157s
-user	0m0.250s
-sys	0m0.074s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 8
-Total time 0.00975552 s real, 0.0242063 s CPU
-Average swap time 15608.8 ns real, 2420.63 ns CPU
-
-real	0m0.134s
-user	0m0.174s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 8
-Total time 0.00973206 s real, 0.0393192 s CPU
-Average swap time 15571.3 ns real, 3931.92 ns CPU
-output sum mismatch (-31 != 0)
-
-real	0m0.135s
-user	0m0.189s
-sys	0m0.054s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 8
-Total time 0.0141398 s real, 0.0688863 s CPU
-Average swap time 22623.7 ns real, 6888.63 ns CPU
-
-real	0m0.151s
-user	0m0.222s
-sys	0m0.074s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 16
-Total time 0.00932624 s real, 0.0243240 s CPU
-Average swap time 14922.0 ns real, 2432.40 ns CPU
-
-real	0m0.148s
-user	0m0.162s
-sys	0m0.070s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 16
-Total time 0.0112491 s real, 0.0503717 s CPU
-Average swap time 17998.5 ns real, 5037.17 ns CPU
-output sum mismatch (114 != 0)
-
-real	0m0.154s
-user	0m0.209s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 16
-Total time 0.0164977 s real, 0.120475 s CPU
-Average swap time 26396.2 ns real, 12047.5 ns CPU
-
-real	0m0.154s
-user	0m0.280s
-sys	0m0.066s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 32
-Total time 0.0115695 s real, 0.0243727 s CPU
-Average swap time 18511.2 ns real, 2437.27 ns CPU
-
-real	0m0.144s
-user	0m0.166s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 32
-Total time 0.00990016 s real, 0.0377975 s CPU
-Average swap time 15840.2 ns real, 3779.75 ns CPU
-output sum mismatch (16 != 0)
-
-real	0m0.157s
-user	0m0.209s
-sys	0m0.049s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 32
-Total time 0.0173890 s real, 0.128387 s CPU
-Average swap time 27822.3 ns real, 12838.7 ns CPU
-
-real	0m0.150s
-user	0m0.286s
-sys	0m0.061s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 64
-Total time 0.0111539 s real, 0.0265858 s CPU
-Average swap time 17846.3 ns real, 2658.58 ns CPU
-
-real	0m0.152s
-user	0m0.177s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 64
-Total time 0.00837214 s real, 0.0533566 s CPU
-Average swap time 13395.4 ns real, 5335.66 ns CPU
-output sum mismatch (6 != 0)
-
-real	0m0.138s
-user	0m0.194s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 64
-Total time 0.0145209 s real, 0.0687809 s CPU
-Average swap time 23233.4 ns real, 6878.09 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 16 10000 100
+Total time 0.0127253 s real, 0.0574502 s CPU
+Average swap time 20360.5 ns real, 5745.02 ns CPU
 
 real	0m0.142s
-user	0m0.239s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 128
-Total time 0.0100544 s real, 0.0256483 s CPU
-Average swap time 16087.0 ns real, 2564.83 ns CPU
-
-real	0m0.138s
-user	0m0.176s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 128
-Total time 0.00915606 s real, 0.0411666 s CPU
-Average swap time 14649.7 ns real, 4116.66 ns CPU
-output sum mismatch (4 != 0)
-
-real	0m0.152s
-user	0m0.201s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 128
-Total time 0.0161339 s real, 0.0854863 s CPU
-Average swap time 25814.3 ns real, 8548.63 ns CPU
-
-real	0m0.155s
-user	0m0.234s
-sys	0m0.078s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 1
-Total time 0.00324036 s real, 0.00000 s CPU
-Average swap time 51.8457 ns real, 0.00000 ns CPU
-
-real	0m0.130s
-user	0m0.135s
-sys	0m0.053s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 1
-Total time 0.00304163 s real, 0.00000 s CPU
-Average swap time 48.6661 ns real, 0.00000 ns CPU
-
-real	0m0.139s
-user	0m0.152s
-sys	0m0.043s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 1
-Total time 0.00264596 s real, 0.00000 s CPU
-Average swap time 42.3354 ns real, 0.00000 ns CPU
-
-real	0m0.137s
-user	0m0.142s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 2
-Total time 0.237293 s real, 0.731318 s CPU
-Average swap time 3796.69 ns real, 731.318 ns CPU
-
-real	0m0.371s
-user	0m0.828s
-sys	0m0.126s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 2
-Total time 0.180352 s real, 2.32711 s CPU
-Average swap time 2885.63 ns real, 2327.11 ns CPU
-output sum mismatch (2434 != 0)
-
-real	0m0.314s
-user	0m2.485s
-sys	0m0.079s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 2
-Total time 0.280017 s real, 2.85193 s CPU
-Average swap time 4480.27 ns real, 2851.93 ns CPU
-
-real	0m0.415s
-user	0m3.050s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 4
-Total time 0.226103 s real, 0.729836 s CPU
-Average swap time 3617.65 ns real, 729.836 ns CPU
-
-real	0m0.356s
-user	0m0.791s
-sys	0m0.152s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 4
-Total time 0.202825 s real, 2.34970 s CPU
-Average swap time 3245.21 ns real, 2349.70 ns CPU
-output sum mismatch (4414 != 0)
-
-real	0m0.347s
-user	0m2.521s
-sys	0m0.076s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 4
-Total time 0.371421 s real, 4.33207 s CPU
-Average swap time 5942.74 ns real, 4332.07 ns CPU
-
-real	0m0.502s
-user	0m4.515s
-sys	0m0.090s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 8
-Total time 0.244393 s real, 0.779098 s CPU
-Average swap time 3910.29 ns real, 779.098 ns CPU
-
-real	0m0.383s
-user	0m0.855s
-sys	0m0.148s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 8
-Total time 0.256302 s real, 3.12291 s CPU
-Average swap time 4100.84 ns real, 3122.91 ns CPU
-output sum mismatch (7917 != 0)
-
-real	0m0.394s
-user	0m3.297s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 8
-Total time 0.305346 s real, 3.60344 s CPU
-Average swap time 4885.53 ns real, 3603.44 ns CPU
-
-real	0m0.438s
-user	0m3.790s
-sys	0m0.076s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 16
-Total time 0.203375 s real, 0.600191 s CPU
-Average swap time 3254.00 ns real, 600.191 ns CPU
-
-real	0m0.334s
-user	0m0.685s
-sys	0m0.137s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 16
-Total time 0.181349 s real, 2.07800 s CPU
-Average swap time 2901.59 ns real, 2078.00 ns CPU
-output sum mismatch (2656 != 0)
-
-real	0m0.317s
-user	0m2.250s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 16
-Total time 0.436538 s real, 5.67179 s CPU
-Average swap time 6984.61 ns real, 5671.79 ns CPU
-
-real	0m0.571s
-user	0m5.870s
-sys	0m0.086s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 32
-Total time 0.216445 s real, 0.660002 s CPU
-Average swap time 3463.12 ns real, 660.002 ns CPU
-
-real	0m0.345s
-user	0m0.743s
-sys	0m0.135s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 32
-Total time 0.240099 s real, 3.30277 s CPU
-Average swap time 3841.58 ns real, 3302.77 ns CPU
-output sum mismatch (2912 != 0)
-
-real	0m0.371s
-user	0m3.463s
-sys	0m0.075s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 32
-Total time 0.572039 s real, 7.27488 s CPU
-Average swap time 9152.62 ns real, 7274.88 ns CPU
-
-real	0m0.717s
-user	0m7.491s
-sys	0m0.081s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 64
-Total time 0.222288 s real, 0.674798 s CPU
-Average swap time 3556.61 ns real, 674.798 ns CPU
-
-real	0m0.370s
-user	0m0.768s
-sys	0m0.140s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 64
-Total time 0.194169 s real, 2.13770 s CPU
-Average swap time 3106.70 ns real, 2137.70 ns CPU
-output sum mismatch (1431 != 0)
-
-real	0m0.326s
-user	0m2.295s
-sys	0m0.081s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 64
-Total time 0.261480 s real, 3.29229 s CPU
-Average swap time 4183.68 ns real, 3292.29 ns CPU
-
-real	0m0.399s
-user	0m3.457s
-sys	0m0.107s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 128
-Total time 0.240255 s real, 0.763130 s CPU
-Average swap time 3844.09 ns real, 763.130 ns CPU
-
-real	0m0.397s
-user	0m0.829s
-sys	0m0.145s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 128
-Total time 0.204631 s real, 2.57350 s CPU
-Average swap time 3274.10 ns real, 2573.50 ns CPU
-output sum mismatch (1336 != 0)
-
-real	0m0.338s
-user	0m2.727s
-sys	0m0.077s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 128
-Total time 0.239762 s real, 2.66182 s CPU
-Average swap time 3836.19 ns real, 2661.82 ns CPU
-
-real	0m0.371s
-user	0m2.846s
-sys	0m0.082s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 1
-Total time 0.00293747 s real, 0.00000 s CPU
-Average swap time 0.469995 ns real, 0.00000 ns CPU
-
-real	0m0.131s
-user	0m0.133s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 1
-Total time 0.00284150 s real, 0.00000 s CPU
-Average swap time 0.454640 ns real, 0.00000 ns CPU
-
-real	0m0.140s
-user	0m0.149s
-sys	0m0.050s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 1
-Total time 0.00327690 s real, 0.00000 s CPU
-Average swap time 0.524304 ns real, 0.00000 ns CPU
-
-real	0m0.141s
-user	0m0.154s
-sys	0m0.045s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 2
-Total time 13.0750 s real, 41.0726 s CPU
-Average swap time 2092.00 ns real, 410.726 ns CPU
-
-real	0m13.208s
-user	0m36.974s
-sys	0m4.322s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 2
-Total time 1.82897 s real, 26.3717 s CPU
-Average swap time 292.635 ns real, 263.717 ns CPU
-output sum mismatch (-54216 != 0)
-
-real	0m1.984s
-user	0m26.486s
-sys	0m0.126s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 2
-Total time 8.97014 s real, 132.823 s CPU
-Average swap time 1435.22 ns real, 1328.23 ns CPU
-
-real	0m9.100s
-user	2m12.840s
-sys	0m0.249s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 4
-Total time 13.9981 s real, 44.2808 s CPU
-Average swap time 2239.70 ns real, 442.808 ns CPU
-
-real	0m14.126s
-user	0m39.892s
-sys	0m4.612s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 4
-Total time 2.44198 s real, 35.1868 s CPU
-Average swap time 390.716 ns real, 351.868 ns CPU
-output sum mismatch (808893 != 0)
-
-real	0m2.578s
-user	0m35.319s
-sys	0m0.093s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 4
-Total time 6.41637 s real, 89.2654 s CPU
-Average swap time 1026.62 ns real, 892.654 ns CPU
-
-real	0m6.549s
-user	1m29.322s
-sys	0m0.210s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 8
-Total time 14.2623 s real, 45.0081 s CPU
-Average swap time 2281.97 ns real, 450.081 ns CPU
-
-real	0m14.392s
-user	0m40.506s
-sys	0m4.734s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 8
-Total time 2.66596 s real, 38.7309 s CPU
-Average swap time 426.554 ns real, 387.309 ns CPU
-output sum mismatch (1121787 != 0)
-
-real	0m2.793s
-user	0m38.871s
-sys	0m0.092s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 8
-Total time 9.49557 s real, 137.204 s CPU
-Average swap time 1519.29 ns real, 1372.04 ns CPU
-
-real	0m9.631s
-user	2m17.384s
-sys	0m0.105s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 16
-Total time 16.7443 s real, 52.4985 s CPU
-Average swap time 2679.09 ns real, 524.985 ns CPU
-
-real	0m16.870s
-user	0m46.385s
-sys	0m6.338s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 16
-Total time 3.38516 s real, 49.6641 s CPU
-Average swap time 541.625 ns real, 496.641 ns CPU
-output sum mismatch (-121261 != 0)
-
-real	0m3.526s
-user	0m49.800s
-sys	0m0.104s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 16
-Total time 8.98792 s real, 128.263 s CPU
-Average swap time 1438.07 ns real, 1282.63 ns CPU
-
-real	0m9.115s
-user	2m8.421s
-sys	0m0.114s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 32
-Total time 16.3990 s real, 56.6730 s CPU
-Average swap time 2623.84 ns real, 566.730 ns CPU
-
-real	0m16.528s
-user	0m49.494s
-sys	0m7.393s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 32
-Total time 3.79893 s real, 56.5710 s CPU
-Average swap time 607.829 ns real, 565.710 ns CPU
-output sum mismatch (-90921 != 0)
-
-real	0m3.936s
-user	0m56.532s
-sys	0m0.266s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 32
-Total time 7.68516 s real, 111.511 s CPU
-Average swap time 1229.63 ns real, 1115.11 ns CPU
-
-real	0m7.812s
-user	1m51.691s
-sys	0m0.098s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 64
-Total time 15.7206 s real, 48.2802 s CPU
-Average swap time 2515.30 ns real, 482.802 ns CPU
-
-real	0m15.846s
-user	0m43.097s
-sys	0m5.408s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 64
-Total time 3.88020 s real, 56.7541 s CPU
-Average swap time 620.832 ns real, 567.541 ns CPU
-output sum mismatch (-99872 != 0)
-
-real	0m4.015s
-user	0m56.898s
-sys	0m0.089s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 64
-Total time 3.78054 s real, 55.0232 s CPU
-Average swap time 604.886 ns real, 550.232 ns CPU
-
-real	0m3.921s
-user	0m55.164s
-sys	0m0.125s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 128
-Total time 16.6751 s real, 52.7530 s CPU
-Average swap time 2668.01 ns real, 527.530 ns CPU
-
-real	0m16.828s
-user	0m46.839s
-sys	0m6.140s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 128
-Total time 4.06816 s real, 57.5468 s CPU
-Average swap time 650.906 ns real, 575.468 ns CPU
-output sum mismatch (-54364 != 0)
-
-real	0m4.214s
-user	0m57.586s
-sys	0m0.206s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 128
-Total time 5.21104 s real, 74.3861 s CPU
-Average swap time 833.767 ns real, 743.861 ns CPU
-
-real	0m5.339s
-user	1m14.372s
-sys	0m0.281s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 1
-Total time 0.00611831 s real, 0.00000 s CPU
-Average swap time 1.95786e+06 ns real, 0.00000 ns CPU
-
-real	0m0.144s
-user	0m0.153s
+user	0m0.209s
 sys	0m0.049s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 1
-Total time 0.00510789 s real, 0.00000 s CPU
-Average swap time 1.63452e+06 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 16 10000 100
+Total time 0.0149102 s real, 0.0250444 s CPU
+Average swap time 23856.3 ns real, 2504.44 ns CPU
 
-real	0m0.135s
-user	0m0.143s
-sys	0m0.050s
+real	0m0.144s
+user	0m0.179s
+sys	0m0.052s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 1
-Total time 0.00650593 s real, 0.00000 s CPU
-Average swap time 2.08190e+06 ns real, 0.00000 ns CPU
-
-real	0m0.134s
-user	0m0.140s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 2
-Total time 0.0105666 s real, 0.00136694 s CPU
-Average swap time 3.38131e+06 ns real, 13669.4 ns CPU
-
-real	0m0.147s
-user	0m0.159s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 2
-Total time 0.00971071 s real, 0.000708780 s CPU
-Average swap time 3.10743e+06 ns real, 7087.80 ns CPU
-output sum mismatch (-1 != 0)
-
-real	0m0.139s
-user	0m0.142s
-sys	0m0.066s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 2
-Total time 0.00955731 s real, 0.00184717 s CPU
-Average swap time 3.05834e+06 ns real, 18471.7 ns CPU
-
-real	0m0.146s
-user	0m0.139s
-sys	0m0.076s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 4
-Total time 0.0126283 s real, 0.000909717 s CPU
-Average swap time 4.04105e+06 ns real, 9097.17 ns CPU
-
-real	0m0.152s
-user	0m0.154s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 4
-Total time 0.00907844 s real, 0.00102347 s CPU
-Average swap time 2.90510e+06 ns real, 10234.7 ns CPU
-output sum mismatch (3 != 0)
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 10000 100
+Total time 0.0161524 s real, 0.0754908 s CPU
+Average swap time 25843.9 ns real, 7549.08 ns CPU
+output sum mismatch (6 != 0)
 
 real	0m0.156s
-user	0m0.160s
+user	0m0.222s
+sys	0m0.060s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 10000 100
+Total time 0.0145416 s real, 0.115611 s CPU
+Average swap time 23266.6 ns real, 11561.1 ns CPU
+
+real	0m0.147s
+user	0m0.269s
+sys	0m0.065s
+
+$ time timeout 3600 java UnsafeMemory Null 16 1000000 5
+Total time 0.209546 s real, 2.85550 s CPU
+Average swap time 3352.74 ns real, 2855.50 ns CPU
+
+real	0m0.338s
+user	0m3.030s
+sys	0m0.052s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 5
+Total time 0.262633 s real, 0.826034 s CPU
+Average swap time 4202.13 ns real, 826.034 ns CPU
+
+real	0m0.391s
+user	0m0.938s
+sys	0m0.107s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 5
+Total time 0.170595 s real, 1.96725 s CPU
+Average swap time 2729.52 ns real, 1967.25 ns CPU
+output sum mismatch (6121 != 0)
+
+real	0m0.308s
+user	0m2.129s
+sys	0m0.063s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 5
+Total time 0.235864 s real, 2.62533 s CPU
+Average swap time 3773.83 ns real, 2625.33 ns CPU
+
+real	0m0.366s
+user	0m2.840s
+sys	0m0.064s
+
+$ time timeout 3600 java UnsafeMemory Null 16 1000000 25
+Total time 0.189056 s real, 2.62693 s CPU
+Average swap time 3024.90 ns real, 2626.93 ns CPU
+
+real	0m0.325s
+user	0m2.767s
+sys	0m0.078s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 25
+Total time 0.318183 s real, 1.00356 s CPU
+Average swap time 5090.93 ns real, 1003.56 ns CPU
+
+real	0m0.447s
+user	0m1.064s
+sys	0m0.158s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 25
+Total time 0.157720 s real, 1.94926 s CPU
+Average swap time 2523.52 ns real, 1949.26 ns CPU
+output sum mismatch (2504 != 0)
+
+real	0m0.287s
+user	0m2.113s
+sys	0m0.058s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 25
+Total time 0.319791 s real, 4.22792 s CPU
+Average swap time 5116.65 ns real, 4227.92 ns CPU
+
+real	0m0.451s
+user	0m4.422s
 sys	0m0.061s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 4
-Total time 0.0108389 s real, 0.00299739 s CPU
-Average swap time 3.46844e+06 ns real, 29973.9 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 16 1000000 100
+Total time 0.188896 s real, 2.64390 s CPU
+Average swap time 3022.33 ns real, 2643.90 ns CPU
+
+real	0m0.316s
+user	0m2.810s
+sys	0m0.052s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 1000000 100
+Total time 0.244607 s real, 0.709391 s CPU
+Average swap time 3913.71 ns real, 709.391 ns CPU
+
+real	0m0.376s
+user	0m0.794s
+sys	0m0.128s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 1000000 100
+Total time 0.270620 s real, 3.23928 s CPU
+Average swap time 4329.92 ns real, 3239.28 ns CPU
+output sum mismatch (264 != 0)
+
+real	0m0.399s
+user	0m3.405s
+sys	0m0.061s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 1000000 100
+Total time 0.299894 s real, 3.63135 s CPU
+Average swap time 4798.30 ns real, 3631.35 ns CPU
+
+real	0m0.431s
+user	0m3.833s
+sys	0m0.067s
+
+$ time timeout 3600 java UnsafeMemory Null 16 100000000 5
+Total time 0.221857 s real, 3.37728 s CPU
+Average swap time 35.4971 ns real, 33.7728 ns CPU
+
+real	0m0.351s
+user	0m3.532s
+sys	0m0.057s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 5
+Total time 22.3404 s real, 73.5698 s CPU
+Average swap time 3574.46 ns real, 735.698 ns CPU
+
+real	0m22.463s
+user	1m6.950s
+sys	0m6.856s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 5
+Total time 2.99770 s real, 47.2455 s CPU
+Average swap time 479.632 ns real, 472.455 ns CPU
+output sum mismatch (187699 != 0)
+
+real	0m3.131s
+user	0m47.392s
+sys	0m0.078s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 5
+Total time 6.78705 s real, 102.705 s CPU
+Average swap time 1085.93 ns real, 1027.05 ns CPU
+
+real	0m6.915s
+user	1m42.906s
+sys	0m0.073s
+
+$ time timeout 3600 java UnsafeMemory Null 16 100000000 25
+Total time 0.236609 s real, 3.46991 s CPU
+Average swap time 37.8574 ns real, 34.6991 ns CPU
+
+real	0m0.378s
+user	0m3.656s
+sys	0m0.055s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 25
+Total time 20.8319 s real, 64.7581 s CPU
+Average swap time 3333.11 ns real, 647.581 ns CPU
+
+real	0m20.960s
+user	0m58.535s
+sys	0m6.461s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 25
+Total time 3.51234 s real, 55.3215 s CPU
+Average swap time 561.975 ns real, 553.215 ns CPU
+output sum mismatch (-133400 != 0)
+
+real	0m3.651s
+user	0m55.484s
+sys	0m0.072s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 25
+Total time 7.82418 s real, 123.797 s CPU
+Average swap time 1251.87 ns real, 1237.97 ns CPU
+
+real	0m7.955s
+user	2m3.985s
+sys	0m0.093s
+
+$ time timeout 3600 java UnsafeMemory Null 16 100000000 100
+Total time 0.248583 s real, 3.65692 s CPU
+Average swap time 39.7734 ns real, 36.5692 ns CPU
+
+real	0m0.378s
+user	0m3.836s
+sys	0m0.048s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 16 100000000 100
+Total time 20.2646 s real, 62.9137 s CPU
+Average swap time 3242.33 ns real, 629.137 ns CPU
+
+real	0m20.387s
+user	0m57.040s
+sys	0m6.109s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 16 100000000 100
+Total time 3.85607 s real, 61.0339 s CPU
+Average swap time 616.971 ns real, 610.339 ns CPU
+output sum mismatch (-77699 != 0)
+
+real	0m3.991s
+user	1m1.172s
+sys	0m0.103s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 16 100000000 100
+Total time 4.23511 s real, 65.4816 s CPU
+Average swap time 677.618 ns real, 654.816 ns CPU
+
+real	0m4.362s
+user	1m5.713s
+sys	0m0.057s
+
+$ time timeout 3600 java UnsafeMemory Null 40 100 5
+Total time 0.0136351 s real, 0.000908008 s CPU
+Average swap time 5.45404e+06 ns real, 9080.08 ns CPU
+
+real	0m0.173s
+user	0m0.164s
+sys	0m0.082s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 100 5
+Total time 0.0145929 s real, 0.00277481 s CPU
+Average swap time 5.83716e+06 ns real, 27748.1 ns CPU
 
 real	0m0.146s
+user	0m0.152s
+sys	0m0.068s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 100 5
+Total time 0.0152331 s real, 0.00127940 s CPU
+Average swap time 6.09325e+06 ns real, 12794.0 ns CPU
+output sum mismatch (2 != 0)
+
+real	0m0.153s
 user	0m0.164s
 sys	0m0.055s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 8
-Total time 0.0112861 s real, 0.00139454 s CPU
-Average swap time 3.61154e+06 ns real, 13945.4 ns CPU
-
-real	0m0.140s
-user	0m0.147s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 8
-Total time 0.00980943 s real, 0.000787322 s CPU
-Average swap time 3.13902e+06 ns real, 7873.22 ns CPU
-output sum mismatch (3 != 0)
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 100 5
+Total time 0.0172604 s real, 0.00360497 s CPU
+Average swap time 6.90417e+06 ns real, 36049.7 ns CPU
 
 real	0m0.148s
-user	0m0.146s
+user	0m0.159s
 sys	0m0.064s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 8
-Total time 0.0108464 s real, 0.00394225 s CPU
-Average swap time 3.47084e+06 ns real, 39422.5 ns CPU
-
-real	0m0.135s
-user	0m0.147s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 16
-Total time 0.00927549 s real, 0.000965617 s CPU
-Average swap time 2.96816e+06 ns real, 9656.17 ns CPU
-
-real	0m0.148s
-user	0m0.143s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 16
-Total time 0.00958820 s real, 0.000728270 s CPU
-Average swap time 3.06822e+06 ns real, 7282.70 ns CPU
-output sum mismatch (1 != 0)
-
-real	0m0.134s
-user	0m0.147s
-sys	0m0.055s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 16
-Total time 0.00988409 s real, 0.00421952 s CPU
-Average swap time 3.16291e+06 ns real, 42195.2 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 40 100 25
+Total time 0.0140108 s real, 0.000674420 s CPU
+Average swap time 5.60430e+06 ns real, 6744.20 ns CPU
 
 real	0m0.143s
-user	0m0.153s
-sys	0m0.067s
+user	0m0.138s
+sys	0m0.078s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 32
-Total time 0.0103661 s real, 0.00123961 s CPU
-Average swap time 3.31715e+06 ns real, 12396.1 ns CPU
-
-real	0m0.136s
-user	0m0.147s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 32
-Total time 0.00891554 s real, 0.000773059 s CPU
-Average swap time 2.85297e+06 ns real, 7730.59 ns CPU
-output sum mismatch (2 != 0)
-
-real	0m0.140s
-user	0m0.143s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 32
-Total time 0.0120378 s real, 0.00310868 s CPU
-Average swap time 3.85209e+06 ns real, 31086.8 ns CPU
-
-real	0m0.147s
-user	0m0.144s
-sys	0m0.073s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 64
-Total time 0.00948159 s real, 0.000954994 s CPU
-Average swap time 3.03411e+06 ns real, 9549.94 ns CPU
-
-real	0m0.153s
-user	0m0.152s
-sys	0m0.067s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 64
-Total time 0.0105467 s real, 0.000858446 s CPU
-Average swap time 3.37495e+06 ns real, 8584.46 ns CPU
-
-real	0m0.145s
-user	0m0.142s
-sys	0m0.071s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 64
-Total time 0.0118376 s real, 0.00344202 s CPU
-Average swap time 3.78804e+06 ns real, 34420.2 ns CPU
-
-real	0m0.160s
-user	0m0.160s
-sys	0m0.077s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100 128
-Total time 0.00927318 s real, 0.00115952 s CPU
-Average swap time 2.96742e+06 ns real, 11595.2 ns CPU
-
-real	0m0.138s
-user	0m0.139s
-sys	0m0.069s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100 128
-Total time 0.00963768 s real, 0.000691893 s CPU
-Average swap time 3.08406e+06 ns real, 6918.93 ns CPU
-
-real	0m0.148s
-user	0m0.155s
-sys	0m0.059s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100 128
-Total time 0.0102823 s real, 0.00464674 s CPU
-Average swap time 3.29035e+06 ns real, 46467.4 ns CPU
-
-real	0m0.143s
-user	0m0.156s
-sys	0m0.066s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 1
-Total time 0.00572275 s real, 0.00000 s CPU
-Average swap time 18312.8 ns real, 0.00000 ns CPU
-
-real	0m0.151s
-user	0m0.157s
-sys	0m0.051s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 1
-Total time 0.00517406 s real, 0.00000 s CPU
-Average swap time 16557.0 ns real, 0.00000 ns CPU
-
-real	0m0.132s
-user	0m0.133s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 1
-Total time 0.00529839 s real, 0.00000 s CPU
-Average swap time 16954.8 ns real, 0.00000 ns CPU
-
-real	0m0.135s
-user	0m0.151s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 2
-Total time 0.0123796 s real, 0.0268665 s CPU
-Average swap time 39614.9 ns real, 2686.65 ns CPU
-
-real	0m0.177s
-user	0m0.185s
-sys	0m0.073s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 2
-Total time 0.0124062 s real, 0.0420520 s CPU
-Average swap time 39699.7 ns real, 4205.20 ns CPU
-output sum mismatch (32 != 0)
-
-real	0m0.139s
-user	0m0.206s
-sys	0m0.058s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 2
-Total time 0.0167462 s real, 0.0604173 s CPU
-Average swap time 53587.7 ns real, 6041.73 ns CPU
-
-real	0m0.158s
-user	0m0.226s
-sys	0m0.076s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 4
-Total time 0.0109576 s real, 0.0247655 s CPU
-Average swap time 35064.4 ns real, 2476.55 ns CPU
-
-real	0m0.155s
-user	0m0.172s
-sys	0m0.069s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 4
-Total time 0.0150384 s real, 0.0369804 s CPU
-Average swap time 48122.8 ns real, 3698.04 ns CPU
-output sum mismatch (60 != 0)
-
-real	0m0.152s
-user	0m0.204s
-sys	0m0.057s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 4
-Total time 0.0172959 s real, 0.0611610 s CPU
-Average swap time 55346.8 ns real, 6116.10 ns CPU
-
-real	0m0.166s
-user	0m0.239s
-sys	0m0.070s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 8
-Total time 0.0116041 s real, 0.0185666 s CPU
-Average swap time 37133.2 ns real, 1856.66 ns CPU
-
-real	0m0.139s
-user	0m0.155s
-sys	0m0.073s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 8
-Total time 0.0122182 s real, 0.0254593 s CPU
-Average swap time 39098.4 ns real, 2545.93 ns CPU
-output sum mismatch (-22 != 0)
-
-real	0m0.150s
-user	0m0.175s
-sys	0m0.075s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 8
-Total time 0.0166072 s real, 0.0559604 s CPU
-Average swap time 53143.0 ns real, 5596.04 ns CPU
-
-real	0m0.159s
-user	0m0.232s
-sys	0m0.071s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 16
-Total time 0.0124564 s real, 0.0302417 s CPU
-Average swap time 39860.6 ns real, 3024.17 ns CPU
+$ time timeout 3600 java UnsafeMemory Synchronized 40 100 25
+Total time 0.0128367 s real, 0.00289679 s CPU
+Average swap time 5.13468e+06 ns real, 28967.9 ns CPU
 
 real	0m0.142s
-user	0m0.178s
-sys	0m0.072s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 16
-Total time 0.0117201 s real, 0.0266332 s CPU
-Average swap time 37504.5 ns real, 2663.32 ns CPU
-output sum mismatch (14 != 0)
-
-real	0m0.139s
-user	0m0.165s
-sys	0m0.076s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 16
-Total time 0.0161394 s real, 0.0689110 s CPU
-Average swap time 51646.2 ns real, 6891.10 ns CPU
-
-real	0m0.145s
-user	0m0.230s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 32
-Total time 0.0118052 s real, 0.0226800 s CPU
-Average swap time 37776.6 ns real, 2268.00 ns CPU
-
-real	0m0.140s
-user	0m0.165s
+user	0m0.140s
 sys	0m0.073s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 32
-Total time 0.0132308 s real, 0.0282340 s CPU
-Average swap time 42338.4 ns real, 2823.40 ns CPU
-output sum mismatch (24 != 0)
-
-real	0m0.149s
-user	0m0.189s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 32
-Total time 0.0187157 s real, 0.0641106 s CPU
-Average swap time 59890.4 ns real, 6411.06 ns CPU
-
-real	0m0.151s
-user	0m0.238s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 64
-Total time 0.0118710 s real, 0.0303267 s CPU
-Average swap time 37987.1 ns real, 3032.67 ns CPU
-
-real	0m0.156s
-user	0m0.180s
-sys	0m0.073s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 64
-Total time 0.0183172 s real, 0.0710590 s CPU
-Average swap time 58614.9 ns real, 7105.90 ns CPU
-output sum mismatch (13 != 0)
-
-real	0m0.152s
-user	0m0.230s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 64
-Total time 0.0189042 s real, 0.0703753 s CPU
-Average swap time 60493.5 ns real, 7037.53 ns CPU
-
-real	0m0.147s
-user	0m0.241s
-sys	0m0.065s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 10000 128
-Total time 0.0117611 s real, 0.0216280 s CPU
-Average swap time 37635.4 ns real, 2162.80 ns CPU
-
-real	0m0.139s
-user	0m0.168s
-sys	0m0.070s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 10000 128
-Total time 0.0113582 s real, 0.0181780 s CPU
-Average swap time 36346.2 ns real, 1817.80 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 100 25
+Total time 0.0147428 s real, 0.00113390 s CPU
+Average swap time 5.89711e+06 ns real, 11339.0 ns CPU
 output sum mismatch (-2 != 0)
 
-real	0m0.172s
-user	0m0.165s
-sys	0m0.072s
+real	0m0.154s
+user	0m0.143s
+sys	0m0.074s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 10000 128
-Total time 0.0182836 s real, 0.0688870 s CPU
-Average swap time 58507.5 ns real, 6888.70 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 100 25
+Total time 0.0134475 s real, 0.00282518 s CPU
+Average swap time 5.37900e+06 ns real, 28251.8 ns CPU
 
-real	0m0.160s
-user	0m0.249s
-sys	0m0.062s
+real	0m0.149s
+user	0m0.164s
+sys	0m0.056s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 1
-Total time 0.00481436 s real, 0.00000 s CPU
-Average swap time 154.059 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 40 100 100
+Total time 0.0141933 s real, 0.000649284 s CPU
+Average swap time 5.67731e+06 ns real, 6492.84 ns CPU
+
+real	0m0.140s
+user	0m0.156s
+sys	0m0.057s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 100 100
+Total time 0.0160443 s real, 0.00196812 s CPU
+Average swap time 6.41771e+06 ns real, 19681.2 ns CPU
 
 real	0m0.149s
 user	0m0.161s
-sys	0m0.047s
+sys	0m0.055s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 1
-Total time 0.00594970 s real, 0.00000 s CPU
-Average swap time 190.390 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 100 100
+Total time 0.0117182 s real, 0.000578405 s CPU
+Average swap time 4.68727e+06 ns real, 5784.05 ns CPU
 
-real	0m0.135s
-user	0m0.137s
-sys	0m0.056s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 1
-Total time 0.00508000 s real, 0.00000 s CPU
-Average swap time 162.560 ns real, 0.00000 ns CPU
-
-real	0m0.145s
-user	0m0.135s
-sys	0m0.062s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 2
-Total time 0.232502 s real, 0.725367 s CPU
-Average swap time 7440.05 ns real, 725.367 ns CPU
-
-real	0m0.357s
-user	0m0.792s
-sys	0m0.159s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 2
-Total time 0.177773 s real, 2.24335 s CPU
-Average swap time 5688.75 ns real, 2243.35 ns CPU
-output sum mismatch (9195 != 0)
-
-real	0m0.308s
-user	0m2.414s
-sys	0m0.068s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 2
-Total time 0.314322 s real, 4.17281 s CPU
-Average swap time 10058.3 ns real, 4172.81 ns CPU
-
-real	0m0.446s
-user	0m4.377s
-sys	0m0.083s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 4
-Total time 0.261631 s real, 0.848574 s CPU
-Average swap time 8372.20 ns real, 848.574 ns CPU
-
-real	0m0.390s
-user	0m0.919s
-sys	0m0.159s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 4
-Total time 0.159923 s real, 1.84061 s CPU
-Average swap time 5117.52 ns real, 1840.61 ns CPU
-output sum mismatch (3431 != 0)
-
-real	0m0.287s
-user	0m2.002s
-sys	0m0.080s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 4
-Total time 0.378387 s real, 4.60286 s CPU
-Average swap time 12108.4 ns real, 4602.86 ns CPU
-
-real	0m0.520s
-user	0m4.808s
-sys	0m0.100s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 8
-Total time 0.237223 s real, 0.776359 s CPU
-Average swap time 7591.15 ns real, 776.359 ns CPU
-
-real	0m0.369s
-user	0m0.847s
-sys	0m0.166s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 8
-Total time 0.158109 s real, 1.88225 s CPU
-Average swap time 5059.49 ns real, 1882.25 ns CPU
-output sum mismatch (8889 != 0)
-
-real	0m0.296s
-user	0m2.063s
-sys	0m0.064s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 8
-Total time 0.498634 s real, 7.27233 s CPU
-Average swap time 15956.3 ns real, 7272.33 ns CPU
-
-real	0m0.631s
-user	0m7.403s
-sys	0m0.185s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 16
-Total time 0.262547 s real, 0.830718 s CPU
-Average swap time 8401.51 ns real, 830.718 ns CPU
-
-real	0m0.459s
-user	0m0.912s
-sys	0m0.161s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 16
-Total time 0.166784 s real, 2.06345 s CPU
-Average swap time 5337.07 ns real, 2063.45 ns CPU
-output sum mismatch (3636 != 0)
-
-real	0m0.293s
-user	0m2.239s
+real	0m0.142s
+user	0m0.139s
 sys	0m0.070s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 16
-Total time 0.256442 s real, 3.06974 s CPU
-Average swap time 8206.14 ns real, 3069.74 ns CPU
-
-real	0m0.385s
-user	0m3.264s
-sys	0m0.084s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 32
-Total time 0.268364 s real, 0.843384 s CPU
-Average swap time 8587.64 ns real, 843.384 ns CPU
-
-real	0m0.401s
-user	0m0.918s
-sys	0m0.157s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 32
-Total time 0.182360 s real, 2.28375 s CPU
-Average swap time 5835.53 ns real, 2283.75 ns CPU
-output sum mismatch (2411 != 0)
-
-real	0m0.321s
-user	0m2.465s
-sys	0m0.062s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 32
-Total time 0.250203 s real, 3.25341 s CPU
-Average swap time 8006.50 ns real, 3253.41 ns CPU
-
-real	0m0.381s
-user	0m3.451s
-sys	0m0.074s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 64
-Total time 0.265167 s real, 0.818158 s CPU
-Average swap time 8485.34 ns real, 818.158 ns CPU
-
-real	0m0.398s
-user	0m0.908s
-sys	0m0.149s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 64
-Total time 0.189720 s real, 2.15213 s CPU
-Average swap time 6071.03 ns real, 2152.13 ns CPU
-output sum mismatch (2147 != 0)
-
-real	0m0.316s
-user	0m2.317s
-sys	0m0.082s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 64
-Total time 0.507153 s real, 6.48526 s CPU
-Average swap time 16228.9 ns real, 6485.26 ns CPU
-
-real	0m0.640s
-user	0m6.709s
-sys	0m0.092s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 1000000 128
-Total time 0.282310 s real, 0.903308 s CPU
-Average swap time 9033.93 ns real, 903.308 ns CPU
-
-real	0m0.405s
-user	0m0.954s
-sys	0m0.179s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 1000000 128
-Total time 0.249236 s real, 2.92712 s CPU
-Average swap time 7975.55 ns real, 2927.12 ns CPU
-output sum mismatch (470 != 0)
-
-real	0m0.377s
-user	0m3.108s
-sys	0m0.062s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 1000000 128
-Total time 0.195534 s real, 2.18355 s CPU
-Average swap time 6257.09 ns real, 2183.55 ns CPU
-
-real	0m0.330s
-user	0m2.389s
-sys	0m0.068s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 1
-Total time 0.00480855 s real, 0.00000 s CPU
-Average swap time 1.53874 ns real, 0.00000 ns CPU
-
-real	0m0.140s
-user	0m0.144s
-sys	0m0.052s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 1
-Total time 0.00552236 s real, 0.00000 s CPU
-Average swap time 1.76715 ns real, 0.00000 ns CPU
-
-real	0m0.138s
-user	0m0.137s
-sys	0m0.060s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 1
-Total time 0.00518385 s real, 0.00000 s CPU
-Average swap time 1.65883 ns real, 0.00000 ns CPU
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 100 100
+Total time 0.0150370 s real, 0.00367610 s CPU
+Average swap time 6.01480e+06 ns real, 36761.0 ns CPU
 
 real	0m0.147s
-user	0m0.132s
-sys	0m0.068s
+user	0m0.151s
+sys	0m0.069s
 
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 2
-Total time 12.4051 s real, 38.1842 s CPU
-Average swap time 3969.62 ns real, 381.842 ns CPU
+$ time timeout 3600 java UnsafeMemory Null 40 10000 5
+Total time 0.0152821 s real, 0.0251383 s CPU
+Average swap time 61128.4 ns real, 2513.83 ns CPU
 
-real	0m12.546s
-user	0m34.847s
-sys	0m3.576s
+real	0m0.142s
+user	0m0.191s
+sys	0m0.056s
 
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 2
-Total time 1.91977 s real, 28.2806 s CPU
-Average swap time 614.327 ns real, 282.806 ns CPU
-output sum mismatch (-133702 != 0)
+$ time timeout 3600 java UnsafeMemory Synchronized 40 10000 5
+Total time 0.0223569 s real, 0.0235853 s CPU
+Average swap time 89427.5 ns real, 2358.53 ns CPU
 
-real	0m2.048s
-user	0m28.422s
-sys	0m0.099s
+real	0m0.152s
+user	0m0.185s
+sys	0m0.060s
 
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 2
-Total time 6.00870 s real, 90.0312 s CPU
-Average swap time 1922.78 ns real, 900.312 ns CPU
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 10000 5
+Total time 0.0124747 s real, 0.0113991 s CPU
+Average swap time 49898.7 ns real, 1139.91 ns CPU
+output sum mismatch (9 != 0)
 
-real	0m6.152s
-user	1m30.193s
+real	0m0.146s
+user	0m0.150s
+sys	0m0.081s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 10000 5
+Total time 0.0202928 s real, 0.0741780 s CPU
+Average swap time 81171.0 ns real, 7417.80 ns CPU
+
+real	0m0.152s
+user	0m0.234s
+sys	0m0.074s
+
+$ time timeout 3600 java UnsafeMemory Null 40 10000 25
+Total time 0.0146461 s real, 0.0156184 s CPU
+Average swap time 58584.2 ns real, 1561.84 ns CPU
+
+real	0m0.143s
+user	0m0.166s
+sys	0m0.064s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 10000 25
+Total time 0.0233835 s real, 0.0265663 s CPU
+Average swap time 93533.9 ns real, 2656.63 ns CPU
+
+real	0m0.156s
+user	0m0.179s
+sys	0m0.077s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 10000 25
+Total time 0.0171290 s real, 0.0599299 s CPU
+Average swap time 68516.0 ns real, 5992.99 ns CPU
+output sum mismatch (-7 != 0)
+
+real	0m0.146s
+user	0m0.221s
+sys	0m0.061s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 10000 25
+Total time 0.0195507 s real, 0.0549018 s CPU
+Average swap time 78202.7 ns real, 5490.18 ns CPU
+
+real	0m0.151s
+user	0m0.209s
+sys	0m0.080s
+
+$ time timeout 3600 java UnsafeMemory Null 40 10000 100
+Total time 0.0194472 s real, 0.0821981 s CPU
+Average swap time 77788.9 ns real, 8219.81 ns CPU
+
+real	0m0.143s
+user	0m0.230s
+sys	0m0.070s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 10000 100
+Total time 0.0193053 s real, 0.0219887 s CPU
+Average swap time 77221.4 ns real, 2198.87 ns CPU
+
+real	0m0.153s
+user	0m0.164s
+sys	0m0.075s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 10000 100
+Total time 0.0177265 s real, 0.0236190 s CPU
+Average swap time 70906.2 ns real, 2361.90 ns CPU
+output sum mismatch (1 != 0)
+
+real	0m0.156s
+user	0m0.166s
+sys	0m0.082s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 10000 100
+Total time 0.0195464 s real, 0.0526871 s CPU
+Average swap time 78185.7 ns real, 5268.71 ns CPU
+
+real	0m0.152s
+user	0m0.223s
+sys	0m0.067s
+
+$ time timeout 3600 java UnsafeMemory Null 40 1000000 5
+Total time 0.252424 s real, 3.49842 s CPU
+Average swap time 10097.0 ns real, 3498.42 ns CPU
+
+real	0m0.379s
+user	0m3.675s
+sys	0m0.071s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 1000000 5
+Total time 0.287884 s real, 0.918800 s CPU
+Average swap time 11515.4 ns real, 918.800 ns CPU
+
+real	0m0.425s
+user	0m0.985s
+sys	0m0.170s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 1000000 5
+Total time 0.372328 s real, 5.22219 s CPU
+Average swap time 14893.1 ns real, 5222.19 ns CPU
+output sum mismatch (4243 != 0)
+
+real	0m0.510s
+user	0m5.424s
+sys	0m0.065s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 1000000 5
+Total time 0.290709 s real, 4.15347 s CPU
+Average swap time 11628.4 ns real, 4153.47 ns CPU
+
+real	0m0.428s
+user	0m4.382s
+sys	0m0.075s
+
+$ time timeout 3600 java UnsafeMemory Null 40 1000000 25
+Total time 0.239796 s real, 3.48613 s CPU
+Average swap time 9591.85 ns real, 3486.13 ns CPU
+
+real	0m0.367s
+user	0m3.671s
+sys	0m0.062s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 1000000 25
+Total time 0.306470 s real, 0.914680 s CPU
+Average swap time 12258.8 ns real, 914.680 ns CPU
+
+real	0m0.440s
+user	0m0.977s
+sys	0m0.181s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 1000000 25
+Total time 0.128134 s real, 1.68361 s CPU
+Average swap time 5125.35 ns real, 1683.61 ns CPU
+output sum mismatch (2818 != 0)
+
+real	0m0.257s
+user	0m1.850s
+sys	0m0.083s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 1000000 25
+Total time 0.393547 s real, 5.90535 s CPU
+Average swap time 15741.9 ns real, 5905.35 ns CPU
+
+real	0m0.526s
+user	0m6.162s
+sys	0m0.071s
+
+$ time timeout 3600 java UnsafeMemory Null 40 1000000 100
+Total time 0.341822 s real, 4.94997 s CPU
+Average swap time 13672.9 ns real, 4949.97 ns CPU
+
+real	0m0.473s
+user	0m5.140s
+sys	0m0.063s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 1000000 100
+Total time 0.331924 s real, 0.945072 s CPU
+Average swap time 13277.0 ns real, 945.072 ns CPU
+
+real	0m0.462s
+user	0m1.033s
+sys	0m0.160s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 1000000 100
+Total time 0.155847 s real, 2.09902 s CPU
+Average swap time 6233.90 ns real, 2099.02 ns CPU
+output sum mismatch (1824 != 0)
+
+real	0m0.285s
+user	0m2.258s
+sys	0m0.086s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 1000000 100
+Total time 0.285452 s real, 3.97416 s CPU
+Average swap time 11418.1 ns real, 3974.16 ns CPU
+
+real	0m0.418s
+user	0m4.203s
+sys	0m0.080s
+
+$ time timeout 3600 java UnsafeMemory Null 40 100000000 5
+Total time 0.401509 s real, 5.51285 s CPU
+Average swap time 160.604 ns real, 55.1285 ns CPU
+
+real	0m0.545s
+user	0m5.712s
+sys	0m0.071s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 100000000 5
+Total time 22.3503 s real, 75.0428 s CPU
+Average swap time 8940.11 ns real, 750.428 ns CPU
+
+real	0m22.475s
+user	1m11.383s
+sys	0m3.906s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 100000000 5
+Total time 3.19410 s real, 49.9025 s CPU
+Average swap time 1277.64 ns real, 499.025 ns CPU
+output sum mismatch (154549 != 0)
+
+real	0m3.329s
+user	0m50.084s
+sys	0m0.084s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 100000000 5
+Total time 10.0535 s real, 158.367 s CPU
+Average swap time 4021.39 ns real, 1583.67 ns CPU
+
+real	0m10.178s
+user	2m38.572s
+sys	0m0.100s
+
+$ time timeout 3600 java UnsafeMemory Null 40 100000000 25
+Total time 0.505409 s real, 7.53333 s CPU
+Average swap time 202.164 ns real, 75.3333 ns CPU
+
+real	0m0.637s
+user	0m7.717s
+sys	0m0.061s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 100000000 25
+Total time 23.0712 s real, 73.2135 s CPU
+Average swap time 9228.46 ns real, 732.135 ns CPU
+
+real	0m23.195s
+user	1m8.633s
+sys	0m4.833s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 100000000 25
+Total time 4.17473 s real, 65.2730 s CPU
+Average swap time 1669.89 ns real, 652.730 ns CPU
+output sum mismatch (-137293 != 0)
+
+real	0m4.302s
+user	1m5.436s
+sys	0m0.098s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 100000000 25
+Total time 7.14792 s real, 112.279 s CPU
+Average swap time 2859.17 ns real, 1122.79 ns CPU
+
+real	0m7.277s
+user	1m52.489s
+sys	0m0.101s
+
+$ time timeout 3600 java UnsafeMemory Null 40 100000000 100
+Total time 0.577932 s real, 8.48103 s CPU
+Average swap time 231.173 ns real, 84.8103 ns CPU
+
+real	0m0.707s
+user	0m8.653s
+sys	0m0.079s
+
+$ time timeout 3600 java UnsafeMemory Synchronized 40 100000000 100
+Total time 23.6814 s real, 74.8374 s CPU
+Average swap time 9472.55 ns real, 748.374 ns CPU
+
+real	0m23.805s
+user	1m9.828s
+sys	0m5.273s
+
+$ time timeout 3600 java UnsafeMemory Unsynchronized 40 100000000 100
+Total time 4.08306 s real, 64.0799 s CPU
+Average swap time 1633.22 ns real, 640.799 ns CPU
+output sum mismatch (-76788 != 0)
+
+real	0m4.225s
+user	1m4.097s
+sys	0m0.306s
+
+$ time timeout 3600 java UnsafeMemory AcmeSafe 40 100000000 100
+Total time 5.22566 s real, 81.9300 s CPU
+Average swap time 2090.26 ns real, 819.300 ns CPU
+
+real	0m5.354s
+user	1m22.143s
 sys	0m0.119s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 4
-Total time 12.9332 s real, 39.5265 s CPU
-Average swap time 4138.62 ns real, 395.265 ns CPU
-
-real	0m13.076s
-user	0m35.880s
-sys	0m3.890s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 4
-Total time 2.38284 s real, 34.7138 s CPU
-Average swap time 762.508 ns real, 347.138 ns CPU
-output sum mismatch (738544 != 0)
-
-real	0m2.517s
-user	0m34.859s
-sys	0m0.095s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 4
-Total time 5.46666 s real, 81.3234 s CPU
-Average swap time 1749.33 ns real, 813.234 ns CPU
-
-real	0m5.613s
-user	1m21.435s
-sys	0m0.173s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 8
-Total time 16.4564 s real, 60.1158 s CPU
-Average swap time 5266.04 ns real, 601.158 ns CPU
-
-real	0m16.586s
-user	0m52.663s
-sys	0m7.676s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 8
-Total time 2.96234 s real, 44.3723 s CPU
-Average swap time 947.947 ns real, 443.723 ns CPU
-output sum mismatch (-58582 != 0)
-
-real	0m3.121s
-user	0m44.494s
-sys	0m0.125s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 8
-Total time 9.37132 s real, 141.826 s CPU
-Average swap time 2998.82 ns real, 1418.26 ns CPU
-
-real	0m9.509s
-user	2m21.798s
-sys	0m0.318s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 16
-Total time 14.1405 s real, 42.4771 s CPU
-Average swap time 4524.98 ns real, 424.771 ns CPU
-
-real	0m14.282s
-user	0m38.554s
-sys	0m4.157s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 16
-Total time 3.46486 s real, 52.0391 s CPU
-Average swap time 1108.75 ns real, 520.391 ns CPU
-output sum mismatch (-98328 != 0)
-
-real	0m3.592s
-user	0m52.175s
-sys	0m0.104s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 16
-Total time 9.03334 s real, 136.817 s CPU
-Average swap time 2890.67 ns real, 1368.17 ns CPU
-
-real	0m9.209s
-user	2m16.722s
-sys	0m0.379s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 32
-Total time 14.4562 s real, 43.1879 s CPU
-Average swap time 4625.97 ns real, 431.879 ns CPU
-
-real	0m14.595s
-user	0m39.052s
-sys	0m4.370s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 32
-Total time 3.75203 s real, 56.5679 s CPU
-Average swap time 1200.65 ns real, 565.679 ns CPU
-output sum mismatch (-109587 != 0)
-
-real	0m3.905s
-user	0m56.673s
-sys	0m0.146s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 32
-Total time 5.18965 s real, 77.4892 s CPU
-Average swap time 1660.69 ns real, 774.892 ns CPU
-
-real	0m5.335s
-user	1m17.647s
-sys	0m0.134s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 64
-Total time 14.5597 s real, 44.5314 s CPU
-Average swap time 4659.10 ns real, 445.314 ns CPU
-
-real	0m14.693s
-user	0m40.181s
-sys	0m4.580s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 64
-Total time 3.76730 s real, 56.6177 s CPU
-Average swap time 1205.54 ns real, 566.177 ns CPU
-output sum mismatch (-81426 != 0)
-
-real	0m3.900s
-user	0m56.728s
-sys	0m0.145s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 64
-Total time 6.11776 s real, 91.7939 s CPU
-Average swap time 1957.68 ns real, 917.939 ns CPU
-
-real	0m6.251s
-user	1m31.922s
-sys	0m0.150s
-
-$ time timeout 3600 java UnsafeMemory Synchronized 32 100000000 128
-Total time 14.0436 s real, 41.8515 s CPU
-Average swap time 4493.97 ns real, 418.515 ns CPU
-
-real	0m14.180s
-user	0m37.806s
-sys	0m4.284s
-
-$ time timeout 3600 java UnsafeMemory Unsynchronized 32 100000000 128
-Total time 4.31207 s real, 64.7814 s CPU
-Average swap time 1379.86 ns real, 647.814 ns CPU
-output sum mismatch (-56300 != 0)
-
-real	0m4.476s
-user	1m4.801s
-sys	0m0.268s
-
-$ time timeout 3600 java UnsafeMemory AcmeSafe 32 100000000 128
-Total time 5.62750 s real, 85.6138 s CPU
-Average swap time 1800.80 ns real, 856.138 ns CPU
-
-real	0m5.779s
-user	1m25.603s
-sys	0m0.320s
 

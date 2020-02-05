@@ -7,13 +7,13 @@ date &>>lnxsrv07
 cat /proc/cpuinfo | grep "model name" | uniq &>>lnxsrv07
 java -version &>>lnxsrv07
 
-for thread in 1 2 4 8 16 32
+for thread in 1 8 16 40
 do
 	for number in 100 10000 1000000 100000000
 	do
-		for size in 1 2 4 8 16 32 64 128
+		for size in 5 25 100
 		do
-			for type in "Synchronized" "Unsynchronized" "AcmeSafe"
+			for type in "Null" "Synchronized" "Unsynchronized" "AcmeSafe"
 			do
 				echo "\$ time timeout 3600 java UnsafeMemory $type $thread $number $size" >>lnxsrv07
 				(time timeout 3600 java UnsafeMemory $type $thread $number $size) &>>lnxsrv07
