@@ -34,7 +34,7 @@ solve_right(Size,Row,Count) :-
 /* variables: size, row, counts for row */
 /* solve row */
 solve_row(Size,Row,Counts) :-
-	length(Row,Size),length(Counts,2),fd_element_var(1,Counts,Left),solve_left(Size,Row,Left),fd_element_var(2,Counts,Right),solve_right(Size,Row,Right).
+	length(Row,Size),fd_element_var(1,Counts,Left),solve_left(Size,Row,Left),fd_element_var(2,Counts,Right),solve_right(Size,Row,Right),fd_labeling(Row).
 /* variables: size, row, counts for row */
 /* solve rows */
 solve_rows(_,[],[[],[]],0).
@@ -66,7 +66,31 @@ tower(N,T,C) :- N=0,T=[],C=counts([],[],[],[]).
 tower(N,T,C) :-
 	C=counts(Top,Bottom,Left,Right),solve_rows(N,T,[Left,Right]),solve_columns(N,T,[Top,Bottom]).
 
+/* less than */
+
+/* variables: Less, Greater */
+less_than(Less, _, Less).
+less_than(Less, Greater, Acc) :-
+	Acc2 is Acc+1,Acc2\==Greater,less_than(Less,Greater,Acc2).
+less_than(Less, Greater) :-
+	Less\==Greater,less_than(Less, Greater, 1).
+/* check less than or equal to Size and greater than 0*/
+plain_row_less_than(_,[]).
+plain_row_less_than(Size,[H|T]) :-
+	(less_than(H,Size);H==Size),plain_row_less_than(Size,T).
+/* variables: Size, Row */
+/* check count from left */
+plain_left_count([],X,X,_).
+plain_left_count([H|T],Count,Acc,Last) :-
+	less_than(H,Last),plain_left_count(T,Count,Acc,Last).
+plain_left_count([H|T],Count,Acc,Last) :-
+	less_than(Last,H),Plus is Acc+1,plain_left_count(T,Count,Plus,H).
+plain_left_count(Row,Count) :-
+	left_count(Row,Count,0,0).
+/* variables: Row, Count*/
 /* solve left */
+solve_left(Size,Row,Count) :-
+	fd_all_different(Row),plain_row_less_than(Size,Row),plain_left_count(Row,Count).
 /* variables: size, row, counts for row */
 /* solve right */
 /* variables: size, row, counts for row */
