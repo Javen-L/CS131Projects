@@ -101,14 +101,9 @@ plain_solve_rows(Size,[H|T],[[HL|TL],[HR|TR]],0) :-
 	plain_solve_row(Size,H,[HL,HR]),plain_solve_rows(Size,T,[TL,TR],0).
 plain_solve_rows(Size,Array,Counts) :-
 	length(Array,Size),plain_solve_rows(Size,Array,Counts,0).
-/* count rows */
-plain_count_rows([],[[],[]]).
-plain_count_rows([H|T], [[HU|TU],[HD|TD]]) :-
-	plain_left_count(H,HU),plain_right_count(H,HD),plain_count_rows(T,[TU,TD]).
-/* variables: Rows, Counts */
 /* variables: size, array, counts */
-plain_solve_columns(_,Array,Counts) :-
-	transpose(Array,Transposed),plain_count_rows(Transposed,Counts).
+plain_solve_columns(Size,Array,Counts) :-
+	transpose(Array,Transposed),plain_solve_rows(Size,Transposed,Counts).
 /* variables: size, array, counts */
 /* make sure rows and columns solutions match */
 plain_tower(N,T,C) :-
@@ -124,4 +119,4 @@ test_counts(C) :- C=counts([2,3,2,1,4],
 /* returns false because plain_tower is not implemented yet */
 run_tower(Time) :- test_counts(C),tower(5,_,C),statistics(runtime, [_,Time]).
 run_plain_tower(Time) :- test_counts(C),plain_tower(5,_,C),statistics(runtime, [_,Time]).
-speedup(Val) :- statistics(runtime, [_,_]),run_tower(Time1),run_plain_tower(Time2),!,Val is Time2/Time1.
+speedup(Val) :- statistics(runtime, [_,_]),run_tower(Time1),run_plain_tower(Time2),Val is Time2/Time1.
