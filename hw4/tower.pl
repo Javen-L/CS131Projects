@@ -109,14 +109,14 @@ plain_solve_columns(Size,Array,Counts) :-
 plain_tower(N,T,C) :-
 	C=counts(Top,Bottom,Left,Right),plain_solve_rows(N,T,[Left,Right]),plain_solve_columns(N,T,[Top,Bottom]).
 
-ambiguous(N,C,T1,T2) :- tower(N,T1,C),tower(N,T2,C),T1\==T2.
+ambiguous(N,C,T1,T2) :- tower(N,T1,C),tower(N,T2,C),T1\==T2,!.
 
-test_counts(C) :- C=counts([2,3,2,1,4],
-[3,1,3,3,2],
-[4,1,2,5,2],
-[2,4,2,1,2]).
+test_counts(C) :- C=counts([1,2,2,2,3],
+[3,1,2,3,3],
+[1,3,3,2,2],
+[4,2,1,2,4]).
 
 /* returns false because plain_tower is not implemented yet */
 run_tower(Time) :- test_counts(C),tower(5,_,C),statistics(runtime, [_,Time]).
 run_plain_tower(Time) :- test_counts(C),plain_tower(5,_,C),statistics(runtime, [_,Time]).
-speedup(Val) :- statistics(runtime, [_,_]),run_tower(Time1),run_plain_tower(Time2),Val is Time2/Time1.
+speedup(Val) :- statistics(runtime, [_,_]),run_tower(Time1),run_plain_tower(Time2),!,Val is Time2/Time1.
