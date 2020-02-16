@@ -53,56 +53,47 @@ transpose([F|Fs], Ts) :-
 /* variables: array, output */
 /* solve columns */
 solve_columns(Size,Array,Counts) :-
-	length(Array,Size),transpose(Array,Transposed),solve_rows(Size,Transposed,Counts).
+	transpose(Array,Transposed),solve_rows(Size,Transposed,Counts).
 /* variables: size, array, counts */
 /* make sure rows and columns solutions match */
 /* base case, no elements */
-tower(N,T,C) :- N=0,T=[],C=counts([],[],[],[]).
 tower(N,T,C) :-
 	C=counts(Top,Bottom,Left,Right),solve_rows(N,T,[Left,Right]),solve_columns(N,T,[Top,Bottom]).
 
-/* less than */
-less_than(Less, _, Less).
-less_than(Less, Greater, Acc) :-
-	Acc2 is Acc+1,Acc2\==Greater,less_than(Less,Greater,Acc2).
-less_than(Less, Greater) :-
-	Less\==Greater,less_than(Less, Greater, -1).
-/* variables: Less, Greater */
+/* create a row */
+ordered_row(0,Row2,Row2).
+ordered_row(Size,Row2,Acc) :-
+	Size2 is Size-1,Size>0,ordered_row(Size2,Row2,[Size|Acc]).
+ordered_row(Size,Row2) :-
+	ordered_row(Size,Row2,[]).
+plain_generate_row(0,[]).
+plain_generate_row(Size, Row) :-
+	ordered_row(Size,Row2),permutation(Row2,Row).
+/* variables: Size, Row */
 /* lists unique */
 unique_list([]).
 unique_list([H|T]) :-
 	\+(member(H,T)),unique_list(T).
 /* variables: Array */
-/* check less than or equal to Size and greater than 0*/
-plain_row_less_than(_,[]).
-plain_row_less_than(Size,[H|T]) :-
-	less_than(0,H),H==Size,plain_row_less_than(Size,T).
-plain_row_less_than(Size,[H|T]) :-
-	less_than(0,H),less_than(H,Size),plain_row_less_than(Size,T).
-/* variables: Size, Row */
 /* check count from left */
 plain_left_count([],X,X,_).
 plain_left_count([H|T],Count,Acc,Last) :-
-	less_than(H,Last),plain_left_count(T,Count,Acc,Last).
+	H<Last,plain_left_count(T,Count,Acc,Last).
 plain_left_count([H|T],Count,Acc,Last) :-
-	less_than(Last,H),Plus is Acc+1,plain_left_count(T,Count,Plus,H).
+	Last<H,Plus is Acc+1,plain_left_count(T,Count,Plus,H).
 plain_left_count(Row,Count) :-
 	plain_left_count(Row,Count,0,0).
 /* variables: Row, Count*/
 /* solve left */
 plain_solve_left(Size,Row,Count) :-
-	plain_row_less_than(Size,Row),unique_list(Row),plain_left_count(Row,Count).
+	plain_generate_row(Size,Row),unique_list(Row),plain_left_count(Row,Count).
 /* check count from right */
 plain_right_count(Row,Count) :-
 	reverse(Row,Reversed),plain_left_count(Reversed,Count).
 /* variables: Row, Count */
-/* solve right */
-plain_solve_right(Size,Row,Count) :-
-	plain_row_less_than(Size,Row),unique_list(Row),plain_right_count(Row,Count).
-/* variables: size, row, counts for row */
 /* solve row */
 plain_solve_row(Size,Row,[Left,Right]) :-
-	length(Row,Size),plain_solve_left(Size,Row,Left),plain_solve_right(Size,Row,Right).
+	plain_solve_left(Size,Row,Left),plain_right_count(Row,Right),length(Row,Size).
 /* variables: size, row, counts for row */
 /* solve rows */
 plain_solve_rows(_,[],[[],[]],0).
@@ -110,18 +101,27 @@ plain_solve_rows(Size,[H|T],[[HL|TL],[HR|TR]],0) :-
 	plain_solve_row(Size,H,[HL,HR]),plain_solve_rows(Size,T,[TL,TR],0).
 plain_solve_rows(Size,Array,Counts) :-
 	length(Array,Size),plain_solve_rows(Size,Array,Counts,0).
+/* count rows */
+plain_count_rows([],[[],[]]).
+plain_count_rows([H|T], [[HU|TU],[HD|TD]]) :-
+	plain_left_count(H,HU),plain_right_count(H,HD),plain_count_rows(T,[TU,TD]).
+/* variables: Rows, Counts */
 /* variables: size, array, counts */
-plain_solve_columns(Size,Array,Counts) :-
-	length(Array,Size),transpose(Array,Transposed),plain_solve_rows(Size,Transposed,Counts).
+plain_solve_columns(_,Array,Counts) :-
+	transpose(Array,Transposed),plain_count_rows(Transposed,Counts).
 /* variables: size, array, counts */
 /* make sure rows and columns solutions match */
-plain_tower(N,T,C) :- N=0,T=[],C=counts([],[],[],[]).
 plain_tower(N,T,C) :-
 	C=counts(Top,Bottom,Left,Right),plain_solve_rows(N,T,[Left,Right]),plain_solve_columns(N,T,[Top,Bottom]).
 
 ambiguous(N,C,T1,T2) :- tower(N,T1,C),tower(N,T2,C),T1\==T2.
 
+test_counts(C) :- C=counts([2,3,2,1,4],
+[3,1,3,3,2],
+[4,1,2,5,2],
+[2,4,2,1,2]).
+
 /* returns false because plain_tower is not implemented yet */
-run_tower(Time) :- ambiguous(_,_,_,_),statistics(runtime, [_,Time]).
-run_plain_tower(Time) :- plain_tower(N,T1,C),plain_tower(N,T2,C),T1\==T2,statistics(runtime, [_,Time]).
-speedup(Val) :- statistics(runtime, [_,_]),run_tower(Time1),run_plain_tower(Time2),Val is Time2/Time1.
+run_tower(Time) :- test_counts(C),tower(5,_,C),statistics(runtime, [_,Time]).
+run_plain_tower(Time) :- test_counts(C),plain_tower(5,_,C),statistics(runtime, [_,Time]).
+speedup(Val) :- statistics(runtime, [_,_]),run_tower(Time1),run_plain_tower(Time2),!,Val is Time2/Time1.
