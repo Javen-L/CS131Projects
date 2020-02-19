@@ -17,15 +17,11 @@ left_count(Row,Count) :-
 /* variables: Row, Count*/
 /* solve left */
 solve_left(Size,Row,Count) :-
-	fd_all_different(Row),row_less_than(Size,Row),left_count(Row,Count).
+	row_less_than(Size,Row),fd_all_different(Row),left_count(Row,Count).
 /* variables: size, row, counts for row */
-/* check count from right */
-right_count(Row,Count) :-
-	reverse(Row,Reversed),left_count(Reversed,Count,0,0).
-/* variables: Row, Count */
 /* solve right */
-solve_right(Size,Row,Count) :-
-	fd_all_different(Row),row_less_than(Size,Row),right_count(Row,Count).
+solve_right(_,Row,Count) :-
+	reverse(Row,Reversed),left_count(Reversed,Count,0,0).
 /* variables: size, row, counts for row */
 /* solve row */
 solve_row(Size,Row,Counts) :-

@@ -10,5 +10,5 @@ of them are shown above.
 My test case for the speedup problem is a towers problem of size 5 with only 
 the counts given. tower and plain_tower fill in the values of the towers, and 
 the times for these operations are returned as a ratio of the plain_tower time 
-over the tower time. The result showed about a 190 times speedup of tower over 
+over the tower time. The result showed about a 200 times speedup of tower over 
 plain_tower.
