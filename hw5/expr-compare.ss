@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out))
 ;implement argument-replacer with revapp
 (define (argument-replacer-single x r x3 out)
 	(if (list? x3)
@@ -210,14 +211,25 @@
 
 (define (test-expr-compare x y)
 	(and
-		(equal? (eval x (variable-reference->namespace (#%variable-reference))) (eval (expr-compare x y) (let ((% #t)) (variable-reference->namespace (#%variable-reference)))))
-		(equal? (eval y (variable-reference->namespace (#%variable-reference))) (eval (expr-compare x y) (let ((% #t)) (variable-reference->namespace (#%variable-reference)))))
+		(let ((comparison (expr-compare x y)))
+			;((eval `(lambda (%) ,comparison) (variable-reference->namespace (#%variable-reference))) #t)
+			(and
+				(equal? (eval x (variable-reference->namespace (#%variable-reference))) ((eval `(lambda (%) ,comparison) (variable-reference->namespace (#%variable-reference))) #t))
+				(equal? (eval y (variable-reference->namespace (#%variable-reference))) ((eval `(lambda (%) ,comparison) (variable-reference->namespace (#%variable-reference))) #f))
+			)
+		)
 	)
 )
 
-;(eval '(cons 'a 'b) (variable-reference->namespace (#%variable-reference)))
-;(test-expr-compare '(cons 'a 'b) '(list 'a 'b))
+#|
+(eval '(cons 'a 'b) (variable-reference->namespace (#%variable-reference)))
+((eval '(lambda (% x y) (if % x y)) (variable-reference->namespace (#%variable-reference))) #t 'a 'b)
+(eval '(expr-compare '(cons 'a 'b) '(list 'a 'b)) (variable-reference->namespace (#%variable-reference)))
+((eval '(lambda (% x y) (expr-compare x y)) (variable-reference->namespace (#%variable-reference))) #t '(cons 'a 'b) '(list 'a 'b))
+(test-expr-compare '(cons 'a 'b) '(list 'a 'b))
+|#
 
+#|
 (expr-compare 12 12)
 (expr-compare 12 20)
 (expr-compare #t #t)
@@ -254,3 +266,4 @@
               '((λ (a) (eqv? a ((lambda (b a) ((lambda (a b) (a b)) b a))
                                 a (λ (b) a))))
                 (lambda (a b) (a b))))
+|#
