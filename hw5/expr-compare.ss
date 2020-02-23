@@ -33,6 +33,21 @@
 					[(equal? y1 'quote) (cons (list 'if '% x1 (list y1 (cadr y))) (expr-compare (cdr x) (cddr y)))]
 					;check for lambda expression (replace lambda with λ)
 					;check for if expression
+					[(and (equal? x1 'if) (= (length x) 4))
+						(cond
+							[(and (equal? y1 'if) (= (length y) 4)) (list 'if (expr-compare (cadr x) (cadr y)) (expr-compare (caddr x) (caddr y)) (expr-compare (cadddr x) (cadddr y)))]
+							[else (list 'if '% x y)]
+						)
+					]
+					[(and (equal? x1 'if) (= (length x) 3))
+						(cond
+							[(and (equal? y1 'if) (= (length y) 3)) (list 'if (expr-compare (cadr x) (cadr y)) (expr-compare (caddr x) (caddr y)))]
+							[else (list 'if '% x y)]
+						)
+					]
+					[(equal? y1 'if)
+						(list 'if '% x y)
+					]
 					;check for list
 					[(and (list? x1) (list? y1)) (cons (expr-compare x1 y1) (expr-compare (cdr x) (cdr y)))]
 					[(or (list? x1) (list? y1)) (cons (list 'if '% x1 y1) (expr-compare (cdr x) (cdr y)))]
@@ -59,3 +74,5 @@
 (expr-compare ''(a b) ''(a c))
 (expr-compare '(quote (a b)) '(quote (a c)))
 (expr-compare '(quoth (a b)) '(quoth (a c)))
+(expr-compare '(if x y z) '(if x z z))
+(expr-compare '(if x y z) '(g x y z))
