@@ -1,20 +1,101 @@
 #lang racket
 ;implement argument-replacer with revapp
-(define (argument-replacer x r x3 out)
+(define (argument-replacer-single x r x3 out)
 	(if (list? x3)
 		(if (empty? x3)
 			(reverse out)
 			(let ((xh (car x3)))
 				(cond
-					[(equal? x xh) (argument-replacer x r (cdr x3) (cons r out))]
-					[(list? xh) (argument-replacer x r (cdr x3) (cons (argument-replacer x r xh '() )))]
-					[else (argument-replacer x r (cdr x3) (cons xh out))]
+					[(equal? x xh) (argument-replacer-single x r (cdr x3) (cons r out))]
+					[(list? xh) (argument-replacer-single x r (cdr x3) (cons (argument-replacer-single x r xh '() ) out))]
+					[else (argument-replacer-single x r (cdr x3) (cons xh out))]
+				)
+			)
+		)
+		(if (equal? x x3)
+			r
+			x3
+		)
+	)
+)
+(define (argument-replacer x y r x3 y3 outx outy)
+	(if (list? x3)
+		(if (empty? x3)
+			(list (reverse outx) (reverse outy))
+			(let ((xh (car x3)) (yh (car y3)))
+				(cond
+					[(equal? x xh)
+						(cond
+							[(equal? y yh) (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons r outy))]
+							[(list? yh)
+								(cond
+									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
+										(argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))
+									]
+									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (argument-replacer-single y r yh '() ) outy))]
+								)
+							]
+							[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))]
+						)
+					]
+					[(list? xh)
+						(cond
+							[(and (or (equal? (car xh) 'lambda) (equal? (car xh) 'λ)) (= (length xh) 3))
+								(if (list? yh)
+									(cond
+										[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
+											(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))
+										]
+										[else (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons (argument-replacer-single y r yh '() ) outy))]
+									)
+									(if (equal? y yh)
+										(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons r outy))
+										(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))
+									)
+								)
+							]
+							[(list? yh)
+								(cond
+									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
+										(argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons yh outy))
+									]
+									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons (argument-replacer-single y r yh '() ) outy))]
+								)
+							]
+							[(equal? y yh) (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons r outy))]
+							[else (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons yh outy))]
+						)
+					]
+					[else
+						(cond
+							[(equal? y yh) (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons r outy))]
+							[(list? yh)
+								(cond
+									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
+										(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))
+									]
+									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons (argument-replacer-single y r yh '() ) outy))]
+								)
+							]
+							[else (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))]
+						)
+					]
 				)
 			)
 		)
 		(cond
-			[(equal? x x3) r]
-			[else x3]
+			[(equal? x x3)
+				(cond
+					[(equal? y y3) (list r r)]
+					[else (list r y3)]
+				)
+			]
+			[else
+				(cond
+					[(equal? y y3) (list x3 r)]
+					[else (list x3 y3)]
+				)
+			]
 		)
 	)
 )
@@ -26,7 +107,9 @@
 				[(equal? xh yh) (argument-comparer (cdr x2) (cdr y2) x3 y3 (cons xh out))]
 				[else
 					(let ((r (string->symbol (string-append (symbol->string xh) "!" (symbol->string yh)))))
-						(argument-comparer (cdr x2) (cdr y2) (argument-replacer xh r x3 '() ) (argument-replacer yh r y3 '() ) (cons r out))
+						(let ((output (argument-replacer xh yh r x3 y3 '() '() )))
+							(argument-comparer (cdr x2) (cdr y2) (car output) (cadr output) (cons r out))
+						)
 					)
 				]
 			)
@@ -124,6 +207,17 @@
 		]
 	)
 )
+
+(define (test-expr-compare x y)
+	(and
+		(equal? (eval x (variable-reference->namespace (#%variable-reference))) (eval (expr-compare x y) (let ((% #t)) (variable-reference->namespace (#%variable-reference)))))
+		(equal? (eval y (variable-reference->namespace (#%variable-reference))) (eval (expr-compare x y) (let ((% #t)) (variable-reference->namespace (#%variable-reference)))))
+	)
+)
+
+;(eval '(cons 'a 'b) (variable-reference->namespace (#%variable-reference)))
+;(test-expr-compare '(cons 'a 'b) '(list 'a 'b))
+
 (expr-compare 12 12)
 (expr-compare 12 20)
 (expr-compare #t #t)
