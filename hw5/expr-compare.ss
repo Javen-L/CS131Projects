@@ -19,6 +19,96 @@
 		)
 	)
 )
+(define (list-status x x3)
+	; "single equal" --> single element that is equal
+	; "single not equal" --> single element that is not equal
+	; "list to check" --> expression without lambda or lambda without the variable defined
+	; "list to not check" --> lambda expression with variable defined
+	; "empty list" --> empty list, return
+	; "replace single" --> replace a single element
+	; "do not replace" --> do not replace single element
+	(if (list? x3)
+		(if (empty? x3)
+			"empty list"
+			(let ((xh (car x3)))
+				(cond
+					[(list? xh)
+						(cond
+							[(and (or (equal? (car xh) 'lambda) (equal? (car xh) 'λ)) (= (length xh) 3))
+								(cond
+									[(and (list? (cadr xh)) (member x (cadr xh)))
+										"list to not check"
+									]
+									[(equal? (cadr xh) x) "list to not check" ]
+									[else "list to check"]
+								)
+							]
+							[else "list to check"]
+						)
+					]
+					[(equal? x xh) "replace single"]
+					[else "do not replace"]
+				)
+			)
+		)
+		(if (equal? x x3)
+			"single equal"
+			"single not equal"
+		)
+	)
+)
+(define (argument-replacer x y r x3 y3 outx outy)
+	(let ((x-status (list-status x x3)) (y-status (list-status y y3)))
+		(cond
+			[(equal? x-status "empty list") (list (reverse outx) (reverse outy))]
+			[(equal? x-status "single equal")
+				(cond
+					[(equal? y-status "single equal") (list r r)]
+					[(equal? y-status "single not equal") (list r y)]
+				)
+			]
+			[(equal? x-status "single not equal")
+				(cond
+					[(equal? y-status "single equal") (list x r)]
+					[(equal? y-status "single not equal") (list x y)]
+				)
+			]
+			[(equal? x-status "list to check")
+				(cond
+					[(equal? y-status "list to check") (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r (car x3) '() ) outx) (cons (argument-replacer-single y r (car y3) '() ) outy))]
+					[(equal? y-status "list to not check") (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r (car x3) '() ) outx) (cons (car y3) outy))]
+					[(equal? y-status "replace single") (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r (car x3) '() ) outx) (cons r outy))]
+					[(equal? y-status "do not replace") (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r (car x3) '() ) outx) (cons (car y3) outy))]
+				)
+			]
+			[(equal? x-status "list to not check")
+				(cond
+					[(equal? y-status "list to check") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons (argument-replacer-single y r (car y3) '() ) outy))]
+					[(equal? y-status "list to not check") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons (car y3) outy))]
+					[(equal? y-status "replace single") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons r outy))]
+					[(equal? y-status "do not replace") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons (car y3) outy))]
+				)
+			]
+			[(equal? x-status "replace single")
+				(cond
+					[(equal? y-status "list to check") (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (argument-replacer-single y r (car y3) '() ) outy))]
+					[(equal? y-status "list to not check") (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (car y3) outy))]
+					[(equal? y-status "replace single") (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons r outy))]
+					[(equal? y-status "do not replace") (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (car y3) outy))]
+				)
+			]
+			[(equal? x-status "do not replace")
+				(cond
+					[(equal? y-status "list to check") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons (argument-replacer-single y r (car y3) '() ) outy))]
+					[(equal? y-status "list to not check") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons (car y3) outy))]
+					[(equal? y-status "replace single") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons r outy))]
+					[(equal? y-status "do not replace") (argument-replacer x y r (cdr x3) (cdr y3) (cons (car x3) outx) (cons (car y3) outy))]
+				)
+			]
+		)
+	)
+)
+#|
 (define (argument-replacer x y r x3 y3 outx outy)
 	(if (list? x3)
 		(if (empty? x3)
@@ -31,7 +121,13 @@
 							[(list? yh)
 								(cond
 									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
-										(argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))
+										(cond
+											[(and (list? (cadr yh)) (member y (cadr yh)))
+												(argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))
+											]
+											[(equal? (cadr yh) y) (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))]
+											[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (argument-replacer-single y r y3 '() ) outy))]
+										)
 									]
 									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (argument-replacer-single y r yh '() ) outy))]
 								)
@@ -100,6 +196,7 @@
 		)
 	)
 )
+|#
 (define (argument-comparer x2 y2 x3 y3 out)
 	(if (empty? x2)
 		(list (reverse out) (expr-compare x3 y3))
@@ -155,7 +252,10 @@
 				(cond
 					;both start with quote
 					[(and (equal? x1 'quote) (equal? y1 'quote))
-						(if (equal? (cadr x) (cadr y)) (append (list x1 (cadr x)) (expr-compare (cddr x) (cddr y))) (cons (list 'if '% (list x1 (cadr x)) (list y1 (cadr y))) (expr-compare (cddr x) (cddr y))))
+						(if (equal? (cadr x) (cadr y))
+							(list x1 (cadr x) (expr-compare (cddr x) (cddr y)))
+							(cons (list 'if '% (list x1 (cadr x)) (list y1 (cadr y))) (expr-compare (cddr x) (cddr y)))
+						)
 					]
 					;one starts with quote
 					[(equal? x1 'quote) (cons (list 'if '% (list x1 (cadr x)) y1) (expr-compare (cddr x) (cdr y)))]
@@ -267,3 +367,30 @@
                                 a (λ (b) a))))
                 (lambda (a b) (a b))))
 |#
+(expr-compare '(cons a lambda) '(cons a λ))
+(expr-compare '(lambda (a) a) '(lambda (b) b))
+(expr-compare '(lambda (a) b) '(cons (c) b))
+(expr-compare '((lambda (if) (+ if 1)) 3) '((lambda (fi) (+ fi 1)) 3))
+(expr-compare '(lambda (lambda) lambda) '(λ (λ) λ))
+(expr-compare ''lambda '(quote λ))
+(expr-compare '(lambda (a b) a) '(λ (b) b))
+(expr-compare '(λ (a b) (lambda (b) b)) '(lambda (b) (λ (b) b)))
+(expr-compare '(λ (let) (let ((x 1)) x)) '(lambda (let) (let ((y 1)) y)))
+(expr-compare '(λ (x) ((λ (x) x) x))
+              '(λ (y) ((λ (x) y) x)))
+(expr-compare '(((λ (g)
+                   ((λ (x) (g (λ () (x x))))     ; This is the way we define a recursive function
+                    (λ (x) (g (λ () (x x))))))   ; when we don't have 'letrec'
+                 (λ (r)                               ; Here (r) will be the function itself
+                   (λ (n) (if (= n 0)
+                              1
+                              (* n ((r) (- n 1))))))) ; Therefore this thing calculates factorial of n
+                10)
+              '(((λ (x)
+                   ((λ (n) (x (λ () (n n))))
+                    (λ (r) (x (λ () (r r))))))
+                 (λ (g)
+                   (λ (x) (if (= x 0)
+                              1
+                              (* x ((g) (- x 1)))))))
+                9))
