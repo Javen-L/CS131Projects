@@ -39,7 +39,7 @@
 									[(and (list? (cadr xh)) (member x (cadr xh)))
 										"list to not check"
 									]
-									[(equal? (cadr xh) x) "list to not check" ]
+									[(equal? x (cadr xh)) "list to not check" ]
 									[else "list to check"]
 								)
 							]
@@ -64,13 +64,13 @@
 			[(equal? x-status "single equal")
 				(cond
 					[(equal? y-status "single equal") (list r r)]
-					[(equal? y-status "single not equal") (list r y)]
+					[(equal? y-status "single not equal") (list r y3)]
 				)
 			]
 			[(equal? x-status "single not equal")
 				(cond
-					[(equal? y-status "single equal") (list x r)]
-					[(equal? y-status "single not equal") (list x y)]
+					[(equal? y-status "single equal") (list x3 r)]
+					[(equal? y-status "single not equal") (list x3 y3)]
 				)
 			]
 			[(equal? x-status "list to check")
@@ -108,95 +108,6 @@
 		)
 	)
 )
-#|
-(define (argument-replacer x y r x3 y3 outx outy)
-	(if (list? x3)
-		(if (empty? x3)
-			(list (reverse outx) (reverse outy))
-			(let ((xh (car x3)) (yh (car y3)))
-				(cond
-					[(equal? x xh)
-						(cond
-							[(equal? y yh) (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons r outy))]
-							[(list? yh)
-								(cond
-									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
-										(cond
-											[(and (list? (cadr yh)) (member y (cadr yh)))
-												(argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))
-											]
-											[(equal? (cadr yh) y) (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))]
-											[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (argument-replacer-single y r y3 '() ) outy))]
-										)
-									]
-									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons (argument-replacer-single y r yh '() ) outy))]
-								)
-							]
-							[else (argument-replacer x y r (cdr x3) (cdr y3) (cons r outx) (cons yh outy))]
-						)
-					]
-					[(list? xh)
-						(cond
-							[(and (or (equal? (car xh) 'lambda) (equal? (car xh) 'λ)) (= (length xh) 3))
-								(if (list? yh)
-									(cond
-										[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
-											(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))
-										]
-										[else (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons (argument-replacer-single y r yh '() ) outy))]
-									)
-									(if (equal? y yh)
-										(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons r outy))
-										(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))
-									)
-								)
-							]
-							[(list? yh)
-								(cond
-									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
-										(argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons yh outy))
-									]
-									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons (argument-replacer-single y r yh '() ) outy))]
-								)
-							]
-							[(equal? y yh) (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons r outy))]
-							[else (argument-replacer x y r (cdr x3) (cdr y3) (cons (argument-replacer-single x r xh '() ) outx) (cons yh outy))]
-						)
-					]
-					[else
-						(cond
-							[(equal? y yh) (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons r outy))]
-							[(list? yh)
-								(cond
-									[(and (or (equal? (car yh) 'lambda) (equal? (car yh) 'λ)) (= (length yh) 3))
-										(argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))
-									]
-									[else (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons (argument-replacer-single y r yh '() ) outy))]
-								)
-							]
-							[else (argument-replacer x y r (cdr x3) (cdr y3) (cons xh outx) (cons yh outy))]
-						)
-					]
-				)
-			)
-		)
-		(cond
-			[(equal? x x3)
-				(cond
-					[(equal? y y3) (list r r)]
-					[else (list r y3)]
-				)
-			]
-			[else
-				(cond
-					[(equal? y y3) (list x3 r)]
-					[else (list x3 y3)]
-				)
-			]
-		)
-	)
-)
-|#
 (define (argument-comparer x2 y2 x3 y3 out)
 	(if (empty? x2)
 		(list (reverse out) (expr-compare x3 y3))
@@ -366,7 +277,6 @@
               '((λ (a) (eqv? a ((lambda (b a) ((lambda (a b) (a b)) b a))
                                 a (λ (b) a))))
                 (lambda (a b) (a b))))
-|#
 (expr-compare '(cons a lambda) '(cons a λ))
 (expr-compare '(lambda (a) a) '(lambda (b) b))
 (expr-compare '(lambda (a) b) '(cons (c) b))
@@ -394,3 +304,4 @@
                               1
                               (* x ((g) (- x 1)))))))
                 9))
+|#
