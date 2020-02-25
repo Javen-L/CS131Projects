@@ -136,6 +136,15 @@
 		)
 	)
 )
+(define (get-base out acc)
+	(if (empty? out)
+		(list (reverse acc) out)
+		(if (equal? (car out) 'quote)
+			(get-base (cdr out) (cons (car out) acc))
+			(list (reverse (cons (car out) acc)) (cdr out))
+		)
+	)
+)
 (define (expr-compare x y)
 	(cond
 		[(equal? x y) x]
@@ -163,14 +172,24 @@
 				(cond
 					;both start with quote
 					[(and (equal? x1 'quote) (equal? y1 'quote))
-						(if (equal? (cadr x) (cadr y))
-							(list x1 (cadr x) (expr-compare (cddr x) (cddr y)))
-							(cons (list 'if '% (list x1 (cadr x)) (list y1 (cadr y))) (expr-compare (cddr x) (cddr y)))
+						(let ((expr (expr-compare (cddr x) (cddr y))))
+							(if (equal? expr '() )
+								(list 'if '% (list x1 (cadr x)) (list y1 (cadr y)))
+								(cons (list 'if '% (list x1 (cadr x)) (list y1 (cadr y))) expr)
+							)
 						)
 					]
 					;one starts with quote
-					[(equal? x1 'quote) (cons (list 'if '% (list x1 (cadr x)) y1) (expr-compare (cddr x) (cdr y)))]
-					[(equal? y1 'quote) (cons (list 'if '% x1 (list y1 (cadr y))) (expr-compare (cdr x) (cddr y)))]
+					[(equal? x1 'quote)
+						(let ((xout (get-base (cdr x) '() )))
+							(cons (list 'if '% (list x1 (car xout)) y1) (expr-compare (cdr xout) (cdr y)))
+						)
+					]
+					[(equal? y1 'quote)
+						(let ((yout (get-base (cdr y) '() )))
+							(cons (list 'if '% x1 (list y1 (car yout))) (expr-compare (cdr x) (cdr yout)))
+						)
+					]
 					;check for lambda expression (replace lambda with λ)
 					[(and (equal? x1 'λ) (= (length x) 3))
 						(cond
@@ -223,21 +242,102 @@
 (define (test-expr-compare x y)
 	(and
 		(let ((comparison (expr-compare x y)))
-			;((eval `(lambda (%) ,comparison) (variable-reference->namespace (#%variable-reference))) #t)
+			;(eval `(let ((% #t)) ,comparison) (variable-reference->namespace (#%variable-reference)))
 			(and
-				(equal? (eval x (variable-reference->namespace (#%variable-reference))) ((eval `(lambda (%) ,comparison) (variable-reference->namespace (#%variable-reference))) #t))
-				(equal? (eval y (variable-reference->namespace (#%variable-reference))) ((eval `(lambda (%) ,comparison) (variable-reference->namespace (#%variable-reference))) #f))
+				(equal? (eval x (variable-reference->namespace (#%variable-reference))) (eval `(let ((% #t)) ,comparison) (variable-reference->namespace (#%variable-reference))))
+				(equal? (eval y (variable-reference->namespace (#%variable-reference))) (eval `(let ((% #f)) ,comparison) (variable-reference->namespace (#%variable-reference))))
+			)
+		)
+	)
+)
+
+(define test-expr-x
+	'(let ((x3 (list 'x 'x3t)))
+		(if (list? x3)
+			(if (empty? x3)
+				"empty list"
+				(let ((xh (car x3)))
+					(cond
+						[(list? xh)
+							(cond
+								[(and (or (equal? (car xh) 'lambda) (equal? (car xh) 'λ)) (= (length xh) 3))
+									(cond
+										[(and (list? (cadr xh)) (member 'x (cadr xh)))
+											"list to not check"
+										]
+										[(equal? 'x (cadr xh)) "list to not check" ]
+										[else "list to check"]
+									)
+								]
+								[else "list to check"]
+							)
+						]
+						[(equal? 'x xh) "replace single"]
+						[else "do not replace"]
+					)
+				)
+			)
+			(if (equal? 'x x3)
+				"single equal"
+				"single not equal"
+			)
+		)
+	)
+)
+
+(define test-expr-y
+	'(let ((x3 'x))
+		(if (list? x3)
+			(if (empty? x3)
+				"empty list"
+				(let ((xh (car x3)))
+					(cond
+						[(list? xh)
+							(cond
+								[(and (or (equal? (car xh) 'lambda) (equal? (car xh) 'λ)) (= (length xh) 3))
+									(cond
+										[(and (list? (cadr xh)) (member 'x (cadr xh)))
+											"list to not check"
+										]
+										[(equal? 'x (cadr xh)) "list to not check" ]
+										[else "list to check"]
+									)
+								]
+								[else "list to check"]
+							)
+						]
+						[(equal? 'x xh) "replace single"]
+						[else "do not replace"]
+					)
+				)
+			)
+			(if (equal? 'x x3)
+				"single equal"
+				"single not equal"
 			)
 		)
 	)
 )
 
 #|
-(eval '(cons 'a 'b) (variable-reference->namespace (#%variable-reference)))
-((eval '(lambda (% x y) (if % x y)) (variable-reference->namespace (#%variable-reference))) #t 'a 'b)
-(eval '(expr-compare '(cons 'a 'b) '(list 'a 'b)) (variable-reference->namespace (#%variable-reference)))
-((eval '(lambda (% x y) (expr-compare x y)) (variable-reference->namespace (#%variable-reference))) #t '(cons 'a 'b) '(list 'a 'b))
+;personal test cases
+(expr-compare '() '())
+; '()
+(expr-compare 'x '())
+; if % x '()
+(expr-compare '(x y) '())
+; if % '(x y) '()
+(expr-compare '(lambda (if) (if x y)) '(lambda (else) (else x y)))
+; '(lambda (if!else) (if!else x y))
+;lambda redefinition overrides if meaning
+(expr-compare '(''''''x y) '(''''''y x))
+; '((if % ''''''x ''''''y) (if % y x))
+|#
+
+#|
 (test-expr-compare '(cons 'a 'b) '(list 'a 'b))
+(test-expr-compare '(cons 'a 'b) '(cons 'a 'b))
+(test-expr-compare test-expr-x test-expr-y)
 |#
 
 #|
