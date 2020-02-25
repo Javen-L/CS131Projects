@@ -229,7 +229,9 @@
 						(list 'if '% x y)
 					]
 					;check for list
-					[(and (list? x1) (list? y1)) (cons (expr-compare x1 y1) (expr-compare (cdr x) (cdr y)))]
+					[(and (list? x1) (list? y1))
+						(cons (expr-compare x1 y1) (expr-compare (cdr x) (cdr y)))
+					]
 					[(or (list? x1) (list? y1)) (cons (list 'if '% x1 y1) (expr-compare (cdr x) (cdr y)))]
 					;else
 					[else (if (equal? x1 y1) (cons x1 (expr-compare (cdr x) (cdr y))) (cons (expr-compare x1 y1) (expr-compare (cdr x) (cdr y))))]
@@ -256,7 +258,7 @@
 		(if (list? x3)
 			(if (empty? x3)
 				"empty list"
-				(let ((xh (car x3)))
+				((lambda (xh)
 					(cond
 						[(list? xh)
 							(cond
@@ -275,7 +277,7 @@
 						[(equal? 'x xh) "replace single"]
 						[else "do not replace"]
 					)
-				)
+				) (car x3))
 			)
 			(if (equal? 'x x3)
 				"single equal"
@@ -286,34 +288,34 @@
 )
 
 (define test-expr-y
-	'(let ((x3 'x))
+	'(let ((x3 'y))
 		(if (list? x3)
-			(if (empty? x3)
+			(if (equal? x3 '())
 				"empty list"
-				(let ((xh (car x3)))
+				((lambda (yh)
 					(cond
-						[(list? xh)
+						[(list? yh)
 							(cond
-								[(and (or (equal? (car xh) 'lambda) (equal? (car xh) 'λ)) (= (length xh) 3))
+								[(and (or (equal? (car yh) 'λ) (equal? (car yh) 'lambda)) (= (length yh) 3))
 									(cond
-										[(and (list? (cadr xh)) (member 'x (cadr xh)))
-											"list to not check"
+										[(and (list? (cadr yh)) (member 'y (cadr yh)))
+											"list not to check"
 										]
-										[(equal? 'x (cadr xh)) "list to not check" ]
+										[(equal? 'y (cadr yh)) "list not to check" ]
 										[else "list to check"]
 									)
 								]
 								[else "list to check"]
 							)
 						]
-						[(equal? 'x xh) "replace single"]
-						[else "do not replace"]
+						[(equal? 'y yh) "replace single"]
+						[else "do not replace single"]
 					)
-				)
+				) (car x3))
 			)
-			(if (equal? 'x x3)
+			(if (equal? 'y x3)
 				"single equal"
-				"single not equal"
+				"single is not equal"
 			)
 		)
 	)
@@ -333,12 +335,17 @@
 (expr-compare '(''''''x y) '(''''''y x))
 ; '((if % ''''''x ''''''y) (if % y x))
 (expr-compare '(lambda (x y) x y) '(lambda (y z) y z))
+; '(lambda (x!y y!z) x!y y!z)
+(expr-compare test-expr-x test-expr-y)
+; '(let ((x3 (if % (list 'x 'x3t) 'y))) (if (list? x3) (if (if % (empty? x3) (equal? x3 '())) "empty list" ((lambda (xh!yh) (cond ((list? xh!yh) (cond ((and (or (equal? (car xh!yh) (if % 'lambda 'λ)) (equal? (car xh!yh) (if % 'λ 'lambda))) (= (length xh!yh) 3)) (cond ((and (list? (cadr xh!yh)) (member (if % 'x 'y) (cadr xh!yh))) (if % "list to not check" "list not to check")) ((equal? (if % 'x 'y) (cadr xh!yh)) (if % "list to not check" "list not to check")) (else "list to check"))) (else "list to check"))) ((equal? (if % 'x 'y) xh!yh) "replace single") (else (if % "do not replace" "do not replace single")))) (car x3))) (if (equal? (if % 'x 'y) x3) "single equal" (if % "single not equal" "single is not equal"))))
 |#
 
 #|
 (test-expr-compare '(cons 'a 'b) '(list 'a 'b))
 (test-expr-compare '(cons 'a 'b) '(cons 'a 'b))
 (test-expr-compare test-expr-x test-expr-y)
+(test-expr-compare '((lambda (lambda) (+ lambda (+ lambda 1))) 3)
+              '((lambda (if) (+ if (+ if 1))) 3))
 |#
 
 #|
