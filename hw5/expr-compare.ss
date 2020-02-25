@@ -110,7 +110,7 @@
 )
 (define (argument-comparer x2 y2 x3 y3 out)
 	(if (empty? x2)
-		(list (reverse out) (expr-compare x3 y3))
+		(cons (reverse out) (expr-compare x3 y3))
 		(let ((xh (car x2)) (yh (car y2)))
 			(cond
 				[(equal? xh yh) (argument-comparer (cdr x2) (cdr y2) x3 y3 (cons xh out))]
@@ -126,8 +126,8 @@
 	)
 )
 (define (lambda-parser x y)
-	(let ((x1 (car x)) (y1 (car y)) (x2 (cadr x)) (y2 (cadr y)) (x3 (caddr x)) (y3 (caddr y)))
-		(if (or (not (= (length x2) (length y2))) (and (list? x3) (not (list? y3))) (and (not (list? x3)) (list? y3)) (and (or (list? x3) (list? y3)) (not (= (length x3) (length y3)))))
+	(let ((x1 (car x)) (y1 (car y)) (x2 (cadr x)) (y2 (cadr y)) (x3 (cddr x)) (y3 (cddr y)))
+		(if (or (not (= (length x2) (length y2))) (and (list? x3) (not (list? y3))) (and (not (list? x3)) (list? y3)) (and (and (list? x3) (list? y3)) (not (= (length x3) (length y3)))))
 			(list 'if '% x y)
 			(if (or (equal? x1 'λ) (equal? y1 'λ))
 				(cons 'λ (argument-comparer x2 y2 x3 y3 '()))
@@ -191,25 +191,25 @@
 						)
 					]
 					;check for lambda expression (replace lambda with λ)
-					[(and (equal? x1 'λ) (= (length x) 3))
+					[(and (equal? x1 'λ) (>= (length x) 3))
 						(cond
-							[(and (or (equal? y1 'λ) (equal? y1 'lambda)) (= (length y) 3)) (lambda-parser x y)]
+							[(and (or (equal? y1 'λ) (equal? y1 'lambda)) (>= (length y) 3)) (lambda-parser x y)]
 							[else (list 'if '% x y)]
 						)
 					]
-					[(and (equal? y1 'λ) (= (length y) 3))
+					[(and (equal? y1 'λ) (>= (length y) 3))
 						(cond
-							[(and (or (equal? x1 'λ) (equal? x1 'lambda)) (= (length x) 3)) (lambda-parser x y)]
+							[(and (or (equal? x1 'λ) (equal? x1 'lambda)) (>= (length x) 3)) (lambda-parser x y)]
 							[else (list 'if '% x y)]
 						)
 					]
-					[(and (equal? x1 'lambda) (= (length x) 3))
+					[(and (equal? x1 'lambda) (>= (length x) 3))
 						(cond
-							[(and (equal? y1 'lambda) (= (length y) 3)) (lambda-parser x y)]
+							[(and (equal? y1 'lambda) (>= (length y) 3)) (lambda-parser x y)]
 							[else (list 'if '% x y)]
 						)
 					]
-					[(and (equal? y1 'lambda) (= (length y) 3))
+					[(and (equal? y1 'lambda) (>= (length y) 3))
 						(list 'if '% x y)
 					]
 					;check for if expression
@@ -332,6 +332,7 @@
 ;lambda redefinition overrides if meaning
 (expr-compare '(''''''x y) '(''''''y x))
 ; '((if % ''''''x ''''''y) (if % y x))
+(expr-compare '(lambda (x y) x y) '(lambda (y z) y z))
 |#
 
 #|
