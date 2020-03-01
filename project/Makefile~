@@ -1,0 +1,8 @@
+default:
+	tar -czf project.tgz server.py client.py
+run:
+	python3 server.py Hill & python3 server.py Jaquez & python3 server.py Smith & python3 server.py Campbell & python3 server.py Singleton
+removelogs:
+	rm -rf *log
+clean:
+	rm -rf project.tgz

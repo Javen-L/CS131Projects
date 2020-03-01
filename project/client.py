@@ -1,0 +1,75 @@
+import sys,asyncio,aiohttp,time
+
+
+class Client:
+    def __init__(self, name, port, clienttype, ip='127.0.0.1', message_max_length=1e6):
+        '''
+        127.0.0.1 is the localhost
+        port could be any port
+        '''
+        self.ip = ip
+        self.port = port
+        self.name = name
+        self.clienttype = clienttype
+        self.message_max_length = int(message_max_length)
+
+    async def messages(self, loop):
+        reader, writer = await asyncio.open_connection(self.ip, self.port, loop=loop)
+        iamat = "IAMAT "+self.name+" +34.068930-118.445127 "+str(time.time())
+        print(iamat)
+        writer.write(iamat.encode())
+        message = await reader.read(self.message_max_length)
+        print(message.decode())
+        await writer.drain()
+        whatsat = "WHATSAT "+self.name+" 10 5"
+        print(whatsat)
+        writer.write(whatsat.encode())
+        message = await reader.read(self.message_max_length)
+        print(message.decode())
+        await writer.drain()
+        writer.close()
+
+    async def whatsat(self, loop):
+        reader, writer = await asyncio.open_connection(self.ip, self.port, loop=loop)
+        whatsat = "WHATSAT "+self.name+" 10 5"
+        print(whatsat)
+        writer.write(whatsat.encode())
+        message = await reader.read(self.message_max_length)
+        print(message.decode())
+        await writer.drain()
+        writer.close()
+
+    def run_until_quit(self):
+        # start the loop
+        loop = asyncio.get_event_loop()
+        if self.clienttype == 0:
+            loop.run_until_complete(self.messages(loop))
+        else:
+            loop.run_until_complete(self.whatsat(loop))
+        loop.close()
+
+if __name__ == "__main__":
+    num = len(sys.argv)
+    if num != 4:
+        print("Invalid number of args:", num)
+        exit(1)
+    name = sys.argv[1]
+    port_numbers = [12200, 12201, 12202, 12203, 12204]
+    if sys.argv[2] == "Hill":
+        port = 12200
+    elif sys.argv[2] == "Jaquez":
+        port = 12201
+    elif sys.argv[2] == "Smith":
+        port = 12202
+    elif sys.argv[2] == "Campbell":
+        port = 12203
+    elif sys.argv[2] == "Singleton":
+        port = 12204
+    else:
+        port = 12200
+    if sys.argv[3] == "iamat":
+        clienttype = 0
+    else:
+        clienttype = 1
+    client = Client(name, port, clienttype)
+    client.run_until_quit()
