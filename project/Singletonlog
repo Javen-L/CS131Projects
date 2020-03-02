@@ -1,0 +1,69 @@
+New connection to ('127.0.0.1', 42214)
+SERVER1 AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+Attempting to connect to 12201
+New connection to ('127.0.0.1', 42220)
+Connected to 12201 . Writing data.
+Closing connection to 12201
+SERVER1 AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+Attempting to connect to 12201
+Connection to 12201 closed
+Attempting to connect to 12202
+Connected to 12201 . Writing data.
+Closing connection to 12201
+Connected to 12202 . Writing data.
+Closing connection to 12202
+Connection to 12201 closed
+Attempting to connect to 12202
+Connection to 12202 closed
+Attempting to connect to 12203
+Connected to 12202 . Writing data.
+Closing connection to 12202
+Connected to 12203 . Writing data.
+Closing connection to 12203
+Connection to 12202 closed
+Attempting to connect to 12203
+Connection to 12203 closed
+Connection closed with ('127.0.0.1', 42214)
+Connected to 12203 . Writing data.
+Closing connection to 12203
+Connection to 12203 closed
+Connection closed with ('127.0.0.1', 42220)
+New connection to ('127.0.0.1', 42234)
+SERVER2 AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+Connection closed with ('127.0.0.1', 42234)
+New connection to ('127.0.0.1', 42260)
+SERVER0 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Attempting to connect to 12201
+Connected to 12201 . Writing data.
+Closing connection to 12201
+Connection to 12201 closed
+Attempting to connect to 12202
+Connected to 12202 . Writing data.
+Closing connection to 12202
+Connection to 12202 closed
+Attempting to connect to 12203
+Connected to 12203 . Writing data.
+Closing connection to 12203
+Connection to 12203 closed
+Connection closed with ('127.0.0.1', 42260)
+New connection to ('127.0.0.1', 42270)
+SERVER2 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Connection closed with ('127.0.0.1', 42270)
+New connection to ('127.0.0.1', 42282)
+New connection to ('127.0.0.1', 42284)
+SERVER1 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Attempting to connect to 12201
+SERVER2 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Connection closed with ('127.0.0.1', 42284)
+Connected to 12201 . Writing data.
+Closing connection to 12201
+Connection to 12201 closed
+Attempting to connect to 12202
+Connected to 12202 . Writing data.
+Closing connection to 12202
+Connection to 12202 closed
+Attempting to connect to 12203
+Connected to 12203 . Writing data.
+Closing connection to 12203
+Connection to 12203 closed
+Connection closed with ('127.0.0.1', 42282)

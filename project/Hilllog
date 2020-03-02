@@ -1,0 +1,3396 @@
+New connection to ('127.0.0.1', 37694)
+IAMAT Name +34.068930-118.445127 1583111537.3717093
+Client ('127.0.0.1', 37694) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0004324913024902344 Name +34.068930-118.445127 1583111537.3717093
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "This API project is not authorized to use this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "REQUEST_DENIED"
+}
+
+AT Hill +0.0004324913024902344 Name +34.068930-118.445127 1583111537.3717093
+{"error_message": "This API project is not authorized to use this API.", "html_attributions": [], "results": [], "status": "REQUEST_DENIED"}
+
+
+Connection closed with ('127.0.0.1', 37694)
+New connection to ('127.0.0.1', 37720)
+IAMAT Name +34.068930-118.445127 1583111684.567456
+Client ('127.0.0.1', 37720) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0008451938629150391 Name +34.068930-118.445127 1583111684.567456
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "This API project is not authorized to use this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "REQUEST_DENIED"
+}
+
+AT Hill +0.0008451938629150391 Name +34.068930-118.445127 1583111684.567456
+{"error_message": "This API project is not authorized to use this API.", "html_attributions": [], "results": [], "status": "REQUEST_DENIED"}
+
+
+Connection closed with ('127.0.0.1', 37720)
+New connection to ('127.0.0.1', 37728)
+IAMAT Name +34.068930-118.445127 1583111784.2600696
+Client ('127.0.0.1', 37728) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0012254714965820312 Name +34.068930-118.445127 1583111784.2600696
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "html_attributions" : [],
+   "next_page_token" : "CqQCFQEAAOmy1oFt6GdPMaJFVDAVaYu1ZR2Sb1l9mXH91xQ8Ze_52PCE0UIggrxrgFCNWbKfK8zIw62g_l_nNDiR5jcs6tzbVydA7kW6O_q0ZjXHplGS__lfgYlI6CccPTizHH0NhgXnDg3lqjb-yB-5jzNV4aTt93-NqtWtxxG9aKZdbwcXpz6xpzWHCAxFzZX4HIiCQcdUKmpbChJSUPbgnIczaS3SOlRckx3ITHkfnUkPOVXKg8JxKrK_arGzwsabaji2ce9EpglS6aPU5ZgnvOXwrr47xGYtyP0jXP3LJnagRcw6zwqAd7hfVorbl0mR22oRGLnMcTc9AfgpZaM5fmHN1KfupMtTYk3KcYAOUwugU_Ed6CC-aUmYAovljmU6ZJYs2BIQLCR441Tv8HPQFHlZhQks9BoUZqxIngOQDxwb6C0GM_5HFZUr_OQ",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0522342,
+               "lng" : -118.2436849
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.3373061,
+                  "lng" : -118.1552891
+               },
+               "southwest" : {
+                  "lat" : 33.7036519,
+                  "lng" : -118.6681759
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",
+         "name" : "Los Angeles",
+         "photos" : [
+            {
+               "height" : 721,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111908544265113207087\"\u003eHarsh Kumar\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAycTcjlbMA0Xvhn1xu-L8FE-YoxEOdCO4nLN6-FqnV5EmcvPFw7WwCKQQYBKgAVokjaKEQFI4d5iEae7WzHYxr9sySBAwcngZaOGk7Ry-_2WEfGQaqf7Bm7h4ndL_8yGsEhDNd455qENkTjioRrO1x9mOGhQ4iiLYzLVWpt9ylV9bduOCO3g_6Q",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+         "reference" : "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.06320729999999,
+               "lng" : -118.4416734
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06453173029149,
+                  "lng" : -118.4401795197085
+               },
+               "southwest" : {
+                  "lat" : 34.0618337697085,
+                  "lng" : -118.4428774802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "ddb6b9d2e25032f5541bfcf42b91f6c1161be1a2",
+         "name" : "Hilgard House Hotel & Suites",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 260,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114543748345978093084\"\u003eHilgard House Hotel &amp; Suites\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAGpW9QIel78WxK8-EaF1hN08R4cuJg1jDQAPN-CgxIATOE_IEC6TZfDXO1IvfF59xsUV7fJRKLQsjpDp4W-cbjiieAPbZiRsudJthzHg4GFuhHeuWUmkCKAd1kZ1iZ1gZEhC8Ipptg7hiI31a_gMD4axLGhQYTHYx7JZbQy1mrpmy2sTvn3uXmQ",
+               "width" : 300
+            }
+         ],
+         "place_id" : "ChIJ06ecwoC8woARVyPlQNVzetI",
+         "plus_code" : {
+            "compound_code" : "3H75+78 Los Angeles, California, United States",
+            "global_code" : "85633H75+78"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJ06ecwoC8woARVyPlQNVzetI",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 167,
+         "vicinity" : "927 Hilgard Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0632746,
+               "lng" : -118.4409504
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0646108802915,
+                  "lng" : -118.4398087197085
+               },
+               "southwest" : {
+                  "lat" : 34.0619129197085,
+                  "lng" : -118.4425066802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "123c3294a684a0fb173c40813459506d1420c75b",
+         "name" : "W Los Angeles - West Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106717016222686749028\"\u003eW Los Angeles - West Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA9RvynuA9tuZl9n0fFJhY0EcKx9xyVfm0PrbV6AvXl-NQvqn3CDLnSXCKrlmGDXjbQ6LZ4TD-OryLj8YvNKzA3kD42ypwJFQyKt7MYcGqlgvVeEQ9ocfpoDVJJa7r5BPVEhBb6EGedP3ByPGJB59KffLjGhTbTJdatFmxs68U-MWv_jdvkayzlg",
+               "width" : 1500
+            }
+         ],
+         "place_id" : "ChIJffYelYC8woARkChY4cQOzUM",
+         "plus_code" : {
+            "compound_code" : "3H75+8J Los Angeles, California, United States",
+            "global_code" : "85633H75+8J"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJffYelYC8woARkChY4cQOzUM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1022,
+         "vicinity" : "930 Hilgard Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0606338,
+               "lng" : -118.4429579
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06200043029149,
+                  "lng" : -118.4417212697085
+               },
+               "southwest" : {
+                  "lat" : 34.0593024697085,
+                  "lng" : -118.4444192302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "d9aae9960743eec4c49c99ac8a437b7ddbef7c63",
+         "name" : "Royal Palace Westwood Hotel",
+         "photos" : [
+            {
+               "height" : 2988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114094194621340748848\"\u003eCarefree 1AZ\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA2VZdGCQjLPK2kxiWc-zrczUrBf-o-bWzOgb5Ss2yq02Wa5def4So3VwboEbUi6T-m4Qfq7ZHqJ1GFIrPCNrmbnYBUQCo8xEgPnd7jWHhorpT5bBQzxN5Hyb-6L4ajT_XEhDi6gx7iDscXY3EXhFiZ1XOGhR6FdIOUZI2XrS9bjf5bXsX6wr2KA",
+               "width" : 5312
+            }
+         ],
+         "place_id" : "ChIJ36i1toG8woARHcjs6P2eCkU",
+         "plus_code" : {
+            "compound_code" : "3H64+7R Los Angeles, California, United States",
+            "global_code" : "85633H64+7R"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJ36i1toG8woARHcjs6P2eCkU",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 192,
+         "vicinity" : "1052 Tiverton Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0677194,
+               "lng" : -118.4260111
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06895858029149,
+                  "lng" : -118.4244877697085
+               },
+               "southwest" : {
+                  "lat" : 34.0662606197085,
+                  "lng" : -118.4271857302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "a5699f3a10cfd58c6aab513ae29e157fcfda7ce2",
+         "name" : "Beverly Hills Plaza Hotel & Spa",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2736,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116019741408911300544\"\u003eThe Wanderer\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAFYZsCR9JYnP8t3u8VtXjmXOt6TcNDmd-6hSsNWEa0XYeWhQ5Cj_1kWQhZNjw2OO96_hMiqyRHvILG9B0azNR1R6JCJlrAH02mox1lV_LC7yuOBWRiv7atoS6yN_WUHFuEhCUQ78Ws1Zgj4YGrNP0wgDHGhQMoyhGO5EnSC8xfyL7OxwS9cprog",
+               "width" : 3648
+            }
+         ],
+         "place_id" : "ChIJ5ZA1I3e8woARBzIurF6K3vU",
+         "plus_code" : {
+            "compound_code" : "3H9F+3H Los Angeles, California, United States",
+            "global_code" : "85633H9F+3H"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJ5ZA1I3e8woARBzIurF6K3vU",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 337,
+         "vicinity" : "10300 Wilshire Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0737527,
+               "lng" : -118.4682129
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.07501653029149,
+                  "lng" : -118.4668231197085
+               },
+               "southwest" : {
+                  "lat" : 34.0723185697085,
+                  "lng" : -118.4695210802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "0a0e53eb3db8472da3fb4694435ba78501bb0265",
+         "name" : "Hotel Angeleno",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4013,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116754839533570358242\"\u003eHotel Angeleno\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA5aa7ZQQ-8KfEZkX1ieYgMjcNxv8jXcw4cRgveihxAQPOS6pgjL0Ic-i8J8Aig0wLdNKRACrfg-UBAAuq_qNIDCscZCMwPZlNrrx2_cq2sOBdCo5sFeiHhWP2OOmcRS6hEhArdvIyW2X0MpFNkfjHEzU1GhQNcvNWeDwmqbcV-QOmfH9GQblZ1w",
+               "width" : 5375
+            }
+         ],
+         "place_id" : "ChIJt37HtsC8woARLi6S2eMbe_o",
+         "plus_code" : {
+            "compound_code" : "3GFJ+GP Los Angeles, California, United States",
+            "global_code" : "85633GFJ+GP"
+         },
+         "rating" : 4,
+         "reference" : "ChIJt37HtsC8woARLi6S2eMbe_o",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1254,
+         "vicinity" : "170 North Church Lane, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0508994,
+               "lng" : -118.4329414
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0523316802915,
+                  "lng" : -118.4316681697085
+               },
+               "southwest" : {
+                  "lat" : 34.0496337197085,
+                  "lng" : -118.4343661302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "4f07c4e71d89ce9d03fa9983a8122d07cb3642e0",
+         "name" : "Good Nite Inn West Los Angeles",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 846,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116597620800848914070\"\u003eGood Nite Inn West Los Angeles\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAANM1vUSvhPP7lyguVPBV8CvGVS2GUPg2KFOO_u4zGW_5lATRZ-7PJFiHA-Hu6KvWkZBHIvpDKF42s3l-bbmDlrv5Pat5LUfaP21B6cSj856p2GY2aWqI1nQlbRDOVA13qEhDihzAgyQlOXVvyqyTptne8GhR0wLm5aVJRzJoWPlZIAbisClfOIA",
+               "width" : 1300
+            }
+         ],
+         "place_id" : "ChIJdSBYTpu7woAR3Sf7DOdRWWg",
+         "plus_code" : {
+            "compound_code" : "3H28+9R Los Angeles, California, United States",
+            "global_code" : "85633H28+9R"
+         },
+         "rating" : 3.6,
+         "reference" : "ChIJdSBYTpu7woAR3Sf7DOdRWWg",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 297,
+         "vicinity" : "10740 Santa Monica Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0464745,
+               "lng" : -118.4473949
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0479639302915,
+                  "lng" : -118.4461093197085
+               },
+               "southwest" : {
+                  "lat" : 34.0452659697085,
+                  "lng" : -118.4488072802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2b21d456606fcc54a7dc1129c912defa289f9e9a",
+         "name" : "Holiday Inn Express West Los Angeles-Santa Monica",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115825071599629851306\"\u003eHoliday Inn Express West Los Angeles-Santa Monica\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA19i8G6vNrSoR31zRhIc5VVPV3IJq0CnXpd471Ja256tpQgSBMP-UM5jf5HQpuAL2FiZUyTDN0CUu3iqmqFhIb6zHZhDkM_0rOU5ipQgDvonVISDer2Lv1FnE4JO-_mVuEhDF3ed2SW7ctYDwjJJj7IJXGhTcAksKNPpKioelE3c291rT1yRuwg",
+               "width" : 4500
+            }
+         ],
+         "place_id" : "ChIJuQNqk3C7woARlnbSL3nEkUM",
+         "plus_code" : {
+            "compound_code" : "2HW3+H2 West Los Angeles, Los Angeles, CA, United States",
+            "global_code" : "85632HW3+H2"
+         },
+         "rating" : 4,
+         "reference" : "ChIJuQNqk3C7woARlnbSL3nEkUM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 304,
+         "vicinity" : "11250 Santa Monica Boulevard, West Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.051903,
+               "lng" : -118.417654
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05338823029149,
+                  "lng" : -118.4161994197085
+               },
+               "southwest" : {
+                  "lat" : 34.05069026970849,
+                  "lng" : -118.4188973802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "69aa1a9ccb1f82920988409000e990e17b5925e3",
+         "name" : "Century Park Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 960,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112311724520769325511\"\u003eMarcos Alfredo Ribeiro\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA2KCBKcMmP4YVLvBNjDeJw-HdD5Sxhid9w-7Dp8CADqYQgj7AOdRXLrXJTI5awwKdRM_n9iBhAjt0IkehMQJloTyVN-JKEgWRRdwjbkL1kqZqe7kD1ge17yfp_8hnV8KxEhCY1mhOxq0VzEI1PR9R1hhOGhRyYccCPgVGNJgrO1xF8TDjE39r2Q",
+               "width" : 1280
+            }
+         ],
+         "place_id" : "ChIJTRwaPZO7woARMB6CHkQuqvM",
+         "plus_code" : {
+            "compound_code" : "3H2J+QW Los Angeles, California, United States",
+            "global_code" : "85633H2J+QW"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJTRwaPZO7woARMB6CHkQuqvM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 165,
+         "vicinity" : "10330 West Olympic Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0523725,
+               "lng" : -118.4171034
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05384763029149,
+                  "lng" : -118.4157280197085
+               },
+               "southwest" : {
+                  "lat" : 34.0511496697085,
+                  "lng" : -118.4184259802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "98a0231b2c9e4f20fadf1fde47b7cfe934ae7bd6",
+         "name" : "Courtyard by Marriott Los Angeles Century City/Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109053689834061212494\"\u003epatrick scoby\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAJYJDUorxUM5Cd4MPgi18RKKW3R-gF9jSm0G6Lr72dFrAF9m0Ou8Lluftv32f3EfZJWOsJIHCUnupmFESulGH-FiSGpnvqmhL58z40EqMq3xfKalc_n4L4O_Wz9vonM-jEhDgW8rHCwQzXB-kqr6rDrZYGhSs3Znx1qZV1WvYdCq7_UDYU5rtBA",
+               "width" : 2560
+            }
+         ],
+         "place_id" : "ChIJIbJWL5O7woARovCBp1ymJvA",
+         "plus_code" : {
+            "compound_code" : "3H2M+W5 Los Angeles, California, United States",
+            "global_code" : "85633H2M+W5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJIbJWL5O7woARovCBp1ymJvA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 421,
+         "vicinity" : "10320 West Olympic Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.065757,
+               "lng" : -118.4107154
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06719313029149,
+                  "lng" : -118.4092918697085
+               },
+               "southwest" : {
+                  "lat" : 34.06449516970849,
+                  "lng" : -118.4119898302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "500a20024c631569f6c7fbd5aef2fcedeb10bf6e",
+         "name" : "The Peninsula Beverly Hills",
+         "photos" : [
+            {
+               "height" : 3840,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104737288464912423882\"\u003eThe Peninsula Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAHL2MBulFFRzDFpGI59KQbjdSpsMhXy1XGEYjTJFYrW14ZH1H_18vyp_Si8t2vcGA35DpY4kHDhl8A3l8TCqrBB7hwvzS8xgktAUOj3A_U0X_PeaqYOKRAr-1ne4-b3LpEhBEusqsthM6mE56U0cKWHTpGhTDSujjB3hfnMd6CjjnKMvSJ3xHMw",
+               "width" : 5760
+            }
+         ],
+         "place_id" : "ChIJo4XM5_W7woARSKsK1bsfNS8",
+         "plus_code" : {
+            "compound_code" : "3H8Q+8P Beverly Hills, California, United States",
+            "global_code" : "85633H8Q+8P"
+         },
+         "rating" : 4.8,
+         "reference" : "ChIJo4XM5_W7woARSKsK1bsfNS8",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 818,
+         "vicinity" : "9882 South Santa Monica Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0818769,
+               "lng" : -118.4134867
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0831230802915,
+                  "lng" : -118.4115693197085
+               },
+               "southwest" : {
+                  "lat" : 34.0804251197085,
+                  "lng" : -118.4142672802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "036816007f207edd82110343cbbe3ad976e16bee",
+         "name" : "The Beverly Hills Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113873817739450896514\"\u003eThe Beverly Hills Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAOim7cfRXNxik9TKq21151tYjHNDwf-iQqiEomyFhU5_L7gah_QxY3roKuFjweuJzsF9h4FX-o1On5FCe28x4qR3DY84TxrqANqrM3lapiybC7rnBLDSdmFBwGIdcKz6qEhCq5CpejCs7ZMI9Xm4h-nK_GhRhfDl7ee-m6gJmwpm-IgA2f5Dl6A",
+               "width" : 6840
+            }
+         ],
+         "place_id" : "ChIJjWrkXge8woARQa2f1ewAZqA",
+         "plus_code" : {
+            "compound_code" : "3HJP+QJ Beverly Hills, California, United States",
+            "global_code" : "85633HJP+QJ"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJjWrkXge8woARQa2f1ewAZqA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1564,
+         "vicinity" : "9641 Sunset Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.065646,
+               "lng" : -118.4096781
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0669928302915,
+                  "lng" : -118.4083808197085
+               },
+               "southwest" : {
+                  "lat" : 34.0642948697085,
+                  "lng" : -118.4110787802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "bceefa71feeaa8b43f5314afbb45bd62e2a23aee",
+         "name" : "Maison 140 Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 460,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117910841522023427724\"\u003eMaison 140 Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA-XCpGHW2hRvtPtTNkp_ObGOfUMjqogO4dW9Dj1pc3h9UelKKYV-admfiFRy166KPvcoI7h4jsI_FL0_MhiunB3sVsGQvTwbdxRkLqb5ZkRF8sSaorAWkbtMioKZ1_DhbEhDYHc1AP08JYd_rEp-1i0A0GhQs7WHveknO1XI6y542arAgyCj4Mw",
+               "width" : 817
+            }
+         ],
+         "place_id" : "ChIJLy7Lb_a7woARrxK7_9sLiF4",
+         "plus_code" : {
+            "compound_code" : "3H8R+74 Beverly Hills, California, United States",
+            "global_code" : "85633H8R+74"
+         },
+         "price_level" : 4,
+         "rating" : 3.7,
+         "reference" : "ChIJLy7Lb_a7woARrxK7_9sLiF4",
+         "scope" : "GOOGLE",
+         "types" : [ "night_club", "lodging", "bar", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 175,
+         "vicinity" : "140 South Lasky Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0541583,
+               "lng" : -118.4125222
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05562588029151,
+                  "lng" : -118.4108774697085
+               },
+               "southwest" : {
+                  "lat" : 34.05292791970851,
+                  "lng" : -118.4135754302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "7e31a4c2493f309e5c401e9524f6549123813346",
+         "name" : "InterContinental Los Angeles Century City",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 484,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112530985343617622744\"\u003eInterContinental Los Angeles Century City\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAqkc266C4K36memX-_HUk_FTvHgRdCjJuFdubwE4gHvqzvsnYHdwuro9uOaN0nju3fJ5YtKdnW7DoHZlO9sdrzf2oDelpTWgEB8KBeSrXFX43Lx7kbIz-PQQ5A9gpb5B4EhDiom8jAwpqFHG-MDoUQ4fHGhQHzRQxW4WHbb2Ri9xdU3IXgPSSpA",
+               "width" : 796
+            }
+         ],
+         "place_id" : "ChIJTWllB-27woARFHntVl3XnBc",
+         "plus_code" : {
+            "compound_code" : "3H3Q+J3 Los Angeles, California, United States",
+            "global_code" : "85633H3Q+J3"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJTWllB-27woARFHntVl3XnBc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1029,
+         "vicinity" : "2151 Avenue of the Stars, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.072598,
+               "lng" : -118.468582
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0739042302915,
+                  "lng" : -118.4673464697085
+               },
+               "southwest" : {
+                  "lat" : 34.0712062697085,
+                  "lng" : -118.4700444302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "8967d2977d851552fcadb849b2f08f33746be93c",
+         "name" : "Luxe Sunset Boulevard Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 801,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111158627418530220550\"\u003eLuxe Sunset Boulevard Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA7Pf3b3--P4TYWriVEN1tfYApIGaQ7DrmZMcvy34TJVEE4xtpBT2nscR8tES9uoRfVBciKpWhg3y8JBFSKs2VfPAtDrffj-CVP_g8SJsoGsLWuptKOnGOQW1cEI1bVHwnEhA1lSDH_o5h-47IkPVCQOJGGhSr6uWZQvNfhBxeK76APgl-bd3pcA",
+               "width" : 1200
+            }
+         ],
+         "place_id" : "ChIJP2-QVL-8woARX7Y4RJZwa54",
+         "plus_code" : {
+            "compound_code" : "3GFJ+2H Los Angeles, California, United States",
+            "global_code" : "85633GFJ+2H"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJP2-QVL-8woARX7Y4RJZwa54",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 748,
+         "vicinity" : "11461 Sunset Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.068921,
+               "lng" : -118.4451811
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0828575,
+                  "lng" : -118.42990995
+               },
+               "southwest" : {
+                  "lat" : 34.0575047,
+                  "lng" : -118.46313815
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39",
+         "name" : "University of California, Los Angeles",
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/102441856898186297335\"\u003eG L\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA7jvgWQCayF4qp_yhY1GJWyvRBnuvDzx_wcxMnm53lNgiY5egkNuHpB0NgZzYBVH5zZcFYyBClHICz9F8qSM3-83ujwjhC-0eFiNniTzTWlJfFRQwOWHCnOTJusTiyWiMEhDQw3NEulo9iOJgfe2jSqqRGhSAUHJrbC59r2lvLt5nQM5MpPRLCg",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJZQ9c8IW8woARN0gTXFiTqSU",
+         "plus_code" : {
+            "compound_code" : "3H93+HW Los Angeles, California, United States",
+            "global_code" : "85633H93+HW"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJZQ9c8IW8woARN0gTXFiTqSU",
+         "scope" : "GOOGLE",
+         "types" : [ "university", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1659,
+         "vicinity" : "Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0690175,
+               "lng" : -118.4024248
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0703570802915,
+                  "lng" : -118.4009626197085
+               },
+               "southwest" : {
+                  "lat" : 34.0676591197085,
+                  "lng" : -118.4036605802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "39e865fd4e8105106e995271692d8a3ad03ed66f",
+         "name" : "Luxe Rodeo Drive Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1334,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103145434244305435950\"\u003eLuxe Rodeo Drive Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAhVn8OyQC2hRAeKNz-9G8-cCUE3KviuGl9HAcT0c5-rMXDlCU5M3YQec2Hj-PdhtOchnKA_CJIK2s-bDKlrAM99nNquqmaiuIieKEUiahy32JhAx9dRCo-sL4Jlh9JcdyEhDAIKCbYWCHBu1k4zdf-44oGhT611LMKF1XdGpfW4vHN4EO3Yvh3Q",
+               "width" : 2000
+            }
+         ],
+         "place_id" : "ChIJtS2kefi7woARaYSltnna5Jw",
+         "plus_code" : {
+            "compound_code" : "3H9X+J2 Beverly Hills, California, United States",
+            "global_code" : "85633H9X+J2"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJtS2kefi7woARaYSltnna5Jw",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 317,
+         "vicinity" : "360 North Rodeo Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.03454809999999,
+               "lng" : -118.4333429
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.03571163029149,
+                  "lng" : -118.4320817697085
+               },
+               "southwest" : {
+                  "lat" : 34.0330136697085,
+                  "lng" : -118.4347797302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "d6f569df72798ca70f1cfa1a3662294f8fc0a052",
+         "name" : "Best Western Royal Palace Inn & Suites",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/102783467123895644660\"\u003eBest Western Royal Palace Inn &amp; Suites\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAJyWy9crMBZmMgRGllxU1KBJmTrk4Qr8xt4I945bQWQb1vz2v_qtOzsGXz2XTuwF6OofV5HpCSmcfmTllsqaZOOBOdVN7aaqQJ11c3KYIEcsU1VYzs-Kfrzea7JI8RIbCEhACGH3aQ_jTzz_Q4PdMLHDOGhS_1KBprRRgQCxQlMy4BqS6pjuFuA",
+               "width" : 3840
+            }
+         ],
+         "place_id" : "ChIJTbP6I6S7woART1N84YR5n14",
+         "plus_code" : {
+            "compound_code" : "2HM8+RM Los Angeles, California, United States",
+            "global_code" : "85632HM8+RM"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJTbP6I6S7woART1N84YR5n14",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 547,
+         "vicinity" : "2528 South Sepulveda Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.06612559999999,
+               "lng" : -118.4090544
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0674477302915,
+                  "lng" : -118.4076356197085
+               },
+               "southwest" : {
+                  "lat" : 34.0647497697085,
+                  "lng" : -118.4103335802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "c03239bedc9bbb03775b3f922b96c7a74c1740c0",
+         "name" : "Mosaic Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1192,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116910228927580964646\"\u003eMosaic Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA_avDkg5893SknkQwvbMOAAOKEa_Upa2GSD737clOVh4vKIb585hY4jjfn0mWLN7PwH2V6EouR_ELsSKJfMB9u_Hclfkb0ueeyAED58dPpwHt1pmXPibOefpaVFF1pykGEhA0dr9gfkbJMaH689WluKYcGhQa7xDDNACpDFXmW9-rW0tbaDArcA",
+               "width" : 2119
+            }
+         ],
+         "place_id" : "ChIJ8eoca_a7woARuF2mTk2jdME",
+         "plus_code" : {
+            "compound_code" : "3H8R+F9 Beverly Hills, California, United States",
+            "global_code" : "85633H8R+F9"
+         },
+         "price_level" : 3,
+         "rating" : 4.2,
+         "reference" : "ChIJ8eoca_a7woARuF2mTk2jdME",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 192,
+         "vicinity" : "125 South Spalding Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0194543,
+               "lng" : -118.4911912
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05056,
+                  "lng" : -118.443426
+               },
+               "southwest" : {
+                  "lat" : 33.993161,
+                  "lng" : -118.5180849
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "55014b5c5e5d4c598c03d1024c2802d46d8baf02",
+         "name" : "Santa Monica",
+         "photos" : [
+            {
+               "height" : 738,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103682150529620991834\"\u003eShamayel G\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAY1FCT0H4HNau0zQ9amZgW5RFHMJEEF9-TXsQ8KywhtVgAiRcol27AdzPIAQWYxjDMXGUGAiIOqbOnMmMXuuu8oZc7ZQqHRCKl-VbnLzh5LPXj6q0WMjJTfWG3_5v6yzIEhD4O1FaOK_2D5T3l5jdw2mIGhQwnKxMoINRIcHHldyKlxKLZmxZ2g",
+               "width" : 725
+            }
+         ],
+         "place_id" : "ChIJGQCRws6kwoARq_Uj_7UKF7Q",
+         "reference" : "ChIJGQCRws6kwoARq_Uj_7UKF7Q",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Santa Monica"
+      }
+   ],
+   "status" : "OK"
+}
+
+AT Hill +0.0012254714965820312 Name +34.068930-118.445127 1583111784.2600696
+{"html_attributions": [], "next_page_token": "CqQCFQEAAOmy1oFt6GdPMaJFVDAVaYu1ZR2Sb1l9mXH91xQ8Ze_52PCE0UIggrxrgFCNWbKfK8zIw62g_l_nNDiR5jcs6tzbVydA7kW6O_q0ZjXHplGS__lfgYlI6CccPTizHH0NhgXnDg3lqjb-yB-5jzNV4aTt93-NqtWtxxG9aKZdbwcXpz6xpzWHCAxFzZX4HIiCQcdUKmpbChJSUPbgnIczaS3SOlRckx3ITHkfnUkPOVXKg8JxKrK_arGzwsabaji2ce9EpglS6aPU5ZgnvOXwrr47xGYtyP0jXP3LJnagRcw6zwqAd7hfVorbl0mR22oRGLnMcTc9AfgpZaM5fmHN1KfupMtTYk3KcYAOUwugU_Ed6CC-aUmYAovljmU6ZJYs2BIQLCR441Tv8HPQFHlZhQks9BoUZqxIngOQDxwb6C0GM_5HFZUr_OQ", "results": [{"geometry": {"location": {"lat": 34.0522342, "lng": -118.2436849}, "viewport": {"northeast": {"lat": 34.3373061, "lng": -118.1552891}, "southwest": {"lat": 33.7036519, "lng": -118.6681759}}}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png", "id": "7f7b7d8118ae8db8ed3f541159ac928c484d12ad", "name": "Los Angeles", "photos": [{"height": 721, "html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/111908544265113207087\">Harsh Kumar</a>"], "photo_reference": "CmRaAAAAycTcjlbMA0Xvhn1xu-L8FE-YoxEOdCO4nLN6-FqnV5EmcvPFw7WwCKQQYBKgAVokjaKEQFI4d5iEae7WzHYxr9sySBAwcngZaOGk7Ry-_2WEfGQaqf7Bm7h4ndL_8yGsEhDNd455qENkTjioRrO1x9mOGhQ4iiLYzLVWpt9ylV9bduOCO3g_6Q", "width": 1080}], "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I", "reference": "ChIJE9on3F3HwoAR9AhGJW_fL-I", "scope": "GOOGLE", "types": ["locality", "political"], "vicinity": "Los Angeles"}, {"geometry": {"location": {"lat": 34.06320729999999, "lng": -118.4416734}, "viewport": {"northeast": {"lat": 34.06453173029149, "lng": -118.4401795197085}, "southwest": {"lat": 34.0618337697085, "lng": -118.4428774802915}}}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png", "id": "ddb6b9d2e25032f5541bfcf42b91f6c1161be1a2", "name": "Hilgard House Hotel & Suites", "opening_hours": {"open_now": true}, "photos": [{"height": 260, "html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/114543748345978093084\">Hilgard House Hotel &amp; Suites</a>"], "photo_reference": "CmRaAAAAGpW9QIel78WxK8-EaF1hN08R4cuJg1jDQAPN-CgxIATOE_IEC6TZfDXO1IvfF59xsUV7fJRKLQsjpDp4W-cbjiieAPbZiRsudJthzHg4GFuhHeuWUmkCKAd1kZ1iZ1gZEhC8Ipptg7hiI31a_gMD4axLGhQYTHYx7JZbQy1mrpmy2sTvn3uXmQ", "width": 300}], "place_id": "ChIJ06ecwoC8woARVyPlQNVzetI", "plus_code": {"compound_code": "3H75+78 Los Angeles, California, United States", "global_code": "85633H75+78"}, "rating": 3.9, "reference": "ChIJ06ecwoC8woARVyPlQNVzetI", "scope": "GOOGLE", "types": ["lodging", "point_of_interest", "establishment"], "user_ratings_total": 167, "vicinity": "927 Hilgard Avenue, Los Angeles"}, {"geometry": {"location": {"lat": 34.0632746, "lng": -118.4409504}, "viewport": {"northeast": {"lat": 34.0646108802915, "lng": -118.4398087197085}, "southwest": {"lat": 34.0619129197085, "lng": -118.4425066802915}}}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png", "id": "123c3294a684a0fb173c40813459506d1420c75b", "name": "W Los Angeles - West Beverly Hills", "opening_hours": {"open_now": true}, "photos": [{"height": 1000, "html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/106717016222686749028\">W Los Angeles - West Beverly Hills</a>"], "photo_reference": "CmRaAAAA9RvynuA9tuZl9n0fFJhY0EcKx9xyVfm0PrbV6AvXl-NQvqn3CDLnSXCKrlmGDXjbQ6LZ4TD-OryLj8YvNKzA3kD42ypwJFQyKt7MYcGqlgvVeEQ9ocfpoDVJJa7r5BPVEhBb6EGedP3ByPGJB59KffLjGhTbTJdatFmxs68U-MWv_jdvkayzlg", "width": 1500}], "place_id": "ChIJffYelYC8woARkChY4cQOzUM", "plus_code": {"compound_code": "3H75+8J Los Angeles, California, United States", "global_code": "85633H75+8J"}, "rating": 4.2, "reference": "ChIJffYelYC8woARkChY4cQOzUM", "scope": "GOOGLE", "types": ["lodging", "point_of_interest", "establishment"], "user_ratings_total": 1022, "vicinity": "930 Hilgard Avenue, Los Angeles"}, {"geometry": {"location": {"lat": 34.0606338, "lng": -118.4429579}, "viewport": {"northeast": {"lat": 34.06200043029149, "lng": -118.4417212697085}, "southwest": {"lat": 34.0593024697085, "lng": -118.4444192302915}}}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png", "id": "d9aae9960743eec4c49c99ac8a437b7ddbef7c63", "name": "Royal Palace Westwood Hotel", "photos": [{"height": 2988, "html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/114094194621340748848\">Carefree 1AZ</a>"], "photo_reference": "CmRaAAAA2VZdGCQjLPK2kxiWc-zrczUrBf-o-bWzOgb5Ss2yq02Wa5def4So3VwboEbUi6T-m4Qfq7ZHqJ1GFIrPCNrmbnYBUQCo8xEgPnd7jWHhorpT5bBQzxN5Hyb-6L4ajT_XEhDi6gx7iDscXY3EXhFiZ1XOGhR6FdIOUZI2XrS9bjf5bXsX6wr2KA", "width": 5312}], "place_id": "ChIJ36i1toG8woARHcjs6P2eCkU", "plus_code": {"compound_code": "3H64+7R Los Angeles, California, United States", "global_code": "85633H64+7R"}, "rating": 4.2, "reference": "ChIJ36i1toG8woARHcjs6P2eCkU", "scope": "GOOGLE", "types": ["lodging", "point_of_interest", "establishment"], "user_ratings_total": 192, "vicinity": "1052 Tiverton Avenue, Los Angeles"}, {"geometry": {"location": {"lat": 34.0677194, "lng": -118.4260111}, "viewport": {"northeast": {"lat": 34.06895858029149, "lng": -118.4244877697085}, "southwest": {"lat": 34.0662606197085, "lng": -118.4271857302915}}}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png", "id": "a5699f3a10cfd58c6aab513ae29e157fcfda7ce2", "name": "Beverly Hills Plaza Hotel & Spa", "opening_hours": {"open_now": true}, "photos": [{"height": 2736, "html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/116019741408911300544\">The Wanderer</a>"], "photo_reference": "CmRaAAAAFYZsCR9JYnP8t3u8VtXjmXOt6TcNDmd-6hSsNWEa0XYeWhQ5Cj_1kWQhZNjw2OO96_hMiqyRHvILG9B0azNR1R6JCJlrAH02mox1lV_LC7yuOBWRiv7atoS6yN_WUHFuEhCUQ78Ws1Zgj4YGrNP0wgDHGhQMoyhGO5EnSC8xfyL7OxwS9cprog", "width": 3648}], "place_id": "ChIJ5ZA1I3e8woARBzIurF6K3vU", "plus_code": {"compound_code": "3H9F+3H Los Angeles, California, United States", "global_code": "85633H9F+3H"}, "rating": 4.4, "reference": "ChIJ5ZA1I3e8woARBzIurF6K3vU", "scope": "GOOGLE", "types": ["lodging", "point_of_interest", "establishment"], "user_ratings_total": 337, "vicinity": "10300 Wilshire Boulevard, Los Angeles"}], "status": "OK"}
+
+
+Connection closed with ('127.0.0.1', 37728)
+New connection to ('127.0.0.1', 37742)
+IAMAT Name +34.068930-118.445127 1583111923.6819208
+Client ('127.0.0.1', 37742) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.00037097930908203125 Name +34.068930-118.445127 1583111923.6819208
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+AT Hill +0.00037097930908203125 Name +34.068930-118.445127 1583111923.6819208
+{
+    "error_message": "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+    "html_attributions": [],
+    "results": [],
+    "status": "OVER_QUERY_LIMIT"
+}
+
+
+Connection closed with ('127.0.0.1', 37742)
+New connection to ('127.0.0.1', 38042)
+IAMAT Name +34.068930-118.445127 1583112376.5849104
+Client ('127.0.0.1', 38042) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0003769397735595703 Name +34.068930-118.445127 1583112376.5849104
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+AT Hill +0.0003769397735595703 Name +34.068930-118.445127 1583112376.5849104
+{
+    "error_message": "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+    "html_attributions": [],
+    "results": [],
+    "status": "OVER_QUERY_LIMIT"
+}
+
+
+Connection closed with ('127.0.0.1', 38042)
+New connection to ('127.0.0.1', 38050)
+IAMAT Name +34.068930-118.445127 1583112398.6914632
+Client ('127.0.0.1', 38050) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0008296966552734375 Name +34.068930-118.445127 1583112398.6914632
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+AT Hill +0.0008296966552734375 Name +34.068930-118.445127 1583112398.6914632
+{
+    "error_message": "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+    "html_attributions": [],
+    "results": [],
+    "status": "OVER_QUERY_LIMIT"
+}
+
+
+Connection closed with ('127.0.0.1', 38050)
+New connection to ('127.0.0.1', 38058)
+IAMAT Name +34.068930-118.445127 1583112479.0635753
+Client ('127.0.0.1', 38058) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0003933906555175781 Name +34.068930-118.445127 1583112479.0635753
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+AT Hill +0.0003933906555175781 Name +34.068930-118.445127 1583112479.0635753
+{
+    "error_message": "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+    "html_attributions": [],
+    "results": [],
+    "status": "OVER_QUERY_LIMIT"
+}
+
+
+Connection closed with ('127.0.0.1', 38058)
+New connection to ('127.0.0.1', 38066)
+IAMAT Name +34.068930-118.445127 1583112481.9544873
+Client ('127.0.0.1', 38066) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0006699562072753906 Name +34.068930-118.445127 1583112481.9544873
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "error_message" : "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+AT Hill +0.0006699562072753906 Name +34.068930-118.445127 1583112481.9544873
+{
+    "error_message": "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+    "html_attributions": [],
+    "results": [],
+    "status": "OVER_QUERY_LIMIT"
+}
+
+
+Connection closed with ('127.0.0.1', 38066)
+New connection to ('127.0.0.1', 38098)
+IAMAT Name +34.068930-118.445127 1583112701.4134712
+Client ('127.0.0.1', 38098) is Name
+Attempting to connect to 12201
+Port 12201 is not open.
+Attempting to connect to 12202
+Port 12202 is not open.
+AT Hill +0.0007178783416748047 Name +34.068930-118.445127 1583112701.4134712
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "html_attributions" : [],
+   "next_page_token" : "CqQCFQEAAKw8Kv84OcBlvAJc5BCUIv_t6VZW1_Vem5xFdLdIRpskIvYQ1TKncYtWC1ASFeM5De834SryEepiUU8aGDc5I_SVcd5ypLdtmiMnJZV7ZSGkW9-Xck-gPoTTnXmvzXMt8fwo_xnbR-65qLDGHwrJx2ePcHlj7UHs3g-dacMQgqsVK74KNQ-y5qds38upaSUUuTbi-6vA2b0VaSBDUkIkWGN4iVkU6qRtNdbRAbn8WXtOPfrGkPIRjI-01uQFJZMNj-1EVpoyLpxMZZxDBFmXEogDQncscVhumU9tXnNUiyryMAjLtm_yD3nIGcTq2IegPbfez6dfEnexebfIvcIvRYetJdC3DnScrKTzwVcmHVOjGeY_nR_oOLwmLLYs4tIe5hIQ3jzVzM-ANQDorOCApNGdjxoU8EkbY6z5Jp7IaoiH-ZZtfKR0HFg",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0522342,
+               "lng" : -118.2436849
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.3373061,
+                  "lng" : -118.1552891
+               },
+               "southwest" : {
+                  "lat" : 33.7036519,
+                  "lng" : -118.6681759
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",
+         "name" : "Los Angeles",
+         "photos" : [
+            {
+               "height" : 721,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111908544265113207087\"\u003eHarsh Kumar\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAWYyMkqTCJBhxI7MT5YWnpdht5tPqC0yPpof90IIg9RlEg4pQtArwzFYGEqbGDFUzjLUTuoTtjnbID2wm--P-Z8qgr59gFJV__Q9hSTRP7uBpumChUb7fRDf-dk0czZU8EhC4BSbw-z103weCF3OCN2WXGhS-MjYhUR_IoZDJRpnoktUgOudBkw",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+         "reference" : "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.01541479999999,
+               "lng" : -118.4990823
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0167717802915,
+                  "lng" : -118.4979703697085
+               },
+               "southwest" : {
+                  "lat" : 34.0140738197085,
+                  "lng" : -118.5006683302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "6386ccce03d4d355c8c2a4a79253097969895413",
+         "name" : "Hotel Shangri-La",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2448,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110739657517272402764\"\u003eRicky Gunawan\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAALgdZCVAli1IHYSk-L0fyG0Ly5hmt1oITZUTll-_I_xhaCB9BJNXlwJwEG2V5LN8ETJGip6RpyyqDboOmmAASaAYbRnNkltegw9eHiF5cjrk7jBFbYFwMw1hXxbJ899q-EhD7_8SHDuqEITgyewdVq1rHGhR--D3a4jluoq0ZJ0gn27n_0lpEDw",
+               "width" : 3264
+            }
+         ],
+         "place_id" : "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+         "plus_code" : {
+            "compound_code" : "2G82+59 Santa Monica, California, United States",
+            "global_code" : "85632G82+59"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "bar", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 734,
+         "vicinity" : "1301 Ocean Avenue, Santa Monica"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.06320729999999,
+               "lng" : -118.4416734
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06453173029149,
+                  "lng" : -118.4401795197085
+               },
+               "southwest" : {
+                  "lat" : 34.0618337697085,
+                  "lng" : -118.4428774802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "ddb6b9d2e25032f5541bfcf42b91f6c1161be1a2",
+         "name" : "Hilgard House Hotel & Suites",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 260,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114543748345978093084\"\u003eHilgard House Hotel &amp; Suites\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAbgq-0Yk77DgJBRLpaBFi78YHfGmny9A5opyhdpguQGcW2d6IhhfNPDbi6033gFP_u-S0avJR8Bf7bu3m9jvv9G1_i3sM9xfUNcgP7nAGp5Fm18LXxxAelUKTQvQGVriZEhBvSvHzGPshZXfR6MMblnqnGhTj4gvgCN447FVMxh_qB_4s7ZqmWw",
+               "width" : 300
+            }
+         ],
+         "place_id" : "ChIJ06ecwoC8woARVyPlQNVzetI",
+         "plus_code" : {
+            "compound_code" : "3H75+78 Los Angeles, California, United States",
+            "global_code" : "85633H75+78"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJ06ecwoC8woARVyPlQNVzetI",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 167,
+         "vicinity" : "927 Hilgard Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0632746,
+               "lng" : -118.4409504
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0646108802915,
+                  "lng" : -118.4398087197085
+               },
+               "southwest" : {
+                  "lat" : 34.0619129197085,
+                  "lng" : -118.4425066802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "123c3294a684a0fb173c40813459506d1420c75b",
+         "name" : "W Los Angeles - West Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106717016222686749028\"\u003eW Los Angeles - West Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAhgRVzgg1hgMzpWix0nYd5BJNWzGYqqAKCxDOycVaxTyjaaclOnoQ6rECnj2QA6ISZg4OI2uSZKiYiQD27-zk5Q6yIl97Sq5Z5W1vJp81Ym0AwPe7fgEA4Yc-wpgSibF3EhB_4tK4TIzg4Vy-TYzl5qOIGhSOLkJh2qRS1wPai2e4f4oI28y-jQ",
+               "width" : 1500
+            }
+         ],
+         "place_id" : "ChIJffYelYC8woARkChY4cQOzUM",
+         "plus_code" : {
+            "compound_code" : "3H75+8J Los Angeles, California, United States",
+            "global_code" : "85633H75+8J"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJffYelYC8woARkChY4cQOzUM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1022,
+         "vicinity" : "930 Hilgard Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0606338,
+               "lng" : -118.4429579
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06200043029149,
+                  "lng" : -118.4417212697085
+               },
+               "southwest" : {
+                  "lat" : 34.0593024697085,
+                  "lng" : -118.4444192302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "d9aae9960743eec4c49c99ac8a437b7ddbef7c63",
+         "name" : "Royal Palace Westwood Hotel",
+         "photos" : [
+            {
+               "height" : 2988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114094194621340748848\"\u003eCarefree 1AZ\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA9lgAAgfHlkinZm-uX0kSAK502DYtIm7JLf34VRKsmRigfZER-TtszR-_P0uLGSncRMxmNLenoCzHMOnSCQGcU_Ue4KOJb7nC5y6uUg6_8CH-pXsAc3iVdjD49QUOzaaqEhC2vCKh3ZKs2zJGSqdq1zWXGhTZ-yYjfOWU90gfwciMugp-hBJM-w",
+               "width" : 5312
+            }
+         ],
+         "place_id" : "ChIJ36i1toG8woARHcjs6P2eCkU",
+         "plus_code" : {
+            "compound_code" : "3H64+7R Los Angeles, California, United States",
+            "global_code" : "85633H64+7R"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJ36i1toG8woARHcjs6P2eCkU",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 192,
+         "vicinity" : "1052 Tiverton Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0677194,
+               "lng" : -118.4260111
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06895858029149,
+                  "lng" : -118.4244877697085
+               },
+               "southwest" : {
+                  "lat" : 34.0662606197085,
+                  "lng" : -118.4271857302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "a5699f3a10cfd58c6aab513ae29e157fcfda7ce2",
+         "name" : "Beverly Hills Plaza Hotel & Spa",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2736,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116019741408911300544\"\u003eThe Wanderer\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAArEQTn-Loa4oeb4PK3qrCyF24lmEAEL7jkGRW5ZJzjRAHnPeIRJMzX49ODT_QBw7b00uXruf9crycvDdno-e6c5ORVuy20FHdwmJTcrXUCO2QQMwJX7BagelHaKcvZUT_EhDViMqlJ1DimsCv5O5ZUi88GhRINmaEKWsX7I5JT0WJg9SrGW9EzA",
+               "width" : 3648
+            }
+         ],
+         "place_id" : "ChIJ5ZA1I3e8woARBzIurF6K3vU",
+         "plus_code" : {
+            "compound_code" : "3H9F+3H Los Angeles, California, United States",
+            "global_code" : "85633H9F+3H"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJ5ZA1I3e8woARBzIurF6K3vU",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 337,
+         "vicinity" : "10300 Wilshire Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0737527,
+               "lng" : -118.4682129
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.07501653029149,
+                  "lng" : -118.4668231197085
+               },
+               "southwest" : {
+                  "lat" : 34.0723185697085,
+                  "lng" : -118.4695210802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "0a0e53eb3db8472da3fb4694435ba78501bb0265",
+         "name" : "Hotel Angeleno",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4013,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116754839533570358242\"\u003eHotel Angeleno\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAAKcTTrRXzK_NSbO0MQBVk62NHTJvY0XI4Yzf0ispTnUFCiZXg_EMvC1rZB7M492-X_LVIfqsAIfY9QkxtI3cphnOKD4DzD9PbyPbZ3WA1dOyUPDGc60_C8BlnqTLNVcyEhBjDyrsI8EBQihp8OHcT6saGhTf0haIiBoCuNfaQ5RJpkrxzZYExg",
+               "width" : 5375
+            }
+         ],
+         "place_id" : "ChIJt37HtsC8woARLi6S2eMbe_o",
+         "plus_code" : {
+            "compound_code" : "3GFJ+GP Los Angeles, California, United States",
+            "global_code" : "85633GFJ+GP"
+         },
+         "rating" : 4,
+         "reference" : "ChIJt37HtsC8woARLi6S2eMbe_o",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1254,
+         "vicinity" : "170 North Church Lane, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0508994,
+               "lng" : -118.4329414
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0523316802915,
+                  "lng" : -118.4316681697085
+               },
+               "southwest" : {
+                  "lat" : 34.0496337197085,
+                  "lng" : -118.4343661302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "4f07c4e71d89ce9d03fa9983a8122d07cb3642e0",
+         "name" : "Good Nite Inn West Los Angeles",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 846,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116597620800848914070\"\u003eGood Nite Inn West Los Angeles\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAllLjmjf1C8M6XHA4xt9s26MGIg3U7ImThQMRwx08FkzU99smacU_cTpUrxu7G4a_rJhGzGauYyxhpcesEPAuxV3OG94HadQhU-nKgNS2HqMEV4nhQ-PyE-P2zzWb2EGHEhB9kic1gJBCxnTgWh17sV07GhTvHBNn9DTUpoQn1UzvQKXJe1eqFQ",
+               "width" : 1300
+            }
+         ],
+         "place_id" : "ChIJdSBYTpu7woAR3Sf7DOdRWWg",
+         "plus_code" : {
+            "compound_code" : "3H28+9R Los Angeles, California, United States",
+            "global_code" : "85633H28+9R"
+         },
+         "rating" : 3.6,
+         "reference" : "ChIJdSBYTpu7woAR3Sf7DOdRWWg",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 297,
+         "vicinity" : "10740 Santa Monica Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0464745,
+               "lng" : -118.4473949
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0479639302915,
+                  "lng" : -118.4461093197085
+               },
+               "southwest" : {
+                  "lat" : 34.0452659697085,
+                  "lng" : -118.4488072802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2b21d456606fcc54a7dc1129c912defa289f9e9a",
+         "name" : "Holiday Inn Express West Los Angeles-Santa Monica",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115825071599629851306\"\u003eHoliday Inn Express West Los Angeles-Santa Monica\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAjYtmVxcDv8H2XWljsNZYNEq7dkVRBjUg-5X0cNPJg0lCU7Znr-kHjyj6pM8Xr2k027LmQD_IeCQUzB2SQz0dWpyIrSgiPJpmdl4oT1nsIZ4rZWfqmhgdDgefZ4zK6nR8EhCeho5-uVhTGKjTMVQ20sH5GhSh58sPkc6AY3K0K8nsuO0or8iVyg",
+               "width" : 4500
+            }
+         ],
+         "place_id" : "ChIJuQNqk3C7woARlnbSL3nEkUM",
+         "plus_code" : {
+            "compound_code" : "2HW3+H2 West Los Angeles, Los Angeles, CA, United States",
+            "global_code" : "85632HW3+H2"
+         },
+         "rating" : 4,
+         "reference" : "ChIJuQNqk3C7woARlnbSL3nEkUM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 304,
+         "vicinity" : "11250 Santa Monica Boulevard, West Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.051903,
+               "lng" : -118.417654
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05338823029149,
+                  "lng" : -118.4161994197085
+               },
+               "southwest" : {
+                  "lat" : 34.05069026970849,
+                  "lng" : -118.4188973802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "69aa1a9ccb1f82920988409000e990e17b5925e3",
+         "name" : "Century Park Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 960,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112311724520769325511\"\u003eMarcos Alfredo Ribeiro\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAtPQujWiwMG3ZvsyOrQ5YxPEZitVJzpfZqPUyWgi5uFafY-qmt_ErGMwoHlmw-I1k0XKe3x4dyfESRDEaUKNR10KpR7IpxUpAKrXo1TrNggYRryP0_o8W5nk4Ju4OcZCYEhCDg--a5I24Ac1GCZt31_XcGhToGxxhEaQeletINrMCpPjNI3BVlg",
+               "width" : 1280
+            }
+         ],
+         "place_id" : "ChIJTRwaPZO7woARMB6CHkQuqvM",
+         "plus_code" : {
+            "compound_code" : "3H2J+QW Los Angeles, California, United States",
+            "global_code" : "85633H2J+QW"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJTRwaPZO7woARMB6CHkQuqvM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 165,
+         "vicinity" : "10330 West Olympic Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0523725,
+               "lng" : -118.4171034
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05384763029149,
+                  "lng" : -118.4157280197085
+               },
+               "southwest" : {
+                  "lat" : 34.0511496697085,
+                  "lng" : -118.4184259802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "98a0231b2c9e4f20fadf1fde47b7cfe934ae7bd6",
+         "name" : "Courtyard by Marriott Los Angeles Century City/Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109053689834061212494\"\u003epatrick scoby\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA7_qe8mfykaE7wSaSzL06haOELnm0COJLZJK8DMcl25wFcIRD8amTtZZP4qKHsIlYVmd8DMY-qNabkLp3BkMk5TCm7JVaCsgxkJ7ep9ZhHAcRFxQ0xOZlph423Iqx_F7SEhBA4RPfgO8IvJzd0xazQekHGhTbebSB_i7_iTw5dJ5lpPMCI-MpMA",
+               "width" : 2560
+            }
+         ],
+         "place_id" : "ChIJIbJWL5O7woARovCBp1ymJvA",
+         "plus_code" : {
+            "compound_code" : "3H2M+W5 Los Angeles, California, United States",
+            "global_code" : "85633H2M+W5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJIbJWL5O7woARovCBp1ymJvA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 421,
+         "vicinity" : "10320 West Olympic Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.065757,
+               "lng" : -118.4107154
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06719313029149,
+                  "lng" : -118.4092918697085
+               },
+               "southwest" : {
+                  "lat" : 34.06449516970849,
+                  "lng" : -118.4119898302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "500a20024c631569f6c7fbd5aef2fcedeb10bf6e",
+         "name" : "The Peninsula Beverly Hills",
+         "photos" : [
+            {
+               "height" : 3840,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104737288464912423882\"\u003eThe Peninsula Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA7u_pV2CvG0Iq7I8s17LuwSALu9oe4GOIqViX0YMqYUF0O9enI50X-ozUk_jQRu2Dowy_OeEByb1avfeAjQMdIlRSocG8ENETNoj7_n80s-t1-X0ZtunCOjuNr8CfnFeJEhA4f_8zJlIezHF1EcmHoXUMGhSQUXJj-LAy8hVPfYpDsQLFAUm4Iw",
+               "width" : 5760
+            }
+         ],
+         "place_id" : "ChIJo4XM5_W7woARSKsK1bsfNS8",
+         "plus_code" : {
+            "compound_code" : "3H8Q+8P Beverly Hills, California, United States",
+            "global_code" : "85633H8Q+8P"
+         },
+         "rating" : 4.8,
+         "reference" : "ChIJo4XM5_W7woARSKsK1bsfNS8",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 818,
+         "vicinity" : "9882 South Santa Monica Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0818769,
+               "lng" : -118.4134867
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0831230802915,
+                  "lng" : -118.4115693197085
+               },
+               "southwest" : {
+                  "lat" : 34.0804251197085,
+                  "lng" : -118.4142672802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "036816007f207edd82110343cbbe3ad976e16bee",
+         "name" : "The Beverly Hills Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113873817739450896514\"\u003eThe Beverly Hills Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAySuxjqU6xexO5kaDIepi3esvcSGUfn0DbZbKL9Ea9cMSKCSjRjm9CKDkS8LnD8tKHG6BGmLsoxqb6PtiVRsQ0Gw3Ozask_UYZdttghFjTrnl1QiaCm5urxxFdbNB8tSCEhDRkU8aKRw5tx7zcKbC9ljBGhRqEQGOzzPh6u5Js2k9L1wD6YHHEg",
+               "width" : 6840
+            }
+         ],
+         "place_id" : "ChIJjWrkXge8woARQa2f1ewAZqA",
+         "plus_code" : {
+            "compound_code" : "3HJP+QJ Beverly Hills, California, United States",
+            "global_code" : "85633HJP+QJ"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJjWrkXge8woARQa2f1ewAZqA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1564,
+         "vicinity" : "9641 Sunset Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.065646,
+               "lng" : -118.4096781
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0669928302915,
+                  "lng" : -118.4083808197085
+               },
+               "southwest" : {
+                  "lat" : 34.0642948697085,
+                  "lng" : -118.4110787802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "bceefa71feeaa8b43f5314afbb45bd62e2a23aee",
+         "name" : "Maison 140 Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 460,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117910841522023427724\"\u003eMaison 140 Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAxdmPJPUOxCa6X1Wib1LKWSpcwoyggoW_hocDwDlSG9jgpKZjW0SSOOMzZu87rNxE-_8i6l41F0wErpwp4Wld9jJ9IPWPKBiiwhBT6fCL_3RMt6zyW4PDAzBYqiBSF0UBEhA_VDhRpgz-g1JiopTKI28PGhSMd2ExheXfcrY_n3p2yDk-IIoxfg",
+               "width" : 817
+            }
+         ],
+         "place_id" : "ChIJLy7Lb_a7woARrxK7_9sLiF4",
+         "plus_code" : {
+            "compound_code" : "3H8R+74 Beverly Hills, California, United States",
+            "global_code" : "85633H8R+74"
+         },
+         "price_level" : 4,
+         "rating" : 3.7,
+         "reference" : "ChIJLy7Lb_a7woARrxK7_9sLiF4",
+         "scope" : "GOOGLE",
+         "types" : [ "night_club", "lodging", "bar", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 175,
+         "vicinity" : "140 South Lasky Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0541583,
+               "lng" : -118.4125222
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05562588029151,
+                  "lng" : -118.4108774697085
+               },
+               "southwest" : {
+                  "lat" : 34.05292791970851,
+                  "lng" : -118.4135754302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "7e31a4c2493f309e5c401e9524f6549123813346",
+         "name" : "InterContinental Los Angeles Century City",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 484,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112530985343617622744\"\u003eInterContinental Los Angeles Century City\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAg2J5QT2eoWQ3n0TtGvbLBQZsIll0TtkNlEMdRznj8s37y0Lgq-HfW0L_r_-JdcNz8cwKhdH6XHaRZpiBnLHfahqklHP8lqdOlxzMzRPQtlaFElqv3QqMmGbvse1Ks4OuEhC9OxlmD0hD1wyi9b2JtPsEGhSYYidPHLTwOWyDfO1LQYZVa-zwrA",
+               "width" : 796
+            }
+         ],
+         "place_id" : "ChIJTWllB-27woARFHntVl3XnBc",
+         "plus_code" : {
+            "compound_code" : "3H3Q+J3 Los Angeles, California, United States",
+            "global_code" : "85633H3Q+J3"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJTWllB-27woARFHntVl3XnBc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1029,
+         "vicinity" : "2151 Avenue of the Stars, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0690175,
+               "lng" : -118.4024248
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0703570802915,
+                  "lng" : -118.4009626197085
+               },
+               "southwest" : {
+                  "lat" : 34.0676591197085,
+                  "lng" : -118.4036605802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "39e865fd4e8105106e995271692d8a3ad03ed66f",
+         "name" : "Luxe Rodeo Drive Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1334,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103145434244305435950\"\u003eLuxe Rodeo Drive Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAKLGnxls76BiLoDAzmipzyyMoFl2T4PMB9XflokFCLXbiT8EYXlnUY6NhSo8bZCWW0mwG8ofgSB2HwpycDs_zo8HAGzW7cSXeLAiT0w0daJqGWDyUp_yAAa03FqhQrGcTEhDlcZWKvu9z3sHAzMulJjTVGhQR1i2x_hMaix2OtNKKpneBLIDrhw",
+               "width" : 2000
+            }
+         ],
+         "place_id" : "ChIJtS2kefi7woARaYSltnna5Jw",
+         "plus_code" : {
+            "compound_code" : "3H9X+J2 Beverly Hills, California, United States",
+            "global_code" : "85633H9X+J2"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJtS2kefi7woARaYSltnna5Jw",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 317,
+         "vicinity" : "360 North Rodeo Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.03454809999999,
+               "lng" : -118.4333429
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.03571163029149,
+                  "lng" : -118.4320817697085
+               },
+               "southwest" : {
+                  "lat" : 34.0330136697085,
+                  "lng" : -118.4347797302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "d6f569df72798ca70f1cfa1a3662294f8fc0a052",
+         "name" : "Best Western Royal Palace Inn & Suites",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/102783467123895644660\"\u003eBest Western Royal Palace Inn &amp; Suites\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAASPMXTfOkq5JIqON3Yi-4c0njIJ2y6PCTvvV01UzI189gYR0-X_an032KiP3YCG1Ely50I5MHmpKrDr_CCH2ovu985duWfiECe3MnqRde_sQsGVCTye2Cw9GdD7LhztgBEhBd1yK8K41UnnmdKmV8nhzFGhSOylBQ41gJmOzcZly89WZ8zMyajw",
+               "width" : 3840
+            }
+         ],
+         "place_id" : "ChIJTbP6I6S7woART1N84YR5n14",
+         "plus_code" : {
+            "compound_code" : "2HM8+RM Los Angeles, California, United States",
+            "global_code" : "85632HM8+RM"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJTbP6I6S7woART1N84YR5n14",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 547,
+         "vicinity" : "2528 South Sepulveda Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.066883,
+               "lng" : -118.4007852
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0683323302915,
+                  "lng" : -118.3994167197085
+               },
+               "southwest" : {
+                  "lat" : 34.0656343697085,
+                  "lng" : -118.4021146802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "8d3450b5834425433d906197ac94fe787e91e0f0",
+         "name" : "Beverly Wilshire, A Four Seasons Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1280,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101231318544174638884\"\u003eBeverly Wilshire, A Four Seasons Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA7LgVwvq-IHFQ2JzrJkv7PpLPYtM3fMHavHksvrHSoPKmjkShteSK37QFKw2JU6m4W_1RBnMsGP7R_SY_-o-yVUFet54GrsJyPg2eNq-HQe8ypMvHLjzfeDhDZXgWYNV7EhDd128YMa-1613eO-PdmT6uGhS7TbMNHC64R6xtg-1wmuIt42Mycw",
+               "width" : 1924
+            }
+         ],
+         "place_id" : "ChIJz-22Hfm7woARmoLOmvYW4J0",
+         "plus_code" : {
+            "compound_code" : "3H8X+QM Beverly Hills, California, United States",
+            "global_code" : "85633H8X+QM"
+         },
+         "price_level" : 4,
+         "rating" : 4.7,
+         "reference" : "ChIJz-22Hfm7woARmoLOmvYW4J0",
+         "scope" : "GOOGLE",
+         "types" : [ "spa", "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2161,
+         "vicinity" : "9500 Wilshire Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0367843,
+               "lng" : -118.4705904
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0380594802915,
+                  "lng" : -118.4692843197085
+               },
+               "southwest" : {
+                  "lat" : 34.0353615197085,
+                  "lng" : -118.4719822802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "6b15b624b27ddcd53380f9fa9984a1003afb0612",
+         "name" : "Days Inn by Wyndham Santa Monica/Los Angeles",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115453429974871798967\"\u003eDays Inn by Wyndham Santa Monica/Los Angeles\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRZAAAAC11PPXWLYlgO96tr1QcHT6-Io3MN3aCbb9ArmYPEweW6LZcRFxHSx1D-N0ZTiNVcqb6O_BNJk1o_bv0mUPRq8Mv6AeJ_g4CxLGBxPeQbd0dib9tzOp5Gd19khGGoBdyHEhBpa2U6VA2S8n1Anfy9YKHLGhTqeDb2d6rfiEeD6zdrp_O403UU7w",
+               "width" : 1500
+            }
+         ],
+         "place_id" : "ChIJO9D-nka7woARrtsSq8vHCfk",
+         "plus_code" : {
+            "compound_code" : "2GPH+PQ Santa Monica, California, United States",
+            "global_code" : "85632GPH+PQ"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJO9D-nka7woARrtsSq8vHCfk",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 387,
+         "vicinity" : "3007 Santa Monica Boulevard, Santa Monica"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0194543,
+               "lng" : -118.4911912
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05056,
+                  "lng" : -118.443426
+               },
+               "southwest" : {
+                  "lat" : 33.993161,
+                  "lng" : -118.5180849
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "55014b5c5e5d4c598c03d1024c2802d46d8baf02",
+         "name" : "Santa Monica",
+         "photos" : [
+            {
+               "height" : 738,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103682150529620991834\"\u003eShamayel G\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA-WbUs6WL_Mu6RiwHk2p0tyJbadMJUb35U6XFnzpxMOq3sX7hUWd7DpdeuwFv18-Ox4vSQ0W9DiQwbbtKVIooHdFCRs4_L-9-gAKjjmdu-4GzM1t4adEkFomKm9LXckemEhDD6M3bvrqQYzCo00dLLfpiGhSxJDxjHV2pU0RsaB3oh3Pse4a5Pw",
+               "width" : 725
+            }
+         ],
+         "place_id" : "ChIJGQCRws6kwoARq_Uj_7UKF7Q",
+         "reference" : "ChIJGQCRws6kwoARq_Uj_7UKF7Q",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Santa Monica"
+      }
+   ],
+   "status" : "OK"
+}
+
+AT Hill +0.0007178783416748047 Name +34.068930-118.445127 1583112701.4134712
+{
+    "html_attributions": [],
+    "next_page_token": "CqQCFQEAAKw8Kv84OcBlvAJc5BCUIv_t6VZW1_Vem5xFdLdIRpskIvYQ1TKncYtWC1ASFeM5De834SryEepiUU8aGDc5I_SVcd5ypLdtmiMnJZV7ZSGkW9-Xck-gPoTTnXmvzXMt8fwo_xnbR-65qLDGHwrJx2ePcHlj7UHs3g-dacMQgqsVK74KNQ-y5qds38upaSUUuTbi-6vA2b0VaSBDUkIkWGN4iVkU6qRtNdbRAbn8WXtOPfrGkPIRjI-01uQFJZMNj-1EVpoyLpxMZZxDBFmXEogDQncscVhumU9tXnNUiyryMAjLtm_yD3nIGcTq2IegPbfez6dfEnexebfIvcIvRYetJdC3DnScrKTzwVcmHVOjGeY_nR_oOLwmLLYs4tIe5hIQ3jzVzM-ANQDorOCApNGdjxoU8EkbY6z5Jp7IaoiH-ZZtfKR0HFg",
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.0522342,
+                    "lng": -118.2436849
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.3373061,
+                        "lng": -118.1552891
+                    },
+                    "southwest": {
+                        "lat": 33.7036519,
+                        "lng": -118.6681759
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+            "id": "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",
+            "name": "Los Angeles",
+            "photos": [
+                {
+                    "height": 721,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111908544265113207087\">Harsh Kumar</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAWYyMkqTCJBhxI7MT5YWnpdht5tPqC0yPpof90IIg9RlEg4pQtArwzFYGEqbGDFUzjLUTuoTtjnbID2wm--P-Z8qgr59gFJV__Q9hSTRP7uBpumChUb7fRDf-dk0czZU8EhC4BSbw-z103weCF3OCN2WXGhS-MjYhUR_IoZDJRpnoktUgOudBkw",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+            "reference": "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+            "scope": "GOOGLE",
+            "types": [
+                "locality",
+                "political"
+            ],
+            "vicinity": "Los Angeles"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.01541479999999,
+                    "lng": -118.4990823
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.0167717802915,
+                        "lng": -118.4979703697085
+                    },
+                    "southwest": {
+                        "lat": 34.0140738197085,
+                        "lng": -118.5006683302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "6386ccce03d4d355c8c2a4a79253097969895413",
+            "name": "Hotel Shangri-La",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110739657517272402764\">Ricky Gunawan</a>"
+                    ],
+                    "photo_reference": "CmRaAAAALgdZCVAli1IHYSk-L0fyG0Ly5hmt1oITZUTll-_I_xhaCB9BJNXlwJwEG2V5LN8ETJGip6RpyyqDboOmmAASaAYbRnNkltegw9eHiF5cjrk7jBFbYFwMw1hXxbJ899q-EhD7_8SHDuqEITgyewdVq1rHGhR--D3a4jluoq0ZJ0gn27n_0lpEDw",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+            "plus_code": {
+                "compound_code": "2G82+59 Santa Monica, California, United States",
+                "global_code": "85632G82+59"
+            },
+            "rating": 4.2,
+            "reference": "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "bar",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 734,
+            "vicinity": "1301 Ocean Avenue, Santa Monica"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.06320729999999,
+                    "lng": -118.4416734
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.06453173029149,
+                        "lng": -118.4401795197085
+                    },
+                    "southwest": {
+                        "lat": 34.0618337697085,
+                        "lng": -118.4428774802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "ddb6b9d2e25032f5541bfcf42b91f6c1161be1a2",
+            "name": "Hilgard House Hotel & Suites",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 260,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114543748345978093084\">Hilgard House Hotel &amp; Suites</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAbgq-0Yk77DgJBRLpaBFi78YHfGmny9A5opyhdpguQGcW2d6IhhfNPDbi6033gFP_u-S0avJR8Bf7bu3m9jvv9G1_i3sM9xfUNcgP7nAGp5Fm18LXxxAelUKTQvQGVriZEhBvSvHzGPshZXfR6MMblnqnGhTj4gvgCN447FVMxh_qB_4s7ZqmWw",
+                    "width": 300
+                }
+            ],
+            "place_id": "ChIJ06ecwoC8woARVyPlQNVzetI",
+            "plus_code": {
+                "compound_code": "3H75+78 Los Angeles, California, United States",
+                "global_code": "85633H75+78"
+            },
+            "rating": 3.9,
+            "reference": "ChIJ06ecwoC8woARVyPlQNVzetI",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 167,
+            "vicinity": "927 Hilgard Avenue, Los Angeles"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.0632746,
+                    "lng": -118.4409504
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.0646108802915,
+                        "lng": -118.4398087197085
+                    },
+                    "southwest": {
+                        "lat": 34.0619129197085,
+                        "lng": -118.4425066802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "123c3294a684a0fb173c40813459506d1420c75b",
+            "name": "W Los Angeles - West Beverly Hills",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106717016222686749028\">W Los Angeles - West Beverly Hills</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAhgRVzgg1hgMzpWix0nYd5BJNWzGYqqAKCxDOycVaxTyjaaclOnoQ6rECnj2QA6ISZg4OI2uSZKiYiQD27-zk5Q6yIl97Sq5Z5W1vJp81Ym0AwPe7fgEA4Yc-wpgSibF3EhB_4tK4TIzg4Vy-TYzl5qOIGhSOLkJh2qRS1wPai2e4f4oI28y-jQ",
+                    "width": 1500
+                }
+            ],
+            "place_id": "ChIJffYelYC8woARkChY4cQOzUM",
+            "plus_code": {
+                "compound_code": "3H75+8J Los Angeles, California, United States",
+                "global_code": "85633H75+8J"
+            },
+            "rating": 4.2,
+            "reference": "ChIJffYelYC8woARkChY4cQOzUM",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1022,
+            "vicinity": "930 Hilgard Avenue, Los Angeles"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.0606338,
+                    "lng": -118.4429579
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.06200043029149,
+                        "lng": -118.4417212697085
+                    },
+                    "southwest": {
+                        "lat": 34.0593024697085,
+                        "lng": -118.4444192302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "d9aae9960743eec4c49c99ac8a437b7ddbef7c63",
+            "name": "Royal Palace Westwood Hotel",
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114094194621340748848\">Carefree 1AZ</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA9lgAAgfHlkinZm-uX0kSAK502DYtIm7JLf34VRKsmRigfZER-TtszR-_P0uLGSncRMxmNLenoCzHMOnSCQGcU_Ue4KOJb7nC5y6uUg6_8CH-pXsAc3iVdjD49QUOzaaqEhC2vCKh3ZKs2zJGSqdq1zWXGhTZ-yYjfOWU90gfwciMugp-hBJM-w",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJ36i1toG8woARHcjs6P2eCkU",
+            "plus_code": {
+                "compound_code": "3H64+7R Los Angeles, California, United States",
+                "global_code": "85633H64+7R"
+            },
+            "rating": 4.2,
+            "reference": "ChIJ36i1toG8woARHcjs6P2eCkU",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 192,
+            "vicinity": "1052 Tiverton Avenue, Los Angeles"
+        }
+    ],
+    "status": "OK"
+}
+
+
+Connection closed with ('127.0.0.1', 38098)
+New connection to ('127.0.0.1', 38120)
+IAMAT Name +34.068930-118.445127 1583112874.1856277
+Client ('127.0.0.1', 38120) is Name
+Attempting to connect to 12201
+Connected to 12201 . Writing data.
+Closing connection to 12201
+Connection to 12201 closed
+Attempting to connect to 12202
+Connected to 12202 . Writing data.
+Closing connection to 12202
+Connection to 12202 closed
+AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+New connection to ('127.0.0.1', 38126)
+WHATSAT Name 10 5
+Requesting from: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA
+SERVER1 AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+Received own message
+Connection closed with ('127.0.0.1', 38126)
+New connection to ('127.0.0.1', 38128)
+SERVER1 AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+Received own message
+Connection closed with ('127.0.0.1', 38128)
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA status: 200
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.06893,-118.445127&radius=10000&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA responded: {
+   "html_attributions" : [],
+   "next_page_token" : "CqQCFQEAAK7aP0P3famGVYjvRIsxpTn0XwJjy47BQoB9mZloVIVfjLcpUlYmlIx1oU7i67MSjl-4h1__v1ly_21JX6DqAaO7prCUbJkb2WMiu0gespcEsglxi_hVhf8T8McVyzOWsAZv0kslCcPBeyZBI1t4lV2-2_gAdpYq1pfyiQjKNA3Hx09k-rWpE2xRcZRplUPTWz9kYmP1hCwQ19VYv3YzFb5uRtOt1E2S-rHoXlNODnrriNqvvAfarIekA81iAWNTVCIEJZKXamM7CC2Fb2fvf1MX665X5APwfcecFqyZXBhmCfPK6ZkcfN9tzjon999KAhqj0IjZ4x957hK95_jxIFsT5_7DlJ5hKbJgc6b7GTUCkuZSO2SeglxmJaNV9SVVxhIQUzhX6O2VXV9lCHq5iNOGWhoU9uyaFjbJXFKSdtOpf_8KQBuocyw",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0522342,
+               "lng" : -118.2436849
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.3373061,
+                  "lng" : -118.1552891
+               },
+               "southwest" : {
+                  "lat" : 33.7036519,
+                  "lng" : -118.6681759
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",
+         "name" : "Los Angeles",
+         "photos" : [
+            {
+               "height" : 721,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111908544265113207087\"\u003eHarsh Kumar\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAATuUeRFrB6b1QYSRlazAZIQI5tG21LE39_4TwYcwyUXZIGbQ3I8zAgxhtpfsy45v5uG7778Mvd8jNxJNy64rHqMIwr-DntTx2PHu16tSUhRWrbIJISPVNgiJE5FTfUbI3EhAk7UGKVOBEkg0c0l3u-AVJGhR1gyVORK0ibiFywJsJx6VIFiN5Jw",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+         "reference" : "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.01541479999999,
+               "lng" : -118.4990823
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0167717802915,
+                  "lng" : -118.4979703697085
+               },
+               "southwest" : {
+                  "lat" : 34.0140738197085,
+                  "lng" : -118.5006683302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "6386ccce03d4d355c8c2a4a79253097969895413",
+         "name" : "Hotel Shangri-La",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2448,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110739657517272402764\"\u003eRicky Gunawan\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAmxdyQiMAPQRt53puYhTb_0MkHzG3HdJ76MnfDNc084oQ1wL8nn7E6aHd0ShN19Q7y3beT7RNPIjtNQXeFNsmrEEKJxwaC__k6cGm3li3kr-Tt2e_S0hYmndseQIwdyjYEhAXDlbzMILC6F0712c3zBu5GhRiZ37uWuHkKcZjSsulIdXYqCN-Ow",
+               "width" : 3264
+            }
+         ],
+         "place_id" : "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+         "plus_code" : {
+            "compound_code" : "2G82+59 Santa Monica, California, United States",
+            "global_code" : "85632G82+59"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "bar", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 734,
+         "vicinity" : "1301 Ocean Avenue, Santa Monica"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.06320729999999,
+               "lng" : -118.4416734
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06453173029149,
+                  "lng" : -118.4401795197085
+               },
+               "southwest" : {
+                  "lat" : 34.0618337697085,
+                  "lng" : -118.4428774802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "ddb6b9d2e25032f5541bfcf42b91f6c1161be1a2",
+         "name" : "Hilgard House Hotel & Suites",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 260,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114543748345978093084\"\u003eHilgard House Hotel &amp; Suites\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAArpeas-hEjOdEnmnq-v0puQGN2QQ5W1lNQSYEHfAkexujJ0Ni2jysh8-w9orIHnUevWIUCaPc8-3SwtHGgov33tdqpBftnxjeKQQ13YFKofyb2J0AMvnx8jhrHbbx4xWaEhB7PBXC0jhVptEpojoVkAJbGhRLenGmSGVorlHgvg-ndJ5lUztF5A",
+               "width" : 300
+            }
+         ],
+         "place_id" : "ChIJ06ecwoC8woARVyPlQNVzetI",
+         "plus_code" : {
+            "compound_code" : "3H75+78 Los Angeles, California, United States",
+            "global_code" : "85633H75+78"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJ06ecwoC8woARVyPlQNVzetI",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 167,
+         "vicinity" : "927 Hilgard Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0632746,
+               "lng" : -118.4409504
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0646108802915,
+                  "lng" : -118.4398087197085
+               },
+               "southwest" : {
+                  "lat" : 34.0619129197085,
+                  "lng" : -118.4425066802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "123c3294a684a0fb173c40813459506d1420c75b",
+         "name" : "W Los Angeles - West Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106717016222686749028\"\u003eW Los Angeles - West Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAbaYlvcOnec7HkvpEtFv1haouR8Pt-DXV-6jq2jJYzLBryvxJDWkV-H7T4RV_HHbyfc2p9CumrzDjMufsag9eSI38xqBt8UKukqVfL09-MVYUPgn2tJgxZzB9KBTXFN7lEhB6AWufnX79_eBqLnMcHXDZGhSsnuOg9XO5o7Me1F_0ufzbp2-yUQ",
+               "width" : 1500
+            }
+         ],
+         "place_id" : "ChIJffYelYC8woARkChY4cQOzUM",
+         "plus_code" : {
+            "compound_code" : "3H75+8J Los Angeles, California, United States",
+            "global_code" : "85633H75+8J"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJffYelYC8woARkChY4cQOzUM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1022,
+         "vicinity" : "930 Hilgard Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0606338,
+               "lng" : -118.4429579
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06200043029149,
+                  "lng" : -118.4417212697085
+               },
+               "southwest" : {
+                  "lat" : 34.0593024697085,
+                  "lng" : -118.4444192302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "d9aae9960743eec4c49c99ac8a437b7ddbef7c63",
+         "name" : "Royal Palace Westwood Hotel",
+         "photos" : [
+            {
+               "height" : 2988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114094194621340748848\"\u003eCarefree 1AZ\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAADcP4q5LeZiV2cWOXLducFpSA5CxuuuAZf_hHzPLRmRMDbkYAyidqnO8xX1-hyshk4-QDX5ECOmSMW_MlHZtier8RFgi_anI-e9VWT9EzTeiLPSIrdiCMxPnRwt9PwbFzEhCkJEauJcaom9cE83F6-WfqGhSb9oUe-K57sS23OXYDM_V-MT23dA",
+               "width" : 5312
+            }
+         ],
+         "place_id" : "ChIJ36i1toG8woARHcjs6P2eCkU",
+         "plus_code" : {
+            "compound_code" : "3H64+7R Los Angeles, California, United States",
+            "global_code" : "85633H64+7R"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJ36i1toG8woARHcjs6P2eCkU",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 192,
+         "vicinity" : "1052 Tiverton Avenue, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0677194,
+               "lng" : -118.4260111
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06895858029149,
+                  "lng" : -118.4244877697085
+               },
+               "southwest" : {
+                  "lat" : 34.0662606197085,
+                  "lng" : -118.4271857302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "a5699f3a10cfd58c6aab513ae29e157fcfda7ce2",
+         "name" : "Beverly Hills Plaza Hotel & Spa",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2736,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116019741408911300544\"\u003eThe Wanderer\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAzreUjBVVXWAijIivESXDq3xVzrMJF6nrV3pUrNKjHEb07vlJr4f0YJxTyANQlOWdm1lhvfo9TzG2Fia55nua_cnNwg-dEQz9LO_S2pVrZkiix3MsY90AR1L8ykfxeEjqEhA0PA34nWLGH85uTMecN5v9GhQM0o8hIDCdN5PD9_YLQ4ZHSlXpKQ",
+               "width" : 3648
+            }
+         ],
+         "place_id" : "ChIJ5ZA1I3e8woARBzIurF6K3vU",
+         "plus_code" : {
+            "compound_code" : "3H9F+3H Los Angeles, California, United States",
+            "global_code" : "85633H9F+3H"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJ5ZA1I3e8woARBzIurF6K3vU",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 337,
+         "vicinity" : "10300 Wilshire Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0737527,
+               "lng" : -118.4682129
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.07501653029149,
+                  "lng" : -118.4668231197085
+               },
+               "southwest" : {
+                  "lat" : 34.0723185697085,
+                  "lng" : -118.4695210802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "0a0e53eb3db8472da3fb4694435ba78501bb0265",
+         "name" : "Hotel Angeleno",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4013,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116754839533570358242\"\u003eHotel Angeleno\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAdNsLUcFVZ9JL7SNoRvcNjewqPmtNBbIc5oUs3OFOdxwTl8yyuDOWD4Gbw5IV5iA_TRUOTqNmjUHreQzeXn_xux4IDDzm2DnwMz2fAV_NMq9gXm6SSO8JZZD_DSthbeKVEhCKAcgjc3bzuhoNEoHJLp8fGhTxFhcPzN5d8_1DueNMxG0P7jnkqg",
+               "width" : 5375
+            }
+         ],
+         "place_id" : "ChIJt37HtsC8woARLi6S2eMbe_o",
+         "plus_code" : {
+            "compound_code" : "3GFJ+GP Los Angeles, California, United States",
+            "global_code" : "85633GFJ+GP"
+         },
+         "rating" : 4,
+         "reference" : "ChIJt37HtsC8woARLi6S2eMbe_o",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1254,
+         "vicinity" : "170 North Church Lane, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0508994,
+               "lng" : -118.4329414
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0523316802915,
+                  "lng" : -118.4316681697085
+               },
+               "southwest" : {
+                  "lat" : 34.0496337197085,
+                  "lng" : -118.4343661302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "4f07c4e71d89ce9d03fa9983a8122d07cb3642e0",
+         "name" : "Good Nite Inn West Los Angeles",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 846,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116597620800848914070\"\u003eGood Nite Inn West Los Angeles\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAZ4xT8EW5-naCy_vW7Vkkn1JlYE7aeJYSRVD_EK46f0EEVmcQNrDQYUVdIZGBJD-qS1mlyOVH91n8q-NiW4raDEg3zTrcDrPZoILX3kD32hee6OAiHGTxoh5tyg9XLukFEhBsJ2xxRXfb_brD0pIi8NdoGhTlRCFN7WXTcMYFWCTfp_JOt31cSw",
+               "width" : 1300
+            }
+         ],
+         "place_id" : "ChIJdSBYTpu7woAR3Sf7DOdRWWg",
+         "plus_code" : {
+            "compound_code" : "3H28+9R Los Angeles, California, United States",
+            "global_code" : "85633H28+9R"
+         },
+         "rating" : 3.6,
+         "reference" : "ChIJdSBYTpu7woAR3Sf7DOdRWWg",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 297,
+         "vicinity" : "10740 Santa Monica Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0464745,
+               "lng" : -118.4473949
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0479639302915,
+                  "lng" : -118.4461093197085
+               },
+               "southwest" : {
+                  "lat" : 34.0452659697085,
+                  "lng" : -118.4488072802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2b21d456606fcc54a7dc1129c912defa289f9e9a",
+         "name" : "Holiday Inn Express West Los Angeles-Santa Monica",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115825071599629851306\"\u003eHoliday Inn Express West Los Angeles-Santa Monica\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAALfqZXx7-eNOqXN16antuyiFTP_HsPaKKWoAw7gHZC6nSHmaI9DxOiw1o2FukdUQphWzqvu9c_aOz3ldzj_lPBJ4sJgJ4YKmqF0LULUEN0V72fxuoy-6S1sM3MgxuOCzNEhBlXo3fTCur57fRPQGgeKLSGhRpoTWHyZA3GKkl19ccRvatJWDAwg",
+               "width" : 4500
+            }
+         ],
+         "place_id" : "ChIJuQNqk3C7woARlnbSL3nEkUM",
+         "plus_code" : {
+            "compound_code" : "2HW3+H2 West Los Angeles, Los Angeles, CA, United States",
+            "global_code" : "85632HW3+H2"
+         },
+         "rating" : 4,
+         "reference" : "ChIJuQNqk3C7woARlnbSL3nEkUM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 304,
+         "vicinity" : "11250 Santa Monica Boulevard, West Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.051903,
+               "lng" : -118.417654
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05338823029149,
+                  "lng" : -118.4161994197085
+               },
+               "southwest" : {
+                  "lat" : 34.05069026970849,
+                  "lng" : -118.4188973802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "69aa1a9ccb1f82920988409000e990e17b5925e3",
+         "name" : "Century Park Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 960,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112311724520769325511\"\u003eMarcos Alfredo Ribeiro\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAASJQHyGm1mlkYR-KSn4OgP2J8fdxFjVc03pt1YfJ6Mi_myjENA-oV4MbAxHLUa04U4LioU5VogT1Ib7iLsg3CCk0MpYvA3c82ykSYQvphGl3J_ndYPXxuiqu38kAF-hsaEhA2APCk-_o1i-JlbJku9Uq5GhTgyw4S2dEW7wfK7386E6n6YyzzUA",
+               "width" : 1280
+            }
+         ],
+         "place_id" : "ChIJTRwaPZO7woARMB6CHkQuqvM",
+         "plus_code" : {
+            "compound_code" : "3H2J+QW Los Angeles, California, United States",
+            "global_code" : "85633H2J+QW"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJTRwaPZO7woARMB6CHkQuqvM",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 165,
+         "vicinity" : "10330 West Olympic Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0523725,
+               "lng" : -118.4171034
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05384763029149,
+                  "lng" : -118.4157280197085
+               },
+               "southwest" : {
+                  "lat" : 34.0511496697085,
+                  "lng" : -118.4184259802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "98a0231b2c9e4f20fadf1fde47b7cfe934ae7bd6",
+         "name" : "Courtyard by Marriott Los Angeles Century City/Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109053689834061212494\"\u003epatrick scoby\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAKNyvZ3yoEXTXi1b2tDqrRFFH57EmonTta1pXst5eUOgdKUP5Hp4xkn4lnbV9OKk83KCFR-s2R4tU6mH4CZYrWkrC2VhvSSqzxgBjnKEf-BPNUSciPQ8iUB-35Mnhp0SgEhCRChoL80oP6x-grzpZNmezGhQug_80pCp-yTEu2TciudbHVaH9cw",
+               "width" : 2560
+            }
+         ],
+         "place_id" : "ChIJIbJWL5O7woARovCBp1ymJvA",
+         "plus_code" : {
+            "compound_code" : "3H2M+W5 Los Angeles, California, United States",
+            "global_code" : "85633H2M+W5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJIbJWL5O7woARovCBp1ymJvA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 421,
+         "vicinity" : "10320 West Olympic Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.065757,
+               "lng" : -118.4107154
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.06719313029149,
+                  "lng" : -118.4092918697085
+               },
+               "southwest" : {
+                  "lat" : 34.06449516970849,
+                  "lng" : -118.4119898302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "500a20024c631569f6c7fbd5aef2fcedeb10bf6e",
+         "name" : "The Peninsula Beverly Hills",
+         "photos" : [
+            {
+               "height" : 3840,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104737288464912423882\"\u003eThe Peninsula Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAhzNCLVbJWsW1tPHlybwWVbkDEltjJtQWXVkkV3J1G-e5867PqtD3D_ZtBDt7FHkVwdKdcVGwXdGumv95A-Z3vcMQk8mrsAP_mktOzRDc0WNEOwHPX8v_4arWvwq20sdiEhCbK2o8FMfxEM5AZleApmYHGhQxMSVZ6g5tS-nG5mHoj1pPBf-f-A",
+               "width" : 5760
+            }
+         ],
+         "place_id" : "ChIJo4XM5_W7woARSKsK1bsfNS8",
+         "plus_code" : {
+            "compound_code" : "3H8Q+8P Beverly Hills, California, United States",
+            "global_code" : "85633H8Q+8P"
+         },
+         "rating" : 4.8,
+         "reference" : "ChIJo4XM5_W7woARSKsK1bsfNS8",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 818,
+         "vicinity" : "9882 South Santa Monica Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0818769,
+               "lng" : -118.4134867
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0831230802915,
+                  "lng" : -118.4115693197085
+               },
+               "southwest" : {
+                  "lat" : 34.0804251197085,
+                  "lng" : -118.4142672802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "036816007f207edd82110343cbbe3ad976e16bee",
+         "name" : "The Beverly Hills Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113873817739450896514\"\u003eThe Beverly Hills Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAXGkAQmHMlAmc6692PeOihM7vXhXt_WRiNy29ZqH7-f6b6mPqZPRO7gfh18A0f8GxWG37d9J2NYV6ggZcI3jqDwXTdq7oKrmfKFk1y8TchddLKHFedBU1qZTI8Z9K5348EhDOwUOVyeJgCMC6Im7dZH-ZGhRNrZycMZNGkdXYiS0533BLMdvTFg",
+               "width" : 6840
+            }
+         ],
+         "place_id" : "ChIJjWrkXge8woARQa2f1ewAZqA",
+         "plus_code" : {
+            "compound_code" : "3HJP+QJ Beverly Hills, California, United States",
+            "global_code" : "85633HJP+QJ"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJjWrkXge8woARQa2f1ewAZqA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1564,
+         "vicinity" : "9641 Sunset Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.065646,
+               "lng" : -118.4096781
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0669928302915,
+                  "lng" : -118.4083808197085
+               },
+               "southwest" : {
+                  "lat" : 34.0642948697085,
+                  "lng" : -118.4110787802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "bceefa71feeaa8b43f5314afbb45bd62e2a23aee",
+         "name" : "Maison 140 Beverly Hills",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 460,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117910841522023427724\"\u003eMaison 140 Beverly Hills\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAeeup7X_VBdQi_vyZe7jk7YYdxTosjcqG6yWAx1nFS9aZM1a3DkvsGLcxUBFABqeXwqufkBlMcezDsZkOgERglS2xhwuxYd_gX8TyDuWYFfm1TcY-VY2ivWEVHxTDqnWtEhDSWChX8uPspFIyGAeqnmvZGhRzkrswz1gs2DERabeMfIFXNqCnYQ",
+               "width" : 817
+            }
+         ],
+         "place_id" : "ChIJLy7Lb_a7woARrxK7_9sLiF4",
+         "plus_code" : {
+            "compound_code" : "3H8R+74 Beverly Hills, California, United States",
+            "global_code" : "85633H8R+74"
+         },
+         "price_level" : 4,
+         "rating" : 3.7,
+         "reference" : "ChIJLy7Lb_a7woARrxK7_9sLiF4",
+         "scope" : "GOOGLE",
+         "types" : [ "night_club", "lodging", "bar", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 175,
+         "vicinity" : "140 South Lasky Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0541583,
+               "lng" : -118.4125222
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05562588029151,
+                  "lng" : -118.4108774697085
+               },
+               "southwest" : {
+                  "lat" : 34.05292791970851,
+                  "lng" : -118.4135754302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "7e31a4c2493f309e5c401e9524f6549123813346",
+         "name" : "InterContinental Los Angeles Century City",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 484,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112530985343617622744\"\u003eInterContinental Los Angeles Century City\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAARkio4-eKQCoGCTDxqUpU0W_65DbptWZJBzIj0b7lcxcmC3TDWWnScFlWE6sx38-DLAbt6jnWCwc34g90IOzfBE2R1kI9ZEStlRduJfDBHniGvWZNbt8TRBxcTurpY43SEhCY8_YZf_5u52b__6_17xLEGhQxYVYorNkatsqvWKc7mFbOdVYlmQ",
+               "width" : 796
+            }
+         ],
+         "place_id" : "ChIJTWllB-27woARFHntVl3XnBc",
+         "plus_code" : {
+            "compound_code" : "3H3Q+J3 Los Angeles, California, United States",
+            "global_code" : "85633H3Q+J3"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJTWllB-27woARFHntVl3XnBc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1029,
+         "vicinity" : "2151 Avenue of the Stars, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0690175,
+               "lng" : -118.4024248
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0703570802915,
+                  "lng" : -118.4009626197085
+               },
+               "southwest" : {
+                  "lat" : 34.0676591197085,
+                  "lng" : -118.4036605802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "39e865fd4e8105106e995271692d8a3ad03ed66f",
+         "name" : "Luxe Rodeo Drive Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1334,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103145434244305435950\"\u003eLuxe Rodeo Drive Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA96WrIo3_Kd9Az7YQiGwXxUB_8goqNNgVUT74boIFAWlBtXdcRzNvCVN4-IQK8wznUF2O1sOEMDBGWkjbn7ZCk7jw5hfv6NGmJcKrcdxBu7ia8XCxY-qsYO9X0ixerRNEEhA6Sd1uLajIFOJAF3jBry9qGhQk8X-TjNjZ2tvqI0RY0HmuG7BEPg",
+               "width" : 2000
+            }
+         ],
+         "place_id" : "ChIJtS2kefi7woARaYSltnna5Jw",
+         "plus_code" : {
+            "compound_code" : "3H9X+J2 Beverly Hills, California, United States",
+            "global_code" : "85633H9X+J2"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJtS2kefi7woARaYSltnna5Jw",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 317,
+         "vicinity" : "360 North Rodeo Drive, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.03454809999999,
+               "lng" : -118.4333429
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.03571163029149,
+                  "lng" : -118.4320817697085
+               },
+               "southwest" : {
+                  "lat" : 34.0330136697085,
+                  "lng" : -118.4347797302915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "d6f569df72798ca70f1cfa1a3662294f8fc0a052",
+         "name" : "Best Western Royal Palace Inn & Suites",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/102783467123895644660\"\u003eBest Western Royal Palace Inn &amp; Suites\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAVw-mdSCrdfVE11deZVMXRxHkj6mQGXBiH8KZyXbQ4kG5QK-kfw_5lN7qTIyVpraFyE4tX5ZL80GC6WVKj5D8K2zMO_c9gAfW8pYS532-cZoGBeAFvoDghgD41SOP6uywEhAcreJIVqlIe4J0aDqtTniCGhStEYjim6qG_nV5S9qDOiJukAMXIg",
+               "width" : 3840
+            }
+         ],
+         "place_id" : "ChIJTbP6I6S7woART1N84YR5n14",
+         "plus_code" : {
+            "compound_code" : "2HM8+RM Los Angeles, California, United States",
+            "global_code" : "85632HM8+RM"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJTbP6I6S7woART1N84YR5n14",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 547,
+         "vicinity" : "2528 South Sepulveda Boulevard, Los Angeles"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.066883,
+               "lng" : -118.4007852
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0683323302915,
+                  "lng" : -118.3994167197085
+               },
+               "southwest" : {
+                  "lat" : 34.0656343697085,
+                  "lng" : -118.4021146802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "8d3450b5834425433d906197ac94fe787e91e0f0",
+         "name" : "Beverly Wilshire, A Four Seasons Hotel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1280,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101231318544174638884\"\u003eBeverly Wilshire, A Four Seasons Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAOY94T0l7h0tRjowjXtkBsYDbuPhbB3Z8FRpk29AmButV4OuXQkoHsvHUkJsdN5In6pamyla56bfZ4kKyK39hiMwOzAnnISLlizdRH1QMEvWB_lkX8H3I5cQAP-qqEE71EhDLsmfZJFmf_9PHfnuzLeStGhQbQczoXi0VEOgtABGX9EslTSPZkw",
+               "width" : 1924
+            }
+         ],
+         "place_id" : "ChIJz-22Hfm7woARmoLOmvYW4J0",
+         "plus_code" : {
+            "compound_code" : "3H8X+QM Beverly Hills, California, United States",
+            "global_code" : "85633H8X+QM"
+         },
+         "price_level" : 4,
+         "rating" : 4.7,
+         "reference" : "ChIJz-22Hfm7woARmoLOmvYW4J0",
+         "scope" : "GOOGLE",
+         "types" : [ "spa", "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2161,
+         "vicinity" : "9500 Wilshire Boulevard, Beverly Hills"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0367843,
+               "lng" : -118.4705904
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.0380594802915,
+                  "lng" : -118.4692843197085
+               },
+               "southwest" : {
+                  "lat" : 34.0353615197085,
+                  "lng" : -118.4719822802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "6b15b624b27ddcd53380f9fa9984a1003afb0612",
+         "name" : "Days Inn by Wyndham Santa Monica/Los Angeles",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115453429974871798967\"\u003eDays Inn by Wyndham Santa Monica/Los Angeles\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRZAAAAGmfWP6eAB01tLxcsF2leHKKzcLKsm_G3ri3_q8ZJDxm1S0w6hoUBrG7UVgF3POBF9lnPzPEcVq1x2M8HuVYM8dz5qcWZR1JH_C1w5M8VLPuZOxCRYf_H0XrJjZF1N7iWEhD5gnkUKjhU99QgHyIHAxiOGhSG7cN_ZAUiwTw-rvasGPGGiHTG1g",
+               "width" : 1500
+            }
+         ],
+         "place_id" : "ChIJO9D-nka7woARrtsSq8vHCfk",
+         "plus_code" : {
+            "compound_code" : "2GPH+PQ Santa Monica, California, United States",
+            "global_code" : "85632GPH+PQ"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJO9D-nka7woARrtsSq8vHCfk",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 387,
+         "vicinity" : "3007 Santa Monica Boulevard, Santa Monica"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 34.0194543,
+               "lng" : -118.4911912
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 34.05056,
+                  "lng" : -118.443426
+               },
+               "southwest" : {
+                  "lat" : 33.993161,
+                  "lng" : -118.5180849
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "55014b5c5e5d4c598c03d1024c2802d46d8baf02",
+         "name" : "Santa Monica",
+         "photos" : [
+            {
+               "height" : 738,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103682150529620991834\"\u003eShamayel G\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA6nVp2GYvNoEAN7O0-y1C7TmErFVLAj9oPYknDIwvIWsEab2WwmMxww8BfvvPCMNsY1RaY_ZKi1BqZdfO9wpEvGfaKTszI07xOwJp4are4a7fAVZDqTmRYRaCstyHtpWmEhC-ijRzAzzdI3qNtTnJCTUyGhRK0oFoKes2hIFOk0pWAVjYCN1AOg",
+               "width" : 725
+            }
+         ],
+         "place_id" : "ChIJGQCRws6kwoARq_Uj_7UKF7Q",
+         "reference" : "ChIJGQCRws6kwoARq_Uj_7UKF7Q",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Santa Monica"
+      }
+   ],
+   "status" : "OK"
+}
+
+AT Hill +0.0008053779602050781 Name +34.068930-118.445127 1583112874.1856277
+{
+    "html_attributions": [],
+    "next_page_token": "CqQCFQEAAK7aP0P3famGVYjvRIsxpTn0XwJjy47BQoB9mZloVIVfjLcpUlYmlIx1oU7i67MSjl-4h1__v1ly_21JX6DqAaO7prCUbJkb2WMiu0gespcEsglxi_hVhf8T8McVyzOWsAZv0kslCcPBeyZBI1t4lV2-2_gAdpYq1pfyiQjKNA3Hx09k-rWpE2xRcZRplUPTWz9kYmP1hCwQ19VYv3YzFb5uRtOt1E2S-rHoXlNODnrriNqvvAfarIekA81iAWNTVCIEJZKXamM7CC2Fb2fvf1MX665X5APwfcecFqyZXBhmCfPK6ZkcfN9tzjon999KAhqj0IjZ4x957hK95_jxIFsT5_7DlJ5hKbJgc6b7GTUCkuZSO2SeglxmJaNV9SVVxhIQUzhX6O2VXV9lCHq5iNOGWhoU9uyaFjbJXFKSdtOpf_8KQBuocyw",
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.0522342,
+                    "lng": -118.2436849
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.3373061,
+                        "lng": -118.1552891
+                    },
+                    "southwest": {
+                        "lat": 33.7036519,
+                        "lng": -118.6681759
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+            "id": "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",
+            "name": "Los Angeles",
+            "photos": [
+                {
+                    "height": 721,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111908544265113207087\">Harsh Kumar</a>"
+                    ],
+                    "photo_reference": "CmRaAAAATuUeRFrB6b1QYSRlazAZIQI5tG21LE39_4TwYcwyUXZIGbQ3I8zAgxhtpfsy45v5uG7778Mvd8jNxJNy64rHqMIwr-DntTx2PHu16tSUhRWrbIJISPVNgiJE5FTfUbI3EhAk7UGKVOBEkg0c0l3u-AVJGhR1gyVORK0ibiFywJsJx6VIFiN5Jw",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+            "reference": "ChIJE9on3F3HwoAR9AhGJW_fL-I",
+            "scope": "GOOGLE",
+            "types": [
+                "locality",
+                "political"
+            ],
+            "vicinity": "Los Angeles"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.01541479999999,
+                    "lng": -118.4990823
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.0167717802915,
+                        "lng": -118.4979703697085
+                    },
+                    "southwest": {
+                        "lat": 34.0140738197085,
+                        "lng": -118.5006683302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "6386ccce03d4d355c8c2a4a79253097969895413",
+            "name": "Hotel Shangri-La",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110739657517272402764\">Ricky Gunawan</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAmxdyQiMAPQRt53puYhTb_0MkHzG3HdJ76MnfDNc084oQ1wL8nn7E6aHd0ShN19Q7y3beT7RNPIjtNQXeFNsmrEEKJxwaC__k6cGm3li3kr-Tt2e_S0hYmndseQIwdyjYEhAXDlbzMILC6F0712c3zBu5GhRiZ37uWuHkKcZjSsulIdXYqCN-Ow",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+            "plus_code": {
+                "compound_code": "2G82+59 Santa Monica, California, United States",
+                "global_code": "85632G82+59"
+            },
+            "rating": 4.2,
+            "reference": "ChIJIxnYQcWkwoARVbqXi2BrqlM",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "bar",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 734,
+            "vicinity": "1301 Ocean Avenue, Santa Monica"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.06320729999999,
+                    "lng": -118.4416734
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.06453173029149,
+                        "lng": -118.4401795197085
+                    },
+                    "southwest": {
+                        "lat": 34.0618337697085,
+                        "lng": -118.4428774802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "ddb6b9d2e25032f5541bfcf42b91f6c1161be1a2",
+            "name": "Hilgard House Hotel & Suites",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 260,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114543748345978093084\">Hilgard House Hotel &amp; Suites</a>"
+                    ],
+                    "photo_reference": "CmRaAAAArpeas-hEjOdEnmnq-v0puQGN2QQ5W1lNQSYEHfAkexujJ0Ni2jysh8-w9orIHnUevWIUCaPc8-3SwtHGgov33tdqpBftnxjeKQQ13YFKofyb2J0AMvnx8jhrHbbx4xWaEhB7PBXC0jhVptEpojoVkAJbGhRLenGmSGVorlHgvg-ndJ5lUztF5A",
+                    "width": 300
+                }
+            ],
+            "place_id": "ChIJ06ecwoC8woARVyPlQNVzetI",
+            "plus_code": {
+                "compound_code": "3H75+78 Los Angeles, California, United States",
+                "global_code": "85633H75+78"
+            },
+            "rating": 3.9,
+            "reference": "ChIJ06ecwoC8woARVyPlQNVzetI",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 167,
+            "vicinity": "927 Hilgard Avenue, Los Angeles"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.0632746,
+                    "lng": -118.4409504
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.0646108802915,
+                        "lng": -118.4398087197085
+                    },
+                    "southwest": {
+                        "lat": 34.0619129197085,
+                        "lng": -118.4425066802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "123c3294a684a0fb173c40813459506d1420c75b",
+            "name": "W Los Angeles - West Beverly Hills",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106717016222686749028\">W Los Angeles - West Beverly Hills</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAbaYlvcOnec7HkvpEtFv1haouR8Pt-DXV-6jq2jJYzLBryvxJDWkV-H7T4RV_HHbyfc2p9CumrzDjMufsag9eSI38xqBt8UKukqVfL09-MVYUPgn2tJgxZzB9KBTXFN7lEhB6AWufnX79_eBqLnMcHXDZGhSsnuOg9XO5o7Me1F_0ufzbp2-yUQ",
+                    "width": 1500
+                }
+            ],
+            "place_id": "ChIJffYelYC8woARkChY4cQOzUM",
+            "plus_code": {
+                "compound_code": "3H75+8J Los Angeles, California, United States",
+                "global_code": "85633H75+8J"
+            },
+            "rating": 4.2,
+            "reference": "ChIJffYelYC8woARkChY4cQOzUM",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1022,
+            "vicinity": "930 Hilgard Avenue, Los Angeles"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 34.0606338,
+                    "lng": -118.4429579
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 34.06200043029149,
+                        "lng": -118.4417212697085
+                    },
+                    "southwest": {
+                        "lat": 34.0593024697085,
+                        "lng": -118.4444192302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "d9aae9960743eec4c49c99ac8a437b7ddbef7c63",
+            "name": "Royal Palace Westwood Hotel",
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114094194621340748848\">Carefree 1AZ</a>"
+                    ],
+                    "photo_reference": "CmRaAAAADcP4q5LeZiV2cWOXLducFpSA5CxuuuAZf_hHzPLRmRMDbkYAyidqnO8xX1-hyshk4-QDX5ECOmSMW_MlHZtier8RFgi_anI-e9VWT9EzTeiLPSIrdiCMxPnRwt9PwbFzEhCkJEauJcaom9cE83F6-WfqGhSb9oUe-K57sS23OXYDM_V-MT23dA",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJ36i1toG8woARHcjs6P2eCkU",
+            "plus_code": {
+                "compound_code": "3H64+7R Los Angeles, California, United States",
+                "global_code": "85633H64+7R"
+            },
+            "rating": 4.2,
+            "reference": "ChIJ36i1toG8woARHcjs6P2eCkU",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 192,
+            "vicinity": "1052 Tiverton Avenue, Los Angeles"
+        }
+    ],
+    "status": "OK"
+}
+
+
+Connection closed with ('127.0.0.1', 38120)
+New connection to ('127.0.0.1', 38182)
+SERVER2 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Connection closed with ('127.0.0.1', 38182)
+New connection to ('127.0.0.1', 38188)
+New connection to ('127.0.0.1', 38190)
+SERVER1 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Attempting to connect to 12201
+SERVER2 AT Campbell +0.0006053447723388672 Hello +34.068930-118.445127 1583112934.3206089
+Connection closed with ('127.0.0.1', 38190)
+Connected to 12201 . Writing data.
+Closing connection to 12201
+Connection to 12201 closed
+Attempting to connect to 12202
+Connected to 12202 . Writing data.
+Closing connection to 12202
+Connection to 12202 closed
+Connection closed with ('127.0.0.1', 38188)

@@ -1,5 +1,5 @@
 default:
-	tar -czf project.tgz server.py client.py
+	tar -czf project.tgz server.py client.py *log
 removelogs:
 	rm -rf *log
 clean:

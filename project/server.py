@@ -53,39 +53,12 @@ def isLongitude(value):
             return False
 
 def getLongitude(value):
-    split1 = value.split('+')
-    if len(split1) == 1: #no plus signs
-        split3 = split1[0].split('-')
-        if len(split3) != 3:
-            return False
-        split2 = ["","","",""]
-        split2[0] = split3[0]
-        split2[1] = split3[1]
-        split2[3] = split3[2]
-    elif len(split1) == 2: #one plus sign
-        if len(split1[0]) > 0:
-            split2 = split1[0].split('-')
-            split3 = split1[1].split('-')
-            split2.extend(split3)
-        else:
-            split3 = split1[1].split('-')
-            if len(split3) != 2:
-                return False
-            split2 = ["",split3[0],"",split3[1]]
-    elif len(split1) == 3: #two plus signs
-        for i in split1:
-            if len(i.split('-')) != 1:
-                return False
-        split2 = ["","","",""]
-        split2[0] = split1[0]
-        split2[1] = split1[1]
-        split2[3] = split1[2]
-    else:#three or more plus signs
-        return False
-    if len(split2) != 4 or len(split2[0]) != 0 or len(split2[2]) != 0:
-        return False
-    else:
-        return [float(split2[1]),float(split2[3])]
+    i = 1
+    while i < len(value):
+        if value[i] == '-' or value[i] == '+':
+            break
+        i = i+1
+    return [float(value[:i]),float(value[i:])]
 
 class Server:
     def __init__(self, name, port, ip='127.0.0.1', message_max_length=1e6):
@@ -182,20 +155,28 @@ class Server:
                     if splitmessage[1] in self.clients and int(splitmessage[2]) < 50 and int(splitmessage[3]) < 20:
                         #need to add actual functionality (http request)
                         session = aiohttp.ClientSession()
-                        url = 'https://www.google.com'
+                        longitude = getLongitude(self.clients[splitmessage[1]].split(' ')[4])
+                        location = "location="+str(longitude[0])+","+str(longitude[1])
+                        radius = "&radius="+str(int(splitmessage[2])*1000)
+                        key = "&key=AIzaSyCL_8paVGeMOByRa0Tcy6dZJysGLN4ptTA"
+                        url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'+location+radius+key
                         print("Requesting from:",url)
                         response = await session.get(url)
                         print("{0} status: {1}".format(url, response.status))
                         responsetext = await response.text()
                         print("{0} responded: {1}".format(url, responsetext))
                         await session.close()
-                        
-                        output = self.clients[splitmessage[1]]+'\n'+responsetext
+
+                        outputjson = json.loads(responsetext)
+                        slicedresults = outputjson["results"][:int(splitmessage[3])]
+                        outputjson["results"] = slicedresults
+                        modifiedresponse = json.dumps(outputjson, indent=4)
+                        output = self.clients[splitmessage[1]]+'\n'+modifiedresponse+'\n\n'
                         writer.write(output.encode())
                         print(output)
                         await writer.drain()
                     else:
-                        output = "ERROR Unknown Client: "+splitmessage[1]
+                        output = "ERROR Invalid WHATSAT Parameters: "+decoded
                         writer.write(output.encode())
                         print(output)
                         await writer.drain()
