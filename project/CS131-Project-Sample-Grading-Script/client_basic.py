@@ -182,11 +182,11 @@ if __name__ == '__main__':
     TIMEOUT = 20
     # an example of the ports
     port_dict = {
-        'Hill': 8000,
-        'Jaquez': 8001,
-        'Smith': 8002,
-        'Campbell': 8003,
-        'Singleton': 8004
+        'Hill': 12200,
+        'Jaquez': 12201,
+        'Smith': 12202,
+        'Campbell': 12203,
+        'Singleton': 12204
     }
     server_dir = "./sample_submission" # the place where we can find server.py
 
